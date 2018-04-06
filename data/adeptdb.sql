@@ -1,0 +1,210 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : localhost:3306
+-- Généré le :  ven. 06 avr. 2018 à 07:59
+-- Version du serveur :  10.0.34-MariaDB
+-- Version de PHP :  5.6.30
+
+--
+-- Base de données :  `obrassard_adept`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Administrateurs`
+--
+
+CREATE TABLE `Administrateurs` (
+  `Prenom` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `Nom` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `Username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `Token` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `RoleID` int(11) DEFAULT NULL,
+  `AdminID` int(11) NOT NULL,
+  `DateMendat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Afficher` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Client`
+--
+
+CREATE TABLE `Client` (
+  `ClientID` int(11) NOT NULL,
+  `Nom` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Prenom` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `NumEtudiant` int(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Doublure de structure pour la vue `ClientReservation`
+-- (Voir ci-dessous la vue réelle)
+--
+CREATE TABLE `ClientReservation` (
+`ClientId` int(11)
+,`Nom` varchar(50)
+,`Prenom` varchar(50)
+,`Email` varchar(50)
+,`NumEtudiant` int(7)
+,`ReservationID` int(11)
+,`NumeroReservation` varchar(11)
+,`Taille` varchar(2)
+,`Depot` decimal(10,0)
+,`HoodieRecupere` tinyint(1)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `HistoriqueReservation`
+--
+
+CREATE TABLE `HistoriqueReservation` (
+  `ID` int(11) NOT NULL,
+  `AdminID` int(11) NOT NULL,
+  `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ReservationID` int(11) NOT NULL,
+  `Nom` varchar(100) DEFAULT NULL,
+  `Type` varchar(50) NOT NULL,
+  `Depot` decimal(10,0) DEFAULT NULL,
+  `Recup` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `HoodieReservation`
+--
+
+CREATE TABLE `HoodieReservation` (
+  `ReservationID` int(11) NOT NULL,
+  `ClientID` int(11) NOT NULL,
+  `NumeroReservation` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
+  `Depot` decimal(10,0) NOT NULL DEFAULT '0',
+  `HoodieRecupere` tinyint(1) NOT NULL DEFAULT '0',
+  `Taille` varchar(2) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `RolesCA`
+--
+
+CREATE TABLE `RolesCA` (
+  `RoleID` int(11) NOT NULL,
+  `Role` varchar(25) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la vue `ClientReservation`
+--
+DROP TABLE IF EXISTS `ClientReservation`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`obrassard`@`localhost` SQL SECURITY DEFINER VIEW `ClientReservation`  AS  select `c`.`ClientID` AS `ClientId`,`c`.`Nom` AS `Nom`,`c`.`Prenom` AS `Prenom`,`c`.`Email` AS `Email`,`c`.`NumEtudiant` AS `NumEtudiant`,`r`.`ReservationID` AS `ReservationID`,`r`.`NumeroReservation` AS `NumeroReservation`,`r`.`Taille` AS `Taille`,`r`.`Depot` AS `Depot`,`r`.`HoodieRecupere` AS `HoodieRecupere` from (`Client` `c` join `HoodieReservation` `r` on((`r`.`ClientID` = `c`.`ClientID`))) ;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `Administrateurs`
+--
+ALTER TABLE `Administrateurs`
+  ADD PRIMARY KEY (`AdminID`),
+  ADD KEY `FK_Admin_Role_RoleID` (`RoleID`);
+
+--
+-- Index pour la table `Client`
+--
+ALTER TABLE `Client`
+  ADD PRIMARY KEY (`ClientID`);
+
+--
+-- Index pour la table `HistoriqueReservation`
+--
+ALTER TABLE `HistoriqueReservation`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `FK_Admin` (`AdminID`);
+
+--
+-- Index pour la table `HoodieReservation`
+--
+ALTER TABLE `HoodieReservation`
+  ADD PRIMARY KEY (`ReservationID`),
+  ADD KEY `FK_Client_Reservation` (`ClientID`);
+
+--
+-- Index pour la table `RolesCA`
+--
+ALTER TABLE `RolesCA`
+  ADD PRIMARY KEY (`RoleID`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `Administrateurs`
+--
+ALTER TABLE `Administrateurs`
+  MODIFY `AdminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT pour la table `Client`
+--
+ALTER TABLE `Client`
+  MODIFY `ClientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
+-- AUTO_INCREMENT pour la table `HistoriqueReservation`
+--
+ALTER TABLE `HistoriqueReservation`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT pour la table `HoodieReservation`
+--
+ALTER TABLE `HoodieReservation`
+  MODIFY `ReservationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT pour la table `RolesCA`
+--
+ALTER TABLE `RolesCA`
+  MODIFY `RoleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `Administrateurs`
+--
+ALTER TABLE `Administrateurs`
+  ADD CONSTRAINT `FK_Admin_Role_RoleID` FOREIGN KEY (`RoleID`) REFERENCES `RolesCA` (`RoleID`);
+
+--
+-- Contraintes pour la table `HistoriqueReservation`
+--
+ALTER TABLE `HistoriqueReservation`
+  ADD CONSTRAINT `FK_Admin` FOREIGN KEY (`AdminID`) REFERENCES `Administrateurs` (`AdminID`);
+
+--
+-- Contraintes pour la table `HoodieReservation`
+--
+ALTER TABLE `HoodieReservation`
+  ADD CONSTRAINT `FK_Client_Reservation` FOREIGN KEY (`ClientID`) REFERENCES `Client` (`ClientID`);
+COMMIT;
+
+
