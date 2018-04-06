@@ -25,4 +25,6 @@ Nous avons aussi implémentés un module de réservation pour les cotons ouatés
 - Implémentation d’un forum d’aide entre étudiants pour les cours en informatique
 
 
+## Screenshots
+![Page d'accueil](./screenshots/homepage.png)
 
