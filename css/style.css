@@ -72,6 +72,36 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.green{
+  color:#10d22d;
+}
+
+.compact {
+  padding-bottom: 0 !important;
+}
+
+.large-icon{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.discord-color{
+  color: #7289DA;
+}
+
+.messenger-color{
+  color: #0084ff;
+}
+
+.discord {
+  background: #7289DA;
+  border-color: #6077da;
+}
+
+.discord:hover{
+  background: #6077da;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -765,7 +795,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
 }
 
-#services .title a {
+#services .title a, #services .title {
   color: #111;
 }
 
@@ -778,6 +808,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-left: 60px;
   line-height: 24px;
   margin-bottom: 0;
+  text-align: justify;
 }
 
 /* Call To Action Section
@@ -1092,6 +1123,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0;
 }
 
+
+
 #contact .contact-info {
   margin-bottom: 20px;
   text-align: center;
@@ -1125,21 +1158,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #10d213;
 }
 
-#contact .contact-address, #contact .contact-phone, #contact .contact-email {
-  margin-bottom: 20px;
+#contact .center{
+  border-left: solid 1px lightgray;
+  border-right: solid 1px lightgray;
 }
 
-@media (min-width: 768px) {
-  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
-    padding: 20px 0;
-  }
-}
 
-@media (min-width: 768px) {
-  #contact .contact-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-  }
+#contact .form {
+  margin-top: 55px;
 }
 
 #contact .form #sendmessage {
@@ -1355,6 +1381,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #ddd;
 }
 
-.green{
-    color:#10d22d;
+#footer-logo{
+  max-width: 100%;
 }
+
