@@ -696,6 +696,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: 10;
 }
 
+
 #about .about-col {
   background: #fff;
   border-radius: 0 0 4px 4px;
@@ -756,6 +757,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #333;
   margin-bottom: 0;
   padding: 0 20px 20px 20px;
+}
+
+#about .description{
+    text-align: justify;
 }
 
 /* Services Section
@@ -1216,6 +1221,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .form button[type="submit"]:hover {
   background: #13a456;
+}
+
+#emailbtn{
+    background-color:#10d213;
+    border-color:#00c102;
+}
+
+#emailbtn:hover{
+    background-color: #00c102
 }
 
 /*--------------------------------------------------------------
