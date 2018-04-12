@@ -852,7 +852,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #facts {
   background: url("../img/facts-bg.jpg") center top no-repeat fixed;
   background-size: cover;
-  padding: 60px 0 0 0;
+  padding: 60px 0 60px 0;
   position: relative;
 }
 
@@ -892,6 +892,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   padding-top: 30px;
 }
+
 
 /* Portfolio Section
 --------------------------------*/
