@@ -2,7 +2,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500');
 @font-face {
   font-family: 'Imagine';
   src: url('../font/imagine-font.woff2') format('woff2'),
@@ -812,7 +812,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/bg-lan.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -825,6 +825,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #call-to-action p {
   color: #fff;
+  font-family: "Ubuntu","Open Sans",sans-serif;
+  font-weight: 500;
 }
 
 #call-to-action .cta-btn {
@@ -845,6 +847,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 #call-to-action .cta-btn:hover {
   background: #10d213;
   border: 2px solid #10d213;
+}
+
+#logo-lan{
+    width: 300px;
+    margin-bottom: 20px;
 }
 
 /* Facts Section
