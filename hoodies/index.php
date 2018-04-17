@@ -93,7 +93,11 @@
 		<section>
 		<h2>Réservation</h2>
 		<div class="form">
-		  <form action="createReservation.php" method="post" role="form" class="contactForm">
+		    <div class="alert alert-info">
+		        <strong>La période de réservation des hoodies est maintenant terminée.</strong><br>
+		        Pour plus d'informations, adressez-vous à un membre du CA de l'ADEPT.
+		    </div>
+		  <!--<form action="createReservation.php" method="post" role="form" class="contactForm">
 			<div class="form-row">
 			  <div class="form-group col-md-6">
 				<input type="text" name="prenom" class="form-control" id="firstname" placeholder="Prénom" required />
@@ -150,13 +154,10 @@
 
 
 			<div class="text-center"><button type="submit">Confirmer</button></div>
-		  </form>
+		  </form>-->
 		</div>
             <br>
-            <div class="alert alert-primary text-center">
-                Hey ! BTW, les inscriptions pour le LAN sont commencées !<br>
-                <a href="http://lanadept.com">www.lanadept.com</a>
-            </div>
+
 		</section>
 	  </div>
 	</section>
