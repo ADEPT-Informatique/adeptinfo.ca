@@ -82,6 +82,22 @@ h1, h2, h3, h4, h5, h6 {
   color:#10d22d;
 }
 
+.black{
+  color: black;
+}
+
+.blue{
+  color: blue;
+}
+
+.turquoise {
+  color: #17b4b0;
+}
+
+.code{
+  font-family: consolas, Inconsolata, monospace;
+}
+
 .compact {
   padding-bottom: 0 !important;
 }
@@ -170,6 +186,8 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 40px;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # Intro Section

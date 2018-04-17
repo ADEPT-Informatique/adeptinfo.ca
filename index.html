@@ -65,7 +65,8 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="carousel-item" style="background-image: url('img/intro-carousel/2.jpg');">
+            <!-- À décommenter pour ajouter des pages au carroussel
+            <div class="carousel-item" style="background-image: url('img/intro-carousel/2.jpg');">
                 <div class="carousel-container">
                   <div class="carousel-content">
                       <h2>Bienvenue à l'ADEPT</h2>
@@ -150,7 +151,7 @@
       <!-- #about -->
       <!--==========================
             Section Suis-je membre
-          ============================-->
+      ============================-->
       <section id="featured-services">
         <div class="container">
           <header class="section-header">
@@ -220,7 +221,7 @@
       <!-- #services -->
       <!--==========================
           Pub Lan de l'adept
-          ============================-->
+      ============================-->
       <section id="call-to-action" class="wow fadeIn">
         <div class="container text-center">
           <img src="./img/logo-lan.png" id="logo-lan" />
@@ -234,12 +235,12 @@
       <!-- #call-to-action -->
       <!--==========================
          Statistiques
-          ============================-->
+      ============================-->
       <section id="facts"  class="wow fadeIn">
         <div class="container">
           <header class="section-header">
             <h3>À propos de l'ADEPT</h3>
-            <p>Une <span style="font-family:consolas, Inconsolata, monospace; font-weigth: bold"><span style="color:blue">new</span> ICollection&lt;<span style="color:#17b4b0">Avantage</span>&gt;</span> pour les étudiants en informatique !<br>L'essayer c'est l'<strong>ADEPT</strong>er !</p>
+            <p>Une <span class="code"><span class="blue">new</span>&nbsp;ICollection&lt;<span class="turquoise">Avantage</span>&gt;</span> pour les étudiants en informatique !<br>L'essayer c'est l'<strong>ADEPT</strong>er !</p>
           </header>
           <div class="row counters">
             <div class="col-lg-3 col-6 text-center">
@@ -267,7 +268,7 @@
       <!-- #facts -->
       <!--==========================
           Section Membres Conseil
-          ============================-->
+      ============================-->
       <section id="team">
         <div class="container">
           <div class="section-header wow fadeInUp">
@@ -366,7 +367,7 @@
       <!-- #team -->
       <!--==========================
           Section de contact
-          ============================-->
+      ============================-->
       <section id="contact" class="section-bg wow fadeInUp">
         <div class="container">
           <div class="section-header">
@@ -404,25 +405,23 @@
             </div>
           </div>
           <div class="form">
-            <div id="sendmessage">Votre message a été envoyé. Merci!</div>
-            <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="controller/sendForm.php" method="post" role="form" class="contactForm">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" data-rule="minlen:4" data-msg="Veuillez entrer au moins 4 caractères" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom" required minlength="4"/>
                   <div class="validation"></div>
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre adresse courriel" data-rule="email" data-msg="Veuillez entrer une adresse valide" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre adresse courriel"  required/>
                   <div class="validation"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet du message" data-rule="minlen:10" data-msg="Le sujet doit contenir au moins 10 caractères" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet du message" required/>
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Veuillez écrire un message" placeholder="Votre message"></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Votre message" required minlength="10"></textarea>
                 <div class="validation"></div>
               </div>
               <div class="text-center"><button type="submit">Envoyer</button></div>
@@ -434,7 +433,7 @@
     </main>
     <!--==========================
         Pied de page
-        ============================-->
+    ============================-->
     <footer id="footer">
       <div class="footer-top">
         <div class="container">
@@ -474,7 +473,7 @@
               <h4>Infolettre</h4>
               <p>Inscrivez-vous afin de recevoir des nouvelles de nos événements et activités !</p>
               <form action="" method="post">
-                <input type="email" name="email"><input type="submit"  value="S'abonner">
+                <input type="email" name="email" placeholder="Email" required><input type="submit"  value="S'abonner">
               </form>
             </div>
           </div>
@@ -486,7 +485,7 @@
         </div>
         <div class="credits">
             Ce site web est <a href="https://github.com/adept-informatique/adeptinfo.ca">open-source</a>. Merci à <a href="https://github.com/ADEPT-Informatique/adeptinfo.ca#remerciements">tous ceux qui y ont collaboré</a> !
-			<br><span style="color:black">Why do Java programmers wear glasses ? Because they can't C# ;)</span>
+			<br><span class="black">Why do Java programmers wear glasses ? Because they can't C# ;)</span>
 		</div>
       </div>
     </footer>
@@ -506,8 +505,7 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-    <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
+
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
   </body>
