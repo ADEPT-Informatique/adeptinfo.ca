@@ -8,7 +8,7 @@ $message = validatePost("message");
 
 if(!($name && $email && $subject && $message)){
     //Verifier que tous les champs sont valides
-    header('Location: ../index.html?r=error');
+    header('Location: ../index.php?r=error');
     die();
 }
 
@@ -21,6 +21,6 @@ $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 // send email
 mail("adept.informatique.cem@gmail.com","Message du site web - ".$subject,$msg,$headers);
 
-header('Location: ../index.html?r=success');
+header('Location: ../index.php?r=success');
 
 ?>

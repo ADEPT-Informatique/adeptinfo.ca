@@ -1,3 +1,4 @@
+<?php require_once "controller/requestsHandlers.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,6 +58,16 @@
             <div class="carousel-item active" style="background-image: url('img/intro-carousel/1.jpg');">
               <div class="carousel-container">
                 <div class="carousel-content">
+                    <?php $r = validateGet("r");
+                    if ($r == 'success'){
+                        echo '<div class="alert alert-success top-message">Nous avons bien reçu votre message, merci !</div>';
+                    } else if ($r == 'error') {
+                        echo "<div class='alert alert-danger top-message'>Désolé, une erreur s'est produite lors de l'envoi de votre message.</div>";
+                    } else if($r =='error-as') {
+                        echo "<div class='alert alert-warning top-message'>Vous êtes déjà inscrit à la liste d'envoie de l'ADEPT.</div>";
+                    } else if ($r == 'subscribed') {
+                        echo "<div class='alert alert-success top-message'>Vous avez été ajouté à la liste d'envoie de l'ADEPT avec succès.</div>";
+                    }?>
                   <h2>Bienvenue à l'ADEPT</h2>
                   <p>L'ADEPT, c'est l'Association Des Étudiants et Étudiantes du Programme de Technique Informatique du Cégep Édouard-Montpetit.
                     <br /><strong>Venez nous voir, nous sommes au local F-041 situé dans la cafeteria !</strong>
@@ -404,6 +415,7 @@
               <p><a href="mailto:adept.informatique.cem@gmail.com" id="emailbtn" class="btn btn-primary text-white">Envoyer un Courriel</a></p>
             </div>
           </div>
+            <br>
           <div class="form">
             <form action="controller/sendForm.php" method="post" role="form" class="contactForm">
               <div class="form-row">
@@ -472,7 +484,7 @@
             <div class="col-lg-3 col-md-6 footer-newsletter">
               <h4>Infolettre</h4>
               <p>Inscrivez-vous afin de recevoir des nouvelles de nos événements et activités !</p>
-              <form action="" method="post">
+              <form action="controller/subscribe.php" method="post">
                 <input type="email" name="email" placeholder="Email" required><input type="submit"  value="S'abonner">
               </form>
             </div>

@@ -10,7 +10,8 @@ require_once "../model/bdconnect.php";
 $email = validatePost("email");
 
 if(!$email || !(preg_match('/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+/',$email))){
-    header('Location: ../index.html');
+    echo $email;
+    //header('Location: ../index.php');
     die();
 }
 
@@ -23,7 +24,7 @@ try{
     ));
 
 }catch (Exception $e){
-    header('Location: ../index.html?r=error-as');
+    header('Location: ../index.php?r=error-as');
     die($e->getMessage());
 }
 
@@ -38,6 +39,6 @@ $headers = 'From: notification@adeptinfo.ca' . "\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 mail($email,"Confirmation d'abonnement à l'infolettre de l'ADEPT",$msg,$headers);
 
-header('Location: ../index.html?r=subscribed');
+header('Location: ../index.php?r=subscribed');
 
 ?>
