@@ -20,7 +20,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css?v1.4" rel="stylesheet">
   </head>
   <body>
     <!--==========================
@@ -66,8 +66,8 @@
                         echo "<div class='alert alert-success top-message'>Vous avez été ajouté à la liste d'envoi de l'ADEPT avec succès.</div>";
                     }?>
                   <h2>Bienvenue à l'ADEPT</h2>
-                  <p>L'ADEPT, c'est l'Association Des Étudiants et Étudiantes du Programme de Technique Informatique du Cégep Édouard-Montpetit.
-                    <br /><strong>Venez nous voir, nous sommes au local F-041 situé dans la cafeteria !</strong>
+                  <p>L'ADEPT, c'est l'Association Des Étudiants et Étudiantes du Programme de Technique Informatique du cégep Édouard-Montpetit.
+                    <br class="hidden-mobile" /><strong>Venez nous voir, nous sommes au local F-041 situé dans la cafeteria !</strong>
                   </p>
                   <a href="#about" class="btn-get-started scrollto">Découvrir l'ADEPT</a>
                 </div>
@@ -114,7 +114,7 @@
         <div class="container">
           <header class="section-header">
             <h3 class="small-title">Notre mission</h3>
-            <p>L'ADEPT est une des plus grandes organisations étudiantes du cégep Édouard-Montpetit<br /> et nous faisons notre maximum afin d'être celle qui épaule le mieux ses membres !</p>
+            <p>L'ADEPT est une des plus grandes organisations étudiantes du cégep Édouard-Montpetit <br class="hidden-mobile">et nous faisons notre maximum afin d'être celle qui épaule le mieux ses membres !</p>
           </header>
           <div class="row about-cols">
             <div class="col-md-4 wow fadeInUp">
@@ -164,7 +164,7 @@
         <div class="container">
           <header class="section-header">
             <h3>Suis-je membre de l'ADEPT ?</h3>
-            <p class="text-center description">Si tu es inscrit dans un programme de technique informatique du Cégep Édouard-Montpetit, tu es membre de l'ADEPT !</p>
+            <p class="text-center description">Si tu es inscrit dans un programme de technique informatique du cégep Édouard-Montpetit, tu es membre de l'ADEPT !</p>
           </header>
           <div class="row">
             <div class="col-lg-6 box">
@@ -205,7 +205,7 @@
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-tshirt-outline"></i></div>
               <h4 class="title"><a href="./hoodies/index.php">Hoodies officiels</a></h4>
-              <p class="description">Une fois par session vous aurez la chance de vous procurer un hoodie officiel et génial réservé aux membres des deux techniques! En plus, il est super confortable !<br />Plus de détails <a href="./hoodies">ici</a>.</p>
+              <p class="description">Une fois par session vous aurez la chance de vous procurer un hoodie officiel et génial réservé aux membres des deux techniques! En plus, il est super confortable! Plus de détails <a href="./hoodies">ici</a>.</p>
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-pizza"></i></div>

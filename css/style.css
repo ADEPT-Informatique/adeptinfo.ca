@@ -1471,3 +1471,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer-logo{
   max-width: 100%;
 }
+
+@media (max-width: 790px) {
+  .hidden-mobile{
+    display: none !important;
+  }
+
+  #call-to-action {
+    background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/bg-lan.jpg) center center;
+  }
+}
+
+/*TEST -------*/
