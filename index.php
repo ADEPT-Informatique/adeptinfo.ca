@@ -61,9 +61,9 @@
                     } else if ($r == 'error') {
                         echo "<div class='alert alert-danger top-message'>Désolé, une erreur s'est produite lors de l'envoi de votre message.</div>";
                     } else if($r =='error-as') {
-                        echo "<div class='alert alert-warning top-message'>Vous êtes déjà inscrit à la liste d'envoie de l'ADEPT.</div>";
+                        echo "<div class='alert alert-warning top-message'>Vous êtes déjà inscrit à la liste d'envoi de l'ADEPT.</div>";
                     } else if ($r == 'subscribed') {
-                        echo "<div class='alert alert-success top-message'>Vous avez été ajouté à la liste d'envoie de l'ADEPT avec succès.</div>";
+                        echo "<div class='alert alert-success top-message'>Vous avez été ajouté à la liste d'envoi de l'ADEPT avec succès.</div>";
                     }?>
                   <h2>Bienvenue à l'ADEPT</h2>
                   <p>L'ADEPT, c'est l'Association Des Étudiants et Étudiantes du Programme de Technique Informatique du Cégep Édouard-Montpetit.

@@ -6,7 +6,7 @@ $email = validatePost("email");
 $subject = validatePost("subject");
 $message = validatePost("message");
 
-if(!($name && $email && $subject && $message)){
+if(!($name && $email && $subject && $message) || !(preg_match('/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+/',$email))){
     //Verifier que tous les champs sont valides
     header('Location: ../index.php?r=error');
     die();
