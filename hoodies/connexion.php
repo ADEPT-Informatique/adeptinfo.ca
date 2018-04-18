@@ -31,7 +31,7 @@
             <div class="col">
                 <div class="card login" style="width: 25rem;">
                     <div class="card-body text-center">
-                        <img src="../img/badge.svg" width="120">
+                        <img src="../img/badge.png" width="120">
                         <h4 class="card-title text-center">Veuillez vous connecter</h4>
                         <br>
                         <form action="login.php" method="post">

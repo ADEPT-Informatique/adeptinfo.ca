@@ -34,27 +34,23 @@
   <!--==========================
 	HEADER
   ============================-->
-  <header id="header">
-	<div class="container-fluid">
-
-	  <div id="logo" class="pull-left">
-		<h1><a href="../index.php" class="scrollto">ADEPT</a></h1>
-		<!-- Uncomment below if you prefer to use an image logo -->
-		<!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
-	  </div>
-
-<!--	  <nav id="nav-menu-container">-->
-<!--		<ul class="nav-menu">-->
-<!--		  <li class="menu-active d-block d-sm-none"><a href="../indexFull.html#intro">Accueil</a></li>-->
-<!--		  <li><a href="../indexFull.html#about">Qui sommes nous</a></li>-->
-<!--		  <li><a href="../indexFull.html#services">Services</a></li>-->
-<!--		  <li><a href="../indexFull.html#team">Membres du conseil</a></li>-->
-<!--		  <li><a href="../indexFull.html#contact">Contact</a></li>-->
-<!--		  <li><a href="http://lanadept.com">LAN de L'ADEPT</a></li>-->
-<!--		</ul>-->
-<!--	  </nav><!-- #nav-menu-container -->
-	</div>
-  </header><!-- #header -->
+    <header id="header">
+        <div class="container-fluid">
+            <div id="logo" class="pull-left">
+                <h1><a href="../index.php" class="scrollto">ADEPT</a></h1>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active d-block d-sm-none"><a href="../index.php">Accueil</a></li>
+                    <li><a href="../index.php#about">Qui sommes nous</a></li>
+                    <li><a href="../index.php#services">Services</a></li>
+                    <li><a href="../index.php#team">Membres du conseil</a></li>
+                    <li><a href="../index.php#contact">Contact</a></li>
+                    <li><a href="http://lan.adeptinfo.ca">LAN de L'ADEPT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
   <main id="module">

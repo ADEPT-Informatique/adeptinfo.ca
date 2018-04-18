@@ -30,8 +30,6 @@
       <div class="container-fluid">
         <div id="logo" class="pull-left">
           <h1><a href="#intro" class="scrollto">ADEPT</a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
@@ -43,7 +41,6 @@
             <li><a href="http://lan.adeptinfo.ca">LAN de L'ADEPT</a></li>
           </ul>
         </nav>
-        <!-- #nav-menu-container -->
       </div>
     </header>
     <!-- #header -->
@@ -175,7 +172,6 @@
               <h4 class="title text-center"><span class="white">Programmation (Informatique de gestion)</span></h4>
               <!--<p class="description text-center">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>-->
             </div>
-            <hr class="">
             <div class="col-lg-6 box box-bg">
               <h2 class="text-center"><i class="fa fa-server"></i></h2>
               <h4 class="title text-center"><span class="white">Gestion de Réseaux Informatiques</span></h4>
@@ -208,7 +204,7 @@
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-tshirt-outline"></i></div>
-              <h4 class="title"><a href="http://adeptinfo.ca/hoodies/">Hoodies officiels</a></h4>
+              <h4 class="title"><a href="./hoodies/index.php">Hoodies officiels</a></h4>
               <p class="description">Une fois par session vous aurez la chance de vous procurer un hoodie officiel et génial réservé aux membres des deux techniques! En plus, il est super confortable !<br />Plus de détails <a href="./hoodies">ici</a>.</p>
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
@@ -251,7 +247,8 @@
         <div class="container">
           <header class="section-header">
             <h3>À propos de l'ADEPT</h3>
-            <p>Une <span class="code"><span class="blue">new</span>&nbsp;ICollection&lt;<span class="turquoise">Avantage</span>&gt;</span> pour les étudiants en informatique !<br>L'essayer c'est l'<strong>ADEPT</strong>er !</p>
+            <p>L'ADEPT, c'est une <span class="code"><span class="blue">new</span>&nbsp;ICollection&lt;<span class="turquoise">Avantage</span>&gt;</span> pour les étudiants en informatique !<br>Vous verrez, l'essayer c'est l'ADEPTer !
+                <br><span class="x-small">* Pardon pour cet humour douteux...</span></p>
           </header>
           <div class="row counters">
             <div class="col-lg-3 col-6 text-center">
@@ -383,7 +380,7 @@
         <div class="container">
           <div class="section-header">
             <h3>Contactez-nous</h3>
-            <p class="font-weight-bold compact">Le meilleur moyen de nous contacter c'est d'abord de venir nous voir en personne<br> au local de F-041 juste à côté de la cafeteria!</p>
+            <p class="font-weight-bold compact">Le meilleur moyen de nous contacter c'est d'abord de venir nous voir en personne au local de F-041 juste à côté de la cafeteria!</p>
             <p class="font-italic">Sinon, voici d'autres moyens de nous contacter :</p>
           </div>
           <div class="row contact-info">
