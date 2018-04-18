@@ -3,13 +3,28 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 06 avr. 2018 à 07:59
+-- Généré le :  mar. 17 avr. 2018 à 20:09
 -- Version du serveur :  10.0.34-MariaDB
 -- Version de PHP :  5.6.30
+--
+-- --------------------------------------------------------
+--
+-- Base de données :  `adept`
+--
 
+DELIMITER $$
 --
--- Base de données :  `obrassard_adept`
+-- Procédures
 --
+CREATE PROCEDURE `USP_DeleteReservation` (IN `resID` INT)  BEGIN
+set @clientId = (SELECT ClientID from HoodieReservation WHERE ReservationID = resID);
+DELETE FROM HoodieReservation WHERE ReservationID = resID;
+DELETE FROM Client WHERE ClientID = @clientId;
+END$$
+
+CREATE PROCEDURE `USP_ShowReservation` ()  SELECT * FROM Client as c inner join HoodieReservation as h on c.ClientID = h.ClientID$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -42,7 +57,6 @@ CREATE TABLE `Client` (
   `NumEtudiant` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
 
 --
 -- Doublure de structure pour la vue `ClientReservation`
@@ -78,8 +92,6 @@ CREATE TABLE `HistoriqueReservation` (
   `Recup` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
 --
 -- Structure de la table `HoodieReservation`
 --
@@ -93,6 +105,17 @@ CREATE TABLE `HoodieReservation` (
   `Taille` varchar(2) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- ---------------------------------------------------------
+
+--
+-- Structure de la table `InscriptionInfolettre`
+--
+
+CREATE TABLE `InscriptionInfolettre` (
+  `ID` int(11) NOT NULL,
+  `email` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 -- --------------------------------------------------------
 
 --
@@ -101,8 +124,20 @@ CREATE TABLE `HoodieReservation` (
 
 CREATE TABLE `RolesCA` (
   `RoleID` int(11) NOT NULL,
-  `Role` varchar(25) CHARACTER SET latin1 NOT NULL
+  `Role` varchar(25) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `RolesCA`
+--
+
+INSERT INTO `RolesCA` (`RoleID`, `Role`) VALUES
+(1, 'Président'),
+(2, 'Vice-Président'),
+(3, 'Interne'),
+(4, 'Externe'),
+(5, 'Trésorier'),
+(6, 'Webmaster');
 
 -- --------------------------------------------------------
 
@@ -145,6 +180,13 @@ ALTER TABLE `HoodieReservation`
   ADD KEY `FK_Client_Reservation` (`ClientID`);
 
 --
+-- Index pour la table `InscriptionInfolettre`
+--
+ALTER TABLE `InscriptionInfolettre`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Index pour la table `RolesCA`
 --
 ALTER TABLE `RolesCA`
@@ -170,13 +212,19 @@ ALTER TABLE `Client`
 -- AUTO_INCREMENT pour la table `HistoriqueReservation`
 --
 ALTER TABLE `HistoriqueReservation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT pour la table `HoodieReservation`
 --
 ALTER TABLE `HoodieReservation`
   MODIFY `ReservationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT pour la table `InscriptionInfolettre`
+--
+ALTER TABLE `InscriptionInfolettre`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `RolesCA`
@@ -206,5 +254,4 @@ ALTER TABLE `HistoriqueReservation`
 ALTER TABLE `HoodieReservation`
   ADD CONSTRAINT `FK_Client_Reservation` FOREIGN KEY (`ClientID`) REFERENCES `Client` (`ClientID`);
 COMMIT;
-
 
