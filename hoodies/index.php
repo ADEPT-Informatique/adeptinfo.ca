@@ -14,14 +14,14 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../lib/animate/animate.min.css" rel="stylesheet">
-  <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../node_modules/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../node_modules/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="../css/style.css" rel="stylesheet">
@@ -188,10 +188,10 @@
 
 
   <!-- JavaScript Libraries -->
-  <script src="../lib/jquery/jquery.min.js"></script>
-  <script src="../lib/jquery/jquery-migrate.min.js"></script>
-  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../lib/easing/easing.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery.easing/jquery.easing.min.js"></script>
   <script src="../js/main.js"></script>
 
 </body>

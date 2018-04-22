@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/animate.css/animate.min.css" rel="stylesheet">
+    <link href="node_modules/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link href="css/style.css?v1.4" rel="stylesheet">
   </head>
@@ -289,13 +289,13 @@
                 <img src="img/president.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Jonathan Tremblay</h4>
+                    <h4>Olivier<br>Brassard</h4>
                     <span>Président</span>
                     <div class="social">
                       <!-- <a href=""><i class="fa fa-twitter"></i></a>
-                      <a href=""><i class="fa fa-facebook"></i></a>
-                      <a href=""><i class="fa fa-github"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a> -->
+                      <a href=""><i class="fa fa-facebook"></i></a> -->
+                      <a href="https://github.com/obrassard"><i class="fa fa-github"></i></a>
+                      <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -323,13 +323,13 @@
                 <img src="img/externe.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Olivier<br>Brassard</h4>
-                    <span>Secrétaire Externe</span>
+                    <h4>Michael<br>Plourde</h4>
+                    <span>Secrétaire externe</span>
                     <div class="social">
-                      <!-- <a href=""><i class="fa fa-twitter"></i></a> -->
-                      <!-- <a href=""><i class="fa fa-facebook"></i></a> -->
-                      <a href="https://github.com/obrassard"><i class="fa fa-github"></i></a>
-                      <a href="https://www.linkedin.com/in/obrassard/"><i class="fa fa-linkedin"></i></a>
+                      <!-- <a href=""><i class="fa fa-twitter"></i></a>
+                      <a href=""><i class="fa fa-facebook"></i></a>
+                      <a href=""><i class="fa fa-github"></i></a>
+                      <a href=""><i class="fa fa-linkedin"></i></a> -->
                     </div>
                   </div>
                 </div>
@@ -357,13 +357,13 @@
                 <img src="img/tresorier.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Gabriel Lemire</h4>
+                    <h4>Vincent Perreault</h4>
                     <span>Trésorier</span>
                     <div class="social">
                       <!-- <a href=""><i class="fa fa-twitter"></i></a>
                       <a href=""><i class="fa fa-facebook"></i></a>
-                      <a href=""><i class="fa fa-github"></i></a>
-                      <a href=""><i class="fa fa-linkedin"></i></a> -->
+                      <a href=""><i class="fa fa-github"></i></a>-->
+                      <a href="https://www.linkedin.com/in/vincent-p-bb4a66105/"><i class="fa fa-linkedin"></i></a>
                     </div>
                   </div>
                 </div>
@@ -501,19 +501,19 @@
     <!-- #footer -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery.easing/jquery.easing.min.js"></script>
+    <script src="node_modules/superfish/dist/js/hoverIntent.js"></script>
+    <script src="node_modules/superfish/dist/js/superfish.min.js"></script>
+    <script src="node_modules/wow.js/dist/wow.min.js"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="node_modules/counterup/jquery.counterup.min.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
