@@ -1,5 +1,18 @@
 # Site web de l'ADEPT
 
+## Contribution
+
+Votre contribution est la bienvenue! Si vous avez des idées d'éléments à ajouter au site web, nous vous encourageons à créer un [nouvel issue](https://github.com/ADEPT-Informatique/adeptinfo.ca/issues/new) avec le tag **enhancement**.
+
+**Pour développer en local**
+
+Prérequis : [Node.js](https://nodejs.org/en/) et un serveur php/mysql local
+1. `git clone https://github.com/ADEPT-Informatique/adeptinfo.ca.git`
+2. `cd adeptinfo.ca`
+3. `npm install`
+
+Le script de cération de la base de donnée du site est disponible dans `model/adeptbd.sql`
+
 ## Vue d'ensemble
 
 Le nouveau site web de l’ADEPT est un support visuel qui nous permettra d’illustrer la «mission» de l’association, son rôle auprès de ses membres, ainsi que les différents services qu’elle offre. Nous pourrons ainsi informer plus facilement et plus clairement les nouveaux étudiants de l'existence de notre association et encourager plus d’étudiants à s’y joindre.
@@ -12,13 +25,6 @@ Nous avons aussi implémentés un module de réservation pour les cotons ouatés
 2. **Expliquer les services offerts :** Présenter les services et activités offerts par l’ADEPT telles que l'autofinancement ou le LAN.
 3. **Présenter les membres du CA :** Permettre aux étudiants en informatique de reconnaître les membres du CA de l’association afin de pouvoir les contacter en case de besoin.
 4. **Promouvoir l’ADEPT auprès des nouveaux étudiants :** Informer plus facilement les nouveaux étudiants de l’existence de l’ADEPT et les encourager à se joindre.
-
-
-## Caractéristiques techniques
-
-- Front-End : Bootstrap V4 + Jquery
-- Back-End : PHP 7 (ou 5) + MySQL
-- Le site web possédera éventuellement un panneau d'administration afin de faciliter sa gestion et sa mise à jour.
 
 
 ## Idées de développement ultérieur
