@@ -16,7 +16,7 @@
     <!-- Libraries CSS Files -->
     <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="node_modules/animate.css/animate.min.css" rel="stylesheet">
-    <link href="node_modules/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="node_modules/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
