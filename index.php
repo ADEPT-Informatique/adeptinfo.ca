@@ -514,7 +514,7 @@
     <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
     <script src="node_modules/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
-
+    <script src="js/konami.js"></script>
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
   </body>

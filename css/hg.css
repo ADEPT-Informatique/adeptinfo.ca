@@ -1,0 +1,35 @@
+*{
+    color: #f2abe3 !important;
+}
+
+#about::before, #team, #footer{
+    background: rgba(162, 36, 255, 0.7); !important;
+}
+
+p.description{
+    color:black !important;
+}
+
+#featured-services{
+    background: #6f42c1;
+}
+
+h3.small-title {
+    color:white !important;
+}
+
+h4 a, h4, h3{
+    color : #6f42c1 !important;
+}
+
+#services{
+    background: #ffc7f7 !important; ;
+}
+
+.btn-primary.btn{
+    background: rgb(162, 36, 255); !important;
+}
+
+button{
+    background: rgb(162, 36, 255); !important;
+}
