@@ -405,7 +405,7 @@
           <div class="row contact-info">
             <div class="col-md-4 left">
                 <!--<i class="fab fa-discord large-icon discord-color"></i>-->
-				<iframe src="https://discordapp.com/widget?id=362987473154080778&theme=dark" width="150" height="500" allowtransparency="true" frameborder="0"></iframe>
+				<iframe src="https://discordapp.com/widget?id=362987473154080778&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0"></iframe>
               <!--================
 				Bouton d'inviation discord normal
 			  ====================
