@@ -1222,7 +1222,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 #contact .center{
   border-left: solid 1px lightgray;
   border-right: solid 1px lightgray;
+  padding-top: 80px;
 }
+
+#contact .right{
+   padding-top: 80px;
+ }
+
+
 
 #contact .form {
   margin-top: 55px;
@@ -1238,6 +1245,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 25px 0;
     margin: 25px 20px;
   }
+
+  #contact .right{
+    padding: 25px 0;
+  }
+
 
   #contact .form{
     margin-top: 30px;
