@@ -1,6 +1,4 @@
-*{
-    color: #f2abe3 !important;
-}
+
 
 #about::before, #team, #footer{
     background: rgba(162, 36, 255, 0.7); !important;
@@ -19,14 +17,22 @@ h3.small-title {
 }
 
 h4 a, h4, h3{
-    color : #6f42c1 !important;
+    color: rgb(162, 36, 255); !important;
+}
+
+.nav-menu a,#header #logo h1 a{
+    color : rgb(162, 36, 255) !important;
 }
 
 #services{
-    background: #ffc7f7 !important; ;
+    background: #de84ff !important; ;
 }
 
-.btn-primary.btn{
+#about .section-header p{
+    color:white;
+}
+
+.btn-primary.btn, #intro .btn-get-started,#emailbtn{
     background: rgb(162, 36, 255); !important;
 }
 
