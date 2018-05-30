@@ -26,6 +26,7 @@
         border-top: 1px solid rgba(255, 255, 255, 1);
       }
 
+
       h2{
         font-size: 40px !important;
       }
@@ -33,6 +34,11 @@
       h5{
         color: #199fff !important;
         text-shadow: black 3px 3px 2px;
+      }
+
+      div.row{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
       }
 
       @media (max-width: 768px) {
@@ -51,25 +57,29 @@
             <div class="carousel-item active" style="background-image: url('./bg-lan.JPG');">
               <div class="carousel-container">
                 <div class="carousel-content">
-                  <div class="text-center">
-                    <img src="../img/logo-lan.png" width="250" style="margin-bottom:20px">
-                  </div>
-                  <h2>Le site web du LAN de l'ADEPT<br>se refait une beauté!</h2>
-                  <h4>Nous travaillons dur pour concevoir un tout nouveau site pour le LAN. Revenez-bientôt !</h4>
-                  <hr>
-                  <div class="footer-newsletter">
+                  <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="text-center col-md-8">
+                      <img src="../img/logo-lan.png" width="250" style="margin-bottom:20px">
 
-                    <h5>En attendant, inscrivez-vous afin de recevoir toutes les<br>informations importantes pour le prochain LAN !</h5>
-                    <form action="../controller/subscribe.php" method="post">
-                      <div class="input-group mb-3 col-md-8 offset-2">
-                        <input type="text" class="form-control" placeholder="courriel@internet.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                          <input class="btn btn-primary" type="submit" value="S'inscrire">
+                      <h2>Le site web du LAN de l'ADEPT se refait une beauté!</h2>
+                      <h4>Nous travaillons dur pour concevoir un tout nouveau site pour le LAN. Revenez-bientôt !</h4>
+                      <hr>
+                      <h5>En attendant, inscrivez-vous afin de recevoir toutes les informations importantes pour le prochain LAN!</h5>
+                      <form action="../controller/subscribe.php" method="post">
+                        <div class="row">
+                          <div class="col-md-2"> </div>
+                          <div class="input-group col-md-8">
+                            <input type="email" class="form-control" placeholder="courriel@internet.com" aria-label="Recipient's username" required>
+                            <div class="input-group-append">
+                              <input class="btn btn-primary" type="submit" value="S'inscrire">
+                            </div>
+                          </div>
                         </div>
-                      </div>
                       </form>
                   </div>
                   </div>
+                </div>
               </div>
             </div>
           </div>
