@@ -14,27 +14,27 @@
     <!-- Libraries CSS Files -->
     <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="../node_modules/animate.css/animate.min.css" rel="stylesheet">
-    <link href="../node_modules/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="../node_modules/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="../node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link href="../css/style.css" rel="stylesheet">
     <style>
-      h4 {
+      h4,h3,h2,h5 {
         color: white !important;
       }
       hr {
         border-top: 1px solid rgba(255, 255, 255, 1);
       }
-      #hoodiebtn {
-        border: 1px solid #10d213;
+
+      h2{
+        font-size: 40px !important;
       }
-      #lanbtn {
-        background: #007bff !important;
+
+      h5{
+        color: #199fff !important;
+        text-shadow: black 3px 3px 2px;
       }
-      #lanbtn:hover {
-        background: black !important;
-        color: deepskyblue !important;
-      }
+
       @media (max-width: 768px) {
         hr {
           border-top: 1px solid rgba(255, 255, 255, 0);
@@ -55,10 +55,21 @@
                     <img src="../img/logo-lan.png" width="250" style="margin-bottom:20px">
                   </div>
                   <h2>Le site web du LAN de l'ADEPT<br>se refait une beauté!</h2>
-                  <hr>
                   <h4>Nous travaillons dur pour concevoir un tout nouveau site pour le LAN. Revenez-bientôt !</h4>
-                  <a href="../index.php" class="btn btn-get-started btn-primary" id="lanbtn">Retour au site web de l'ADEPT</a>
-                </div>
+                  <hr>
+                  <div class="footer-newsletter">
+
+                    <h5>En attendant, inscrivez-vous afin de recevoir toutes les<br>informations importantes pour le prochain LAN !</h5>
+                    <form action="../controller/subscribe.php" method="post">
+                      <div class="input-group mb-3 col-md-8 offset-2">
+                        <input type="text" class="form-control" placeholder="courriel@internet.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <input class="btn btn-primary" type="submit" value="S'inscrire">
+                        </div>
+                      </div>
+                      </form>
+                  </div>
+                  </div>
               </div>
             </div>
           </div>

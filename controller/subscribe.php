@@ -9,9 +9,10 @@ require_once "../model/bdconnect.php";
 
 $email = validatePost("email");
 
+
+
 if(!$email || !(preg_match('/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+/',$email))){
-    echo $email;
-    //header('Location: ../index.php');
+    header('Location: ../index.php');
     die();
 }
 

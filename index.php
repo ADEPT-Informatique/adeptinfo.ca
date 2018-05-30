@@ -57,7 +57,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#team">Membres du conseil</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="http://lan.adeptinfo.ca">LAN de L'ADEPT</a></li>
+            <li><a href="http://adeptinfo.ca/lan">LAN de L'ADEPT</a></li>
           </ul>
         </nav>
       </div>
@@ -218,7 +218,7 @@
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
                 <div class="icon"><i class="ion-ios-game-controller-b"></i></div>
-                <h4 class="title"><a href="http://lan.adeptinfo.ca">LAN</a></h4>
+                <h4 class="title"><a href="http://adeptinfo.ca/lan">LAN</a></h4>
                 <p class="description">Nous organisons chaque session le LAN de l'ADEPT : un événement de jeux en réseau qui se déroule ici même au cégep et qui regroupe des adeptes de jeux vidéo de partout au Québec!</p>
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
@@ -255,7 +255,7 @@
               <p>Le LAN de l'ADEPT est un événement bisannuel qui a lieu au cours de la semaine d'étude du cégep Édouard-Montpetit. Instauré par un petit groupe de 20 personnes en 2014 et amélioré à chaque édition, l'événement regroupe désormais près de 250 adeptes de jeux vidéo de partout au Québec chaque session!</p>
           </div>
 
-          <a class="cta-btn" href="http://lan.adeptinfo.ca">En savoir plus</a>
+          <a class="cta-btn" href="http://adeptinfo.ca/lan">En savoir plus</a>
         </div>
       </section>
       <!-- #call-to-action -->
@@ -477,7 +477,7 @@
               <h4>Liens utiles</h4>
               <ul>
                 <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php">Réserver un hoodie</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="http://lan.adeptinfo.ca">Le LAN de l'ADEPT</a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan">Le LAN de l'ADEPT</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="btn-get-started scrollto">À propos</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="btn-get-started scrollto">Nos services</a></li>
                                 <li><i class="ion-ios-arrow-right"></i> <a href="https://github.com/ADEPT-Informatique/Charte/blob/master/README.md" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>

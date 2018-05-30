@@ -46,7 +46,7 @@
                     <li><a href="../index.php#services">Services</a></li>
                     <li><a href="../index.php#team">Membres du conseil</a></li>
                     <li><a href="../index.php#contact">Contact</a></li>
-                    <li><a href="http://lan.adeptinfo.ca">LAN de L'ADEPT</a></li>
+                    <li><a href="http://adeptinfo.ca/lan">LAN de L'ADEPT</a></li>
                 </ul>
             </nav>
         </div>
