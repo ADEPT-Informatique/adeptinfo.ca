@@ -325,12 +325,12 @@
                 <img src="img/vpresident.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Matei Martin</h4>
+                    <h4>Christopher<br/>St-Pierre</h4>
                     <span>Vice Président</span>
                     <div class="social">
                       <!-- <a href=""><i class="fa fa-twitter"></i></a>
                       <a href=""><i class="fa fa-facebook"></i></a> -->
-                      <a href="https://github.com/HandsomeRomanian"><i class="fa fa-github"></i></a>
+                      <a href="https://github.com/christopherst-pierre"><i class="fa fa-github"></i></a>
                       <!-- <a href=""><i class="fa fa-linkedin"></i></a> -->
                     </div>
                   </div>
