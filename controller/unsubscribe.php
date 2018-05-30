@@ -31,6 +31,6 @@ try{
     die($e->getMessage());
 }
 
-echo "<h4>Vous avez été retiré de la liste d'envoie avec succès. Au revoir :(</h4>"
+echo "<h4>Vous avez été retiré de la liste d'envoi avec succès. Au revoir :(</h4>"
 
 ?>
