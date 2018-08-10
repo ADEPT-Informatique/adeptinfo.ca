@@ -50,32 +50,45 @@
                 <h3>Devenir Membre de confiance</h3>
             </header>
             <div class="row">
+                <?php if (isset($_GET['r']) && $_GET['r']=='success' ){ ?>
+                    <div class="col-md-7">
+                        <div class="alert alert-primary">Votre candidature a été envoyée avec succès!</div>
+                    </div>
+                <?php } else if ((isset($_GET['r']) && $_GET['r']=='error' )){ ?>
+                    <div class="col-md-7">
+                        <div class="alert alert-danger">Une erreur est survenue! Veuillez réésayer.</div>
+                    </div>
+                <?php }?>
+
+
+            </div>
+            <div class="row">
                 <div class="col-md-8" id="1">
                     <p>
                         Tu es un membre actif de l'ADEPT et tu veux t'impliquer dans l'association ?<br class="d-none d-lg-block">
                         Tu pourrais devenir un <b>membre de confiance</b>.
                     </p>
                     <p>
-                        Les membres de confiances ont un accès privilégié au local.
-                        Ils peuvent emprunter la clé flotante pour pouvoir y accéder n'importe quand.
-                        En revanche, les membres de confiances sont les <b>responsables du
+                        Les membres de confiance ont un accès privilégié au local.
+                        Ils peuvent emprunter la clé flottante pour pouvoir y accéder n'importe quand.
+                        En revanche, les membres de confiance sont les <b>responsables du
                         local</b> lorsqu'aucun membre du conseil d'administration n'est présent.
                     </p>
                     <button id="btn-1" class="btn btn-outline-light">Ça m'intéresse !</button>
                 </div>
                 <div class="col-md-8" style="display: none" id="2">
                     <p>
-                       <strong>Voici les principaux critères de séléction des membres de confiance :</strong>
+                       <strong>Voici les principaux critères de sélection des membres de confiance :</strong>
                     </p>
                     <ol>
                         <li>Être membre de l'ADEPT depuis au moins une session</li>
                         <li>Être un membre <i>actif</i> de l'ADEPT et fréquenter régulièrement le local</li>
                         <li>Être motivé et vouloir s'impliquer auprès de l'asso</li>
-                        <li>Être gentil avec les administrateur ;) </li>
+                        <li>Être gentil avec les administrateurs ;) </li>
                         <li>Bien s'entendre avec tout le monde</li>
                     </ol>
-                    <p>Puisque nous ne pouvons nommer qu'un nombre limité de membres de confiances à chaque session,
-                    nous ferons une sélection parmis les candidatures recues à partir de ces critères et des réponses
+                    <p>Puisque nous ne pouvons nommer qu'un nombre limité de membres de confiance à chaque session,
+                    nous ferons une sélection parmi les candidatures reçues à partir de ces critères et des réponses
                     au questionnaire d'inscription de la page suivante.</p>
 
                     <button id="btn-2" class="btn btn-outline-light">Continuer</button>
@@ -86,12 +99,12 @@
             </div>
             <div class="row text-center" style="display: none; padding-top: 0" id="contact">
                 <div class="col-md-12">
-                    <strong>Pour t'inscrire en tant que membre de confiance candidat, tu n'a qu'a répondre
-                            à ce questionaire !</strong><br>
-                        (&nbsp;Répond du mieux possible à chacune des questions ! Si tu ne connais pas une des réponse, essaie quelque chose&nbsp;!&nbsp;)
+                    <strong>Pour t'inscrire en tant que candidat, tu n'as qu'à répondre
+                            à ce questionnaire !</strong><br>
+                        (&nbsp;Répond de ton mieux à chacune des questions ! Si tu ne connais pas une des réponses, essaie quelque chose&nbsp;!&nbsp;)
                 </div>
                 <div class="col-md-8 offset-md-2 form text-left">
-                    <form action="" method="post" role="form" class="contactForm">
+                    <form action="controller/candidatureMdc.php" method="post" role="form" class="contactForm">
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="nom">Quel est ton nom ?</label>
@@ -106,19 +119,19 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="nbsession">Combien de sessions en informatique as tu complété jusqu'à date ?</label>
+                                <label for="nbsession">Combien de sessions en informatique as-tu complétées jusqu'à date ?</label>
                                 <input type="number" name="nbsession" class="form-control" id="nbsession" required />
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="raison">Pour quelle(s) raison(s) veux tu devenir membre de confiance ?</label>
+                                <label for="raison">Pour quelle(s) raison(s) veux-tu devenir membre de confiance ?</label>
                                 <textarea id="raison" class="form-control" name="raison" required></textarea>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="reaction">Comment réagirais-tu si .. ?</label>
+                                <label for="reaction">Un étudiant utilise la télévision comme escabot pour grimper sur le réfrigérateur. En lui demandant ce qu'il fait, il vous répond qu'il achète un thé glacé à l'ATIM par le plafond. Que faites-vous ?</label>
                                 <textarea id="reaction" class="form-control" name="reaction" required></textarea>
                             </div>
                         </div>
@@ -136,7 +149,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="java">Java ou Javascirpt ?</label>
+                                <label for="java">Java ou Javascript ?</label>
                                 <input type="text" name="java" class="form-control" id="java" required />
                             </div>
                         </div>
@@ -183,8 +196,8 @@
                         <div class="form-row">
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="check" required>
-                                <label class="form-check-label" for="check">Je comprend qu'il ne peut-y avoir qu'un
-                                    nombre limité de membres de confiances par session et que ma participation ne garrantit pas
+                                <label class="form-check-label" for="check">Je comprend qu'il ne peut y avoir qu'un
+                                    nombre limité de membres de confiance par session et que ma participation ne garantit pas
                                 ma sélection.</label>
                             </div>
                         </div>
@@ -225,7 +238,7 @@
                             <p>
                                 945 chemin Chambly, Longueuil<br>
                                 Local F-041, CEM,<br>
-                                Quebec, Canada <br>
+                                Québec, Canada <br>
                                 <a href="mailto:adept.informatique.cem@gmail.com">Nous écrire par courriel...</a>
                             </p>
                             <div class="social-links">

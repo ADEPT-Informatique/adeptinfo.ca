@@ -398,7 +398,7 @@
         <section id="membres-confiance"  class="wow fadeIn">
             <div class="container">
                 <header class="section-header">
-                    <h3>Membres de confiances</h3>
+                    <h3>Membres de confiance</h3>
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-7">
@@ -515,7 +515,7 @@
               <p>
                 945 chemin Chambly, Longueuil<br>
                 Local F-041, CEM,<br>
-                Quebec, Canada <br>
+                Québec, Canada <br>
                 <a href="mailto:adept.informatique.cem@gmail.com">Nous écrire par courriel...</a>
               </p>
               <div class="social-links">
