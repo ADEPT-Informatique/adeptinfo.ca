@@ -103,7 +103,7 @@
                                 <div class="validation"></div>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" name="numetu" id="numetu" placeholder="Votre numéro d'étudiant du cégep"  required/>
+                                <input type="text" class="form-control" name="numetu" id="numetu" placeholder="Votre numéro d'étudiant du cégep" pattern="[0-9]{7}"  required/>
                                 <div class="validation"></div>
                             </div>
 
