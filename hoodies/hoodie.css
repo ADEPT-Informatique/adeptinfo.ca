@@ -9,7 +9,7 @@ body {
     background: black;
 }
 
-img.boxed{
+img{
     max-width: 100%
 }
 .theme-font{
@@ -18,4 +18,8 @@ img.boxed{
 
 .underlined{
     text-decoration: underline;
+}
+
+h4, h5, h6{
+    color: black;
 }
