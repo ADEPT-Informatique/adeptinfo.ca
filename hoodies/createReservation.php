@@ -11,8 +11,9 @@ $prenom = validatePost("prenom");
 $email = validatePost("email");
 $size = validatePost("size");
 $studentId = validatePost("studentid");
+$color = validatePost("color");
 
-if(!($nom && $prenom && $email && $studentId && $size) ||
+if(!($nom && $prenom && $email && $studentId && $size && $color) ||
 !(preg_match('/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+/',$email))||
 !(preg_match('/^[1][0-9]{6}$/',$studentId))){
     //Verifier que tous les champs sont valides
@@ -28,7 +29,7 @@ $cId = GetIDOfLastClient();
 $cfnumber = "AD".substr(strval(time()), -4).strval($cId);
 
 
-MakeReservation($cId, $cfnumber, $size);
+MakeReservation($cId, $cfnumber, $size, $color);
 
 
 //Email de confirmation
