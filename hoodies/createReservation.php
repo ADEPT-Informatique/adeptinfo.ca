@@ -35,16 +35,20 @@ MakeReservation($cId, $cfnumber, $size, $color);
 //Email de confirmation
 
 // the message
-$msg = "Bonjour ".$prenom."!<br>Merci d'avoir reservé un Hoodie du département informatique!<br>Votre numero de confirmation est le <strong>".$cfnumber.".</strong><br><br>
+$msg = "<html>Bonjour ".$prenom."!<br>Merci d'avoir reservé un Hoodie du département informatique!<br>Votre numero de confirmation est le <strong>".$cfnumber.".</strong><br><br>
 Nous vous enverrons bientôt un courriel pour vous informer de l'état de votre commande.
-<br><br>Passez une bonne journée!<br>Cordialement, l'équipe de l'ADEPT !";
+<br><br>Passez une bonne journée!<br>Cordialement, l'équipe de l'ADEPT !</html>";
 
 $msg = wordwrap($msg,70);
 
-$headers = 'From: noreply@adeptinfo.ca' . "\r\n";
+$headers = 'From: adept@adeptinfo.ca' . "\r\n";
+$headers .= "Return-Path: noreply@adeptinfo.ca\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+$subject = '=?utf-8?B?'.base64_encode("ADEPT - Confirmation de ta réservation").'?=';
+
 // send email
-mail($email,"ADEPT - Confirmation de ta réservation",$msg,$headers);
+mail($email,$subject,$msg,$headers);
 
 //=============================
 // the message
@@ -54,6 +58,8 @@ $msgStatus = "Notification ADEPT-Hoodies<br><br><h4>Une réservation de plus!</h
 $msgStatus = wordwrap($msgStatus,70);
 
 $headers = 'From: status@adeptinfo.ca' . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Return-Path: noreply@adeptinfo.ca\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 // send email
 mail('brassard.oli@gmail.com',"ADEPT Nouvelle réservation",$msgStatus,$headers);
