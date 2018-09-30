@@ -50,47 +50,42 @@
   </head>
   <body>
     <section id="intro">
-      <div class="intro-container">
-        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-          <ol class="carousel-indicators"></ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active" style="background-image: url('./bg-lan.JPG');">
-              <div class="carousel-container">
-                <div class="carousel-content">
-                  <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="text-center col-md-8">
-                      <img src="../img/logo-lan.png" width="250" style="margin-bottom:20px">
+        <div class="intro-container">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" style="background-image: url('./bg-lan.JPG');">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="text-center col-md-8">
+                                        <img src="https://adeptinfo.ca/img/logo-lan.png" width="250" style="margin-bottom:20px">
+                                        <img src="https://adeptinfo.ca/img/badge.png" width="250" style="margin-bottom:20px">
 
-                      <h3>Nous travaillons dur pour concevoir un tout nouveau site pour le LAN. Revenez-bientôt !</h3>
-                      <hr>
-                      <h5>En attendant, inscrivez-vous afin de recevoir toutes les informations importantes pour le prochain LAN!</h5>
-                      <form action="../controller/subscribe.php" method="post">
-                        <div class="row">
-                          <div class="col-md-2"> </div>
-                          <div class="input-group col-md-8">
-                            <input type="email" class="form-control" placeholder="courriel@internet.com" name="email" required>
-                            <div class="input-group-append">
-                              <input class="btn btn-primary" type="submit" value="S'inscrire">
+                                        <h3>Nous sommes heureux de vous accueillir au LAN de l'ADEPT édition Automne 2018!</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <br />
+                                        <h5>Veuillez patienter, vous accéderez au site dans quelques instants ...</h5>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </form>
-                  </div>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-    <!-- #intro -->
-    <!-- JavaScript Libraries -->
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Template Main Javascript File -->
-    <script src="../js/main.js"></script>
-  </body>
+    <script type="text/javascript">
+      var start = new Date().getTime();
+      for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > 1000){
+          break;
+        }
+      }
+      window.location.href = "https://lanadept.azurewebsites.net"
+    </script>
+</body>
 </html>
