@@ -133,6 +133,18 @@ CREATE TABLE `HoodieReservation` (
 
 -- ---------------------------------------------------------
 
+create table if not exists ProduitsAutoFinancement
+(
+	Id int auto_increment
+		primary key,
+	NomProduit varchar(50) not null,
+	Prix decimal(4,2) not null,
+	Disponible bit default b'1' not null,
+	EstUnBrevage bit not null
+)
+collate=utf8_unicode_ci;
+
+
 --
 -- Structure de la table `InscriptionInfolettre`
 --
@@ -295,4 +307,3 @@ ALTER TABLE `HistoriqueReservation`
 ALTER TABLE `HoodieReservation`
   ADD CONSTRAINT `FK_Client_Reservation` FOREIGN KEY (`ClientID`) REFERENCES `Client` (`ClientID`);
 COMMIT;
-
