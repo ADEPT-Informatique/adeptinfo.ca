@@ -228,8 +228,8 @@
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-pizza"></i></div>
-              <h4 class="title">Frigo et collations</h4>
-              <p class="description">Vous êtes pressé ou vous ne voulez pas faire la file à la cafeteria? Ça tombe bien car nous avons justement un frigo plein pour vous dépanner! De nombreux breuvages et collations sont disponible à faible prix !</p>
+              <h4 class="title"><a href="./produits.php">Frigo et collations</a></h4>
+              <p class="description">Vous êtes pressé ou vous ne voulez pas faire la file à la cafeteria? Ça tombe bien car nous avons justement un frigo plein pour vous dépanner! De <a href="./produits.php">nombreux breuvages et collations</a> sont disponible à faible prix !</p>
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-ios-monitor"></i></div>

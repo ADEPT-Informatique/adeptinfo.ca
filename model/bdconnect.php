@@ -5,7 +5,7 @@
  * Copyright © 2018 Olivier Brassard. All rights reserved.
  */
 
-include_once "../controller/requestsHandlers.php";
+include_once __DIR__."/../controller/requestsHandlers.php";
 
 //Connexion à la BD
 function connect_BD(){
