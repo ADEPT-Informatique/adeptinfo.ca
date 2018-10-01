@@ -359,7 +359,7 @@
                 <img src="img/interne.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Jasmin Papierz-Lambert</h4>
+                    <h4>Laurent Bouchard</h4>
                     <span>Secrétaire interne</span>
                     <div class="social">
                       <!-- <a href=""><i class="fa fa-twitter"></i></a>
@@ -392,6 +392,33 @@
         </div>
       </section>
       <!-- #team -->
+      <!--==========================
+      Programme des membres de confiance
+      ============================-->
+        <section id="membres-confiance"  class="wow fadeIn">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Membres de confiance</h3>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7">
+                            <h5 class="white">Vous avez envie de vous impliquer ?<br>Devenez membre de confiance !</h5>
+                            <p>
+                                Les membres de confiance ont un accès privilégié au local de l'association et
+                                ont la responsabilité d'assurer sa supervision lorsqu'aucun administrateur n'est
+                                présent.
+                            </p>
+                            <a href="./membresconfiance.php" class="btn btn btn-light">Devenir membre de confiance</a>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/membre-confiance.png">
+                        </div>
+                    </div>
+
+                </header>
+            </div>
+        </section>
+        <!-- #facts -->
       <!--==========================
           Section de contact
       ============================-->
@@ -488,7 +515,7 @@
               <p>
                 945 chemin Chambly, Longueuil<br>
                 Local F-041, CEM,<br>
-                Quebec, Canada <br>
+                Québec, Canada <br>
                 <a href="mailto:adept.informatique.cem@gmail.com">Nous écrire par courriel...</a>
               </p>
               <div class="social-links">

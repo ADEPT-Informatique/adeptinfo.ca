@@ -1178,6 +1178,52 @@ body.mobile-nav-active #mobile-nav-toggle {
     filter: grayscale(100%) contrast(120%);
 
 }
+/* Section membres-confiances
+--------------------------------*/
+
+#membres-confiance{
+  background: #111;
+  padding: 60px 0;
+}
+
+#membres-confiance .section-header .col-md-4{
+  text-align: center;
+}
+
+#membres-confiance .section-header .col-md-7{
+  text-align: right;
+}
+
+#membres-confiance .section-header h3,
+#membres-confiance .section-header p{
+  color: white;
+}
+
+#membres-confiance .section-header p{
+  margin-top: 35px;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+#membres-confiance .section-header img{
+  height: 220px;
+}
+
+@media (max-width: 768px) {
+  #membres-confiance .section-header img{
+    margin-top: 30px;
+  }
+
+  #membres-confiance .section-header .col-md-7{
+    text-align: center;
+  }
+
+  #membres-confiance .section-header p {
+    text-align: center;
+  }
+}
+
+
 /* Contact Section
 --------------------------------*/
 #contact {

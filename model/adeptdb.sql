@@ -28,6 +28,32 @@ DELIMITER ;
 
 -- --------------------------------------------------------
 
+
+--
+-- Structure de la table `CandidatureMembreConfiance`
+--
+
+CREATE TABLE `CandidatureMembreConfiance` (
+  `ReponseID` int(11) NOT NULL,
+  `Nom` varchar(50) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `NbSessions` int(11) NOT NULL,
+  `Motivations` varchar(500) NOT NULL,
+  `Situation` varchar(500) NOT NULL,
+  `Pizza` varchar(50) NOT NULL,
+  `Facto` varchar(45) NOT NULL,
+  `JavaJs` varchar(40) NOT NULL,
+  `Gif` varchar(45) NOT NULL,
+  `Meme` varchar(800) NOT NULL,
+  `SujetBanis` varchar(100) NOT NULL,
+  `Breuvage` varchar(45) NOT NULL,
+  `AlimentPlusVendu` varchar(45) NOT NULL,
+  `NumeroLocal` varchar(45) NOT NULL,
+  `DateCandidature` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `Administrateurs`
 --
@@ -187,6 +213,13 @@ ALTER TABLE `InscriptionInfolettre`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Index pour la table `CandidatureMembreConfiance`
+--
+ALTER TABLE `CandidatureMembreConfiance`
+  ADD PRIMARY KEY (`ReponseID`);
+
+
+--
 -- Index pour la table `RolesCA`
 --
 ALTER TABLE `RolesCA`
@@ -194,6 +227,14 @@ ALTER TABLE `RolesCA`
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `CandidatureMembreConfiance`
+--
+ALTER TABLE `CandidatureMembreConfiance`
+  MODIFY `ReponseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 
 --

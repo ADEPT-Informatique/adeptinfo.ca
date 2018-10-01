@@ -19,13 +19,13 @@
   <!-- Libraries CSS Files -->
     <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="../node_modules/animate.css/animate.min.css" rel="stylesheet">
-    <link href="../node_modules/ionicons/dist/css/ionicons.min.css" rel="stylesheet">
+<!--    <link href="../node_modules/ionicons/dist/css/ionicons.min.css" rel="stylesheet">-->
     <link href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="../node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="../css/style.css" rel="stylesheet">
-  <link href="hoodie.css" rel="stylesheet">
+  <link href="./hoodie.css" rel="stylesheet">
 
 </head>
 
@@ -74,26 +74,51 @@
 			<?php } ?>
 
 		  <h3>Les Hoodies de l'ADEPT sont arrivés!</h3>
-		  <a class="btn btn-lg btn-outline-primary theme-font" href="#resvform">RÉSERVER MAINTENANT</a><br><br>
-		  <p>Intéréssé par un hoodie de la technique !? C'est le moment d'effectuer votre commande!<br>
+		  <p>Intéréssé par un hoodie de la technique !? C'est le moment d'effectuer votre commande pour la session A18!<br>
               <br>Les hoodie coûtent 40$ (taxes incluses) et un supplément est applicable pour les tailles plus grandes que XL.<br><strong>Veuillez noter qu'un dépôt d'au moins 20$ sera nécessaire avant l'envoi de votre commande à notre fournisseur..</strong><br>
           </p>
+            <a class="btn btn-lg btn-outline-primary theme-font" href="#resvform">RÉSERVER MAINTENANT</a><br><br>
+
+            <h4>Cette année, le hoodie de l'ADEPT est disponible en 3 couleurs !</h4>
 
 		</div>
 		<div class="row">
-		  <div class="col-md-7"><img class="boxed" src="../img/hoodies/hoodies.jpg"></div>
-		  <div class="col-md-5"><img class="boxed" src="../img/hoodies/badge.png"></div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../img/hoodies/hoodie_navy.jpg" >
+                    <div class="card-body">
+                        <h6 class="card-text">Navy</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../img/hoodies/hoodie_noir.jpg" >
+                    <div class="card-body">
+                        <h6 class="card-text">Noir</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="../img/hoodies/hoodie_royal.jpg" >
+                    <div class="card-body">
+                        <h6 class="card-text">Bleu royal</h6>
+                    </div>
+                </div>
+            </div>
 		</div>
 		<span id="resvform"></span>
 		<hr >
 		<section>
-		<h2>Réservation</h2>
+            <br>
+		<h3>Réservation</h3>
 		<div class="form">
-		    <div class="alert alert-info">
+		    <!-- <div class="alert alert-info">
 		        <strong>La période de réservation des hoodies est maintenant terminée.</strong><br>
 		        Pour plus d'informations, adressez-vous à un membre du CA de l'ADEPT.
-		    </div>
-		  <!--<form action="createReservation.php" method="post" role="form" class="contactForm">
+		    </div> -->
+		  <form action="createReservation.php" method="post" role="form" class="contactForm">
 			<div class="form-row">
 			  <div class="form-group col-md-6">
 				<input type="text" name="prenom" class="form-control" id="firstname" placeholder="Prénom" required />
@@ -114,45 +139,53 @@
 			<div class="form-group card">
 			  <div class="card-body">
 				<p class="underlined">Grandeur</p>
-			  <div class="radio">
-				<label>
-				  <input type="radio" name="size" id="size1" value="S">&nbsp;
-				  Petit
-				</label>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" id="size1" value="S" required>&nbsp;
+                      Petit
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" id="size2" value="M">&nbsp;
+                      Moyen
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="size" id="size3" value="L">&nbsp;
+                      Grand
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                        <input type="radio" name="size" id="size3" value="XL">&nbsp;
+                        Très Grand
+                    </label>
+                  </div>
+<!--                  <div class="radio">-->
+<!--                    <label>-->
+<!--                      <input type="radio" name="size" id="sizeundefined" value="N" checked>&nbsp;-->
+<!--                      J'irai essayer les grandeurs à l'ADEPT-->
+<!--                    </label>-->
+<!--                  </div>-->
+                </div>
 			  </div>
-			  <div class="radio">
-				<label>
-				  <input type="radio" name="size" id="size2" value="M">&nbsp;
-				  Moyen
-				</label>
-			  </div>
-			  <div class="radio">
-				<label>
-				  <input type="radio" name="size" id="size3" value="L">&nbsp;
-				  Grand
-				</label>
-			  </div>
-              <div class="radio">
-                  <label>
-                      <input type="radio" name="size" id="size3" value="XL">&nbsp;
-                      Très Grand
-                  </label>
+              <div class="form-group card">
+                  <div class="card-body">
+                      <label for="selectCouleur" class="underlined">Couleur</label>
+                      <select class="form-control" name="color" id="selectCouleur" required>
+                          <option value="">Veuillez choisir la couleur</option>
+                          <option value="Navy">Navy</option>
+                          <option value="Black">Noir</option>
+                          <option value="Royal">Bleu</option>
+                      </select>
+                  </div>
               </div>
-
-			  <div class="radio">
-				<label>
-				  <input type="radio" name="size" id="sizeundefined" value="N" checked>&nbsp;
-				  J'irai essayer les grandeurs à l'ADEPT
-				</label>
-			  </div>
-			  </div>
-			</div>
-
-
 			<div class="text-center"><button type="submit">Confirmer</button></div>
-		  </form>-->
+		  </form>
 		</div>
-            <br>
+    <br>
 
 		</section>
 	  </div>

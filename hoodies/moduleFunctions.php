@@ -41,14 +41,15 @@ function GetIDOfLastClient(){
 }
 
 
-function MakeReservation($client,$num,$size){
+function MakeReservation($client,$num,$size,$color){
     $db = connect_BD();
     try{
-        $request = $db -> prepare("INSERT INTO HoodieReservation(ClientID,NumeroReservation,Taille) VALUES (:client, :num, :size)");
+        $request = $db -> prepare("INSERT INTO HoodieReservation(ClientID,NumeroReservation,Taille,Color) VALUES (:client, :num, :size, :color)");
         $request ->execute(array(
             "client"=>$client,
             "num"=>$num,
-            "size"=>$size
+            "size"=>$size,
+            "color"=>$color
         ));
         $request -> closeCursor();
     }catch (Exception $e){
