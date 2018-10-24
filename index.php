@@ -507,7 +507,7 @@
                 <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan">Le LAN de l'ADEPT</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="btn-get-started scrollto">À propos</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="btn-get-started scrollto">Nos services</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="https://github.com/ADEPT-Informatique/Charte/blob/master/README.md" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="https://adept-informatique.github.io/Charte/" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>
               </ul>
             </div>
             <div class="col-lg-3 col-md-6 footer-contact">
