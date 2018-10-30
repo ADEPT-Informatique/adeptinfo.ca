@@ -194,7 +194,7 @@ function UpdateReservation($reservationID, $depot, $size, $isRecupered)
             'ID' => $reservationID,
             'depot' => $depot,
             'size' => $size,
-            'recup' => $isRecupered
+            'recup' => $isRecupered ? 1:0
         ));
 
         return true;
@@ -215,7 +215,7 @@ function SaveInHistory($datas)
             'nom' => $datas['Nom'],
             'type' => $datas['Type'],
             'depot' => $datas['Depot'],
-            'recup' => $datas['Recup']
+            'recup' => $datas['Recup'] ? 1:0
         ));
 
         return true;
