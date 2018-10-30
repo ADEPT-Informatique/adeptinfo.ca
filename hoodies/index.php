@@ -174,7 +174,7 @@
               <div class="form-group card">
                   <div class="card-body">
                       <label for="selectCouleur" class="underlined">Couleur</label>
-                      <select class="form-control" id="selectCouleur" required>
+                      <select class="form-control" name="color" id="selectCouleur" required>
                           <option value="">Veuillez choisir la couleur</option>
                           <option value="Navy">Navy</option>
                           <option value="Black">Noir</option>
