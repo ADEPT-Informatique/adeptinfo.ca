@@ -41,14 +41,15 @@ function GetIDOfLastClient(){
 }
 
 
-function MakeReservation($client,$num,$size){
+function MakeReservation($client,$num,$size,$color){
     $db = connect_BD();
     try{
-        $request = $db -> prepare("INSERT INTO HoodieReservation(ClientID,NumeroReservation,Taille) VALUES (:client, :num, :size)");
+        $request = $db -> prepare("INSERT INTO HoodieReservation(ClientID,NumeroReservation,Taille,Color) VALUES (:client, :num, :size, :color)");
         $request ->execute(array(
             "client"=>$client,
             "num"=>$num,
-            "size"=>$size
+            "size"=>$size,
+            "color"=>$color
         ));
         $request -> closeCursor();
     }catch (Exception $e){
@@ -194,7 +195,7 @@ function UpdateReservation($reservationID, $depot, $size, $isRecupered)
             'ID' => $reservationID,
             'depot' => $depot,
             'size' => $size,
-            'recup' => $isRecupered
+            'recup' => $isRecupered ? 1:0
         ));
 
         return true;
@@ -215,7 +216,7 @@ function SaveInHistory($datas)
             'nom' => $datas['Nom'],
             'type' => $datas['Type'],
             'depot' => $datas['Depot'],
-            'recup' => $datas['Recup']
+            'recup' => $datas['Recup'] ? 1:0
         ));
 
         return true;

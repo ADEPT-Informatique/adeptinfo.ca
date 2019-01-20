@@ -228,8 +228,8 @@
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-pizza"></i></div>
-              <h4 class="title">Frigo et collations</h4>
-              <p class="description">Vous êtes pressé ou vous ne voulez pas faire la file à la cafeteria? Ça tombe bien car nous avons justement un frigo plein pour vous dépanner! De nombreux breuvages et collations sont disponible à faible prix !</p>
+              <h4 class="title"><a href="./produits.php">Frigo et collations</a></h4>
+              <p class="description">Vous êtes pressé ou vous ne voulez pas faire la file à la cafeteria? Ça tombe bien car nous avons justement un frigo plein pour vous dépanner! De <a href="./produits.php">nombreux breuvages et collations</a> sont disponible à faible prix !</p>
             </div>
             <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
               <div class="icon"><i class="ion-ios-monitor"></i></div>
@@ -238,7 +238,7 @@
             </div>
               <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                   <div class="icon"><i class="ion-chatbubble"></i></div>
-                  <h4 class="title"><a href="https://discord.gg/7ycpHGe">Serveur Discord</a></h4>
+                  <h4 class="title"><a href="https://discordapp.com/invite/KYZ5JQB">Serveur Discord</a></h4>
                   <p class="description">Rejoignez notre serveur Discord où les élèves de la technique sont réunis afin de s'entraider et s'amuser ensemble.</p>
               </div>
           </div>
@@ -359,7 +359,7 @@
                 <img src="img/interne.jpg" class="img-fluid" alt="">
                 <div class="member-info">
                   <div class="member-info-content">
-                    <h4>Jasmin Papierz-Lambert</h4>
+                    <h4>Laurent Bouchard</h4>
                     <span>Secrétaire interne</span>
                     <div class="social">
                       <!-- <a href=""><i class="fa fa-twitter"></i></a>
@@ -393,6 +393,33 @@
       </section>
       <!-- #team -->
       <!--==========================
+      Programme des membres de confiance
+      ============================-->
+        <section id="membres-confiance"  class="wow fadeIn">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Membres de confiance</h3>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7">
+                            <h5 class="white">Vous avez envie de vous impliquer ?<br>Devenez membre de confiance !</h5>
+                            <p>
+                                Les membres de confiance ont un accès privilégié au local de l'association et
+                                ont la responsabilité d'assurer sa supervision lorsqu'aucun administrateur n'est
+                                présent.
+                            </p>
+                            <a href="./membresconfiance.php" class="btn btn btn-light">Devenir membre de confiance</a>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/membre-confiance.png">
+                        </div>
+                    </div>
+
+                </header>
+            </div>
+        </section>
+        <!-- #facts -->
+      <!--==========================
           Section de contact
       ============================-->
       <section id="contact" class="section-bg wow fadeInUp">
@@ -412,8 +439,8 @@
 			  <svg class="svg-inline--fa fa-discord  large-icon discord-color" aria-hidden="true" width="50" data-icon="discord" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path fill="currentColor" d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"></path>
               </svg>
-              <h3>Discord</h3>
-              <p><a href="https://discordapp.com/invite/5hcyQfx" class="btn btn-primary text-white discord">Rejoindre notre serveur</a></p> -->
+                <h3>Discord</h3>-->
+              <p><a href="https://discordapp.com/invite/KYZ5JQB" class="btn btn-primary text-white discord">Rejoindre notre serveur</a></p>
             </div>
 
 
@@ -480,7 +507,7 @@
                 <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan">Le LAN de l'ADEPT</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="btn-get-started scrollto">À propos</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="btn-get-started scrollto">Nos services</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="https://github.com/ADEPT-Informatique/Charte/blob/master/README.md" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="https://adept-informatique.github.io/Charte/" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>
               </ul>
             </div>
             <div class="col-lg-3 col-md-6 footer-contact">
@@ -488,7 +515,7 @@
               <p>
                 945 chemin Chambly, Longueuil<br>
                 Local F-041, CEM,<br>
-                Quebec, Canada <br>
+                Québec, Canada <br>
                 <a href="mailto:adept.informatique.cem@gmail.com">Nous écrire par courriel...</a>
               </p>
               <div class="social-links">
