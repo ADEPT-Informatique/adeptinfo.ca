@@ -1,8 +1,7 @@
 <?php
 require_once('bd_connexion.php');
 
-function getAllUser()
-{
+function getAllUser(){
     $bdd = connect_DB();
     try {
         $reponse = $bdd->query("SELECT u.userID, u.nom, u.prenom, r.Role, u.email 
@@ -63,7 +62,7 @@ function getIdByRole($roleID){
 function getMDC(){
     $bdd = connect_DB();
     try {
-        $reponse = $bdd->query("SELECT u.userID, u.nom, u.prenom, u.email 
+        $reponse = $bdd->query("SELECT u.userID, u.nom, u.prenom, u.email, userID 
                                 FROM Utilisateur u 
                                 INNER JOIN Roles r 
                                 ON r.RoleID = u.roleID

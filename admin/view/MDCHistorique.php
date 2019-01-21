@@ -116,63 +116,21 @@ else{
                             </thead>
                             <tbody>
                                 <?php
-                            $tabAll = getCandidaturesMDC();
-                            foreach ($tabAll as $candidature)
+                            $tabAllUser = getCandidaturesMDC();
+                            foreach ($tabAllUser as $user)
                             { ?>
-                                <tr class="clickable" data-toggle="collapse" id="row<?php echo $candidature['ReponseID'];?>" data-target=".row<?php echo $candidature['ReponseID'];?>">
+                                <tr>
                                     <td>
-                                        <?php echo $candidature['prenom']; ?>
+                                        <?php echo $user['prenom']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $candidature['nom']; ?>
+                                        <?php echo $user['nom']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $candidature['Email']; ?>
+                                        <?php echo $user['Email']; ?>
                                     </td>
                                     <td>
-                                        <a href="">Accepter</a>
-                                    </td>
-                                </tr>
-                                <tr class="collapse row<?php echo $candidature['ReponseID'];?>">
-                                    <td>
-                                        <?php echo $candidature['NbSessions']." Sessions"; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Motivation:</b><br>".$candidature['Motivations']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Situation:</b><br>".$candidature['Situation']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Pizza:</b><br>".$candidature['Pizza']; ?>
-                                    </td>
-                                </tr>
-                                <tr class="collapse row<?php echo $candidature['ReponseID'];?>">
-                                    <td>
-                                        <?php echo "<b>Maths (</b><i>(x-y)(x+3)</i><b>):</b><br>".$candidature['Facto']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Java ou Javascript ?:</b><br>".$candidature['JavaJs']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<img src='".$candidature['Meme']."'/> <br> <a href='".$candidature['Meme']."'>if not work</a>"; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Gif ou Jif:</b><br>".$candidature['Gif']; ?>
-                                    </td>
-                                </tr>
-                                <tr class="collapse row<?php echo $candidature['ReponseID'];?>">
-                                    <td>
-                                        <?php echo "<b>Sujet Banis:</b><br>".$candidature['SujetBanis'];?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>IF !Arizona THEN MDCrefuse():</b><br>".$candidature['Breuvage']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Aliment le plus vendu:</b><br>".$candidature['AlimentPlusVendu']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo "<b>Numero du local (F-041):</b><br>".$candidature['NumeroLocal']; ?>
+                                        <a href="../controller/MDCadd.php?id=<?php echo $user['id']; ?>">Accepter</a>
                                     </td>
                                 </tr>
                                 <?php } ?>

@@ -11,7 +11,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="../index.php">
-                            <img src="../img/dash/icon/logo.png" alt="CoolAdmin" />
+                            <img src="../img/badge.png" alt="ADEPT INFORMATIQUE" width="70"/>
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -34,11 +34,11 @@
                         </li>
                         <li>
                             <a href="../view/userList.php">
-                                <i class="fas fa-shopping-basket"></i>Epicerie
+                            <i class="fas fa-users"></i>Liste Utilisateurs
                             </a>
                         </li>
                         <li>
-                            <a href="../hoodies/index.php">
+                            <a href="HoodieIndex.php">
                                 <i class="fas fa-tshirt"></i>Gestion hoodies</a>
                         </li>
                         <li>
@@ -47,7 +47,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <i class="far fa-gamepad"></i>Comité du LAN</a>
+                                <i class="fas fa-gamepad"></i>Comité du LAN</a>
                         </li>
 
                         <li>
@@ -89,7 +89,7 @@
                         </li>
                         <li>
                             <a href="../view/UserList.php">
-                                <i class="fas fa-shopping-basket"></i>Liste Utilisateurs
+                                <i class="fas fa-users"></i>Liste Utilisateurs
                             </a>
                         </li>
                         <li>
@@ -102,7 +102,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <i class="far fa-gamepad"></i>Comité du LAN</a>
+                                <i class="fas fa-gamepad"></i>Comité du LAN</a>
                         </li>
 
                         <li>
@@ -132,7 +132,7 @@
                 <div class="container-fluid">
                     <div class="header-wrap">
                         <div class="header-button">
-                            <div class="account-wrap pull-right">
+                            <div class="account-wrap float-right">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
                                         <img src="../../img/users/<?php echo $userID?>.jpg" alt="" />
