@@ -1,4 +1,6 @@
-<?php require_once  "../model/bdconnect.php" ?>
+<?php 
+require_once  "../model/bdconnect.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +27,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="../css/style.css" rel="stylesheet">
-  <link href="./hoodie.css" rel="stylesheet">
+  <link href="../css/hoodie.css" rel="stylesheet">
 
 </head>
 
@@ -67,7 +69,8 @@
 			<?php
 			 $result = validateGet("r");
 			 $resvnum = validateGet("c");
-			 if ($result == "success") { ?>
+       if ($result == "success") 
+       { ?>
 				<div id="confirmation" class="alert alert-success">Votre réservation à été faite avec succès! Un courriel de confirmation vous a été envoyé. <br>Votre numéro de réservation est <strong><?php echo $resvnum ?></strong></div>
 			<?php } else if ($result == "error") { ?>
 				<div id="infirmation" class="alert alert-danger">Oh non! Une erreur c'est produite <br>Veuillez réessayer</div>
@@ -118,7 +121,7 @@
 		        <strong>La période de réservation des hoodies est maintenant terminée.</strong><br>
 		        Pour plus d'informations, adressez-vous à un membre du CA de l'ADEPT.
 		    </div> -->
-		  <form action="createReservation.php" method="post" role="form" class="contactForm">
+		  <form action="../admin/controller/HoodieCreateReservation.php" method="post" role="form" class="contactForm">
 			<div class="form-row">
 			  <div class="form-group col-md-6">
 				<input type="text" name="prenom" class="form-control" id="firstname" placeholder="Prénom" required />
@@ -203,7 +206,7 @@
           </div>
       </div>
       <div class="text-center">
-          <a href="admin.php" class="text-dark">Gérer les réservations</a>
+          <a href="../admin/" class="text-dark">Gérer les réservations</a>
       </div>
 
 
