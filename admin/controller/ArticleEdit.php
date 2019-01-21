@@ -3,7 +3,7 @@ ob_start();
 session_start();
 require_once('../model/bd_utilisateur.php');
 require_once("../model/bd_articles.php");
-
+require_once("ImgUpload.php")
 
 $userID;
 $roleID;
@@ -22,20 +22,23 @@ else{
 
 
 
-$nom  = htmlspecialchars($_POST['nom']);
+$nom  = htmlspecialchars($_POST['nom'],ENT_QUOTES);
 $qtyCour  = htmlspecialchars($_POST['qty']);
 $prix = htmlspecialchars($_POST['prix']);
 $cout = htmlspecialchars($_POST['cout']);
+
 if (Empty($_POST['desc'])){
-    $desc = "Aucune description de fournie";
+    $desc = htmlentities("Aucune description de fournie",ENT_QUOTES);
 }
 else{
-    $desc = $_POST['desc'];
+    $desc = htmlentities($_POST['desc'],ENT_QUOTES);
 }
 
-    $msg = "L'article $nom a été modifier.";
+$msg = "L'article $nom a été modifier.";
 
-updateArticle($nom, $prix, $cout, $desc, $qtyCour);
+addAricleImage($_FILES['file'],$_POST['articleID'])
+
+updateArticle($nom, $prix, $cout, $desc, $qtyCour, $_POST['articleID']);
 
 
 

@@ -2,9 +2,15 @@
 
 function addAricleImage($Image, $articleID){
 
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($Image["name"]);
+    $target_dir = $_SERVER['DOCUMENT_ROOT']."/img/users/";
     $uploadOk = 1;
+
+    $filename = $Image["name"];
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    $target_file = $target_dir . $userID . $ext;
+
+
+
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     // Check if image file is a actual image or fake image
     if(isset($_POST["submit"])) {

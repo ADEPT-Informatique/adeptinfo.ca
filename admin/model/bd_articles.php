@@ -37,36 +37,12 @@ function insertArticle($nom, $qty, $prix, $cout, $desc){
     catch(Exception $e){die('Erreur : '.$e->getMessage());}
 
 }
-function updateArticle($nom, $prix, $cout, $desc, $qtyCour){
+function updateArticle($nom, $prix, $cout, $desc, $qtyCour, $articleID){
     $bdd = connect_DB();
     try {
-    
-        $str = "UPDATE article SET ";
-
-        if ($nom == null){
-            echo "<scrip> alert erreur</scrip>";
-        }
-        else {
-            if (isset($qtyCour))
-            {
-                $str = $str." qtyCourant = $qtyCour, ";
-            }
-            if (isset($prix))
-            {
-                $str = $str." prixPaquet = $prix, ";
-            }
-            if (isset($cout))
-            {
-                $str = $str." cout = $cout, ";
-            }
-            if (isset($desc))
-            {
-                $str = $str." info = '$desc', ";
-            }
-            $str = $str."nom = nom"." WHERE nom = '$nom'";
-            echo $str;
+        $str = "UPDATE article SET nom = $nom, qtyCourant = $qtyCour, cout = $cout, info = '$desc' WHERE articleID = $articleID";
             $bdd->query($str);
-         }
+         
         $msg =  "<h3>L\'article $nom a été modifie.</h3>";
 
     }
