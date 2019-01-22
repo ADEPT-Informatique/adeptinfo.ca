@@ -130,7 +130,7 @@ else{
                                         <?php echo $candidature['Email']; ?>
                                     </td>
                                     <td>
-                                        <a href="">Accepter</a>
+                                        <a href="../controller/MDCadd.php?id=<?php echo $candidature['ReponseID']; ?>">Accepter</a>
                                     </td>
                                 </tr>
                                 <tr class="collapse row<?php echo $candidature['ReponseID'];?>">
