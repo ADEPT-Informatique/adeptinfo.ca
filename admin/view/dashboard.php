@@ -95,7 +95,7 @@ else{
                                             <div class="text">
                                                 <h2> <?php echo articleEnManque()['nom'];?></h2>
                                                 <span>est bas en inventaire: <br>
-                                                    <?php echo '('.articleEnManque()['qtyCourant'].') en Stock.' ; ?>
+                                                    <?php echo '<b>'.articleEnManque()['qty'].'</b> en Stock.' ; ?>
                                                 </span>
                                             </div>
                                         </div>
@@ -114,9 +114,6 @@ else{
                                             </div>
                                             <div class="text">
                                                 <h2>
-                                                    <?php
-                                                        echo '$'.profitEstime();
-                                                    ?>
                                                 </h2>
                                                 <span>Profit Potentiel</span>
                                             </div>

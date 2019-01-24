@@ -80,7 +80,7 @@ else{
                                 <td colspan="2">
                                 </td>
                                 <td colspan="2">
-                                    <a href="../controller/MDCRemove.php?id=all">Retirer tout les membres de confiance.</a>
+                                    <a href="../controller/MDCremove.php?id=all">Retirer tout les membres de confiance.</a>
                                 </td>
                             </tr>
                         </tbody>

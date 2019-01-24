@@ -83,7 +83,7 @@ include("includes/header.php");
                                                     <?php echo $Article['cout']; ?>
                                                 </td>
                                                 <td>
-                                                    <?php echo $Article['qtyCourant']; ?>
+                                                    <?php echo $Article['qty']; ?>
                                                 </td>
                                                 <td >
                                                     <?php echo $Article['info']; ?>
@@ -105,7 +105,7 @@ include("includes/header.php");
                                                     <input type="number" value="<?php echo $Article['cout']?>" name="cout" class="form-control" id="cout" step=".01"/>
                                                     </td>
                                                     <td>
-                                                    <input type="number" value="<?php echo $Article['qtyCourant']?>" name="qty" class="form-control" id="qty"  />
+                                                    <input type="number" value="<?php echo $Article['qty']?>" name="qty" class="form-control" id="qty"  />
                                                     </td>
                                                     <td >
                                                     <input type="text" value="<?php echo $Article['info']?>" name="desc" class="form-control" id="desc"  />

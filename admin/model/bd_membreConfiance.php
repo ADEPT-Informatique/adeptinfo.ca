@@ -83,9 +83,9 @@ function removeMembre($id){
 function clearMembres(){
     $bdd = connect_DB();
     try {
-        $request = $bdd->prepare("UPDATE `Utilisateur` SET `roleID` = '10' WHERE `Utilisateur`.`roleID` = '8'");
+        $request = $bdd->prepare("UPDATE `Utilisateur` SET `roleID` = '10' WHERE `Utilisateur`.`roleID` = 8");
 
-        $request->execute(array('id' => $id));
+        $request->execute();
         return true;
     } catch (Exception $e) {
         die($e->getMessage());

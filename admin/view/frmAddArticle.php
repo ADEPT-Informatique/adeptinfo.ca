@@ -3,7 +3,6 @@
   session_start();
   require_once('../model/bd_utilisateur.php');
   require("../model/bd_articles.php");
-  require_once('../controller/ImgUpload.php');
 
   $userID;
   $roleID;

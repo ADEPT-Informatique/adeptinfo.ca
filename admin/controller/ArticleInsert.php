@@ -2,8 +2,7 @@
 ob_start();
 session_start();
 require_once('../model/bd_utilisateur.php');
-require_once("../model/bd_articles.php");
-
+require_once('../model/bd_articles.php');
 
 $userID;
 $roleID;
@@ -11,74 +10,45 @@ if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
     $userID = $_SESSION['user'];
     $roleID = $_SESSION['roleID'];
     if (!hasDashPerms(getInfo($userID,'roleID'))){
-        header('Location: ../view/login.php?error=3');
+        header('Location: ../index.php?error=3');
     }
 }
 else{
-    $_SESSION['user'] = 'visiteur'; 
-    $_SESSION['roleID'] = '1';
-    header('Location: ../view/login.php?error=3');
+    $_SESSION['user'] = 'visiteur';
+    $_SESSION['roleID'] = '8';
+    header('Location: ../index.php?error=3');
 }
 
+$nom  = htmlspecialchars($_POST['nom']);
+$qty  = htmlspecialchars($_POST['qty']);
+$cout = htmlspecialchars($_POST['cout']);
+if (Empty($_POST['desc'])){
+    $desc = "Aucune description de fournie";
+}
+if (!Empty($_POST['desc'])){
+    $desc = htmlspecialchars($_POST['desc']);
+}
 
-if (isset($_POST['soumis'])) 
+insertArticle($nom, $qty, $cout, $desc);
+$article = getLastArticle();
+
+if (isset($_FILES['img']) AND $_FILES['img']['error'] == 0) //fichier ok
 {
-    if ($_POST['add'] == 'TRUE') 
+    if ($_FILES['img']['size'] <= 5000000) //5Mo max
     {
-        if (!Empty($_POST['nom']) AND !Empty($_POST['qty']) AND !Empty($_POST['prix']) AND !Empty($_POST['cout'])) 
+        $infosfichier = pathinfo($_FILES['img']['name']);
+        $extensionFichier = strtolower($infosfichier['extension']);
+        $extensions_valides = array('jpg', 'jpeg', 'png');
+        if (in_array($extensionFichier, $extensions_valides))
         {
-            $nom  = htmlspecialchars($_POST['nom']);
-            $qty  = htmlspecialchars($_POST['qty']);
-            $prix = htmlspecialchars($_POST['prix']);
-            $cout = htmlspecialchars($_POST['cout']);
-            if (Empty($_POST['desc']))
-                $desc = "Aucune description de fournie";
-            if (!Empty($_POST['desc']))
-                $desc = htmlspecialchars($_POST['desc']);
-            
-             $msg = "<h3>L'article $nom a été ajouté.</h3>";
-            
-             addAricleImage($_FILES['img'],$)
-
-            insertArticle($nom, $qty, $prix, $cout, $desc);
+            $fileName = $article['articleID'].".jpg";
+            $name = $_SERVER['DOCUMENT_ROOT']."/img/epicerie/".$fileName;
+            move_uploaded_file($_FILES['img']['tmp_name'],$name);
+            header('Location: ../view/frmAddArticle.php?code=Good');
         }
     }
-    else 
-    {
-        if (isset($_POST['qty']) && $_POST['qty'] == 0){
-            deleteArticle($_POST['articleID']);
-            $msg = $_POST['nom']."effacer avec succes!";
-        }
-        else{
-            $nom;
-            $qtyCour;
-            $desc;
-            $prix;
-            $cout;
-            $img = "''";
-            if (!Empty($_POST['nom']))
-                $nom  = htmlspecialchars($_POST['nom']);
-            if (!Empty($_POST['qty']))
-                $qtyCour  = htmlspecialchars($_POST['qty']);
-            if (!Empty($_POST['prix']))
-                $prix = htmlspecialchars($_POST['prix']);
-            if (!Empty($_POST['cout']))
-                $cout = htmlspecialchars($_POST['cout']);
-            if (Empty($_POST['desc']))
-                $desc = "Aucune description de fournie";
-            if (!Empty($_POST['desc']))
-                $desc = htmlspecialchars($_POST['desc']);
-            
-             $msg = "<h3>L'article $nom a été modifier.</h3>";
-    
-            updateArticle($nom, $prix, $cout, $desc, $qtyCour);
-        }
-    }    
-} 
-else {
-    //  sinon
-    $msg = "Error";
 }
+
 include('../view/frmAddArticle.html');
 
 ?>

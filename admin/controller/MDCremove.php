@@ -26,7 +26,7 @@ if (isset($_GET['id']))
     {
         clearMembres();
     }
-    if(addMembre($_GET['id']))
+    else if(addMembre($_GET['id']))
     {
         header('Location: ../view/MDCList.php?status=0');
     }

@@ -1,9 +1,10 @@
 <?php
 ob_start();
 session_start();
+require_once('../controller/ImgUpload.php');
 require_once('../model/bd_utilisateur.php');
-require_once("../model/bd_articles.php");
-require_once("ImgUpload.php");
+require_once('../model/bd_articles.php');
+//https://gist.github.com/obrassard/b8efb5f2a92ddf499b81b880bb6ed3d4
 
 $userID;
 $roleID;
@@ -21,27 +22,27 @@ else{
 }
 
 
-
-$nom  = htmlspecialchars($_POST['nom'],ENT_QUOTES);
-$qtyCour  = htmlspecialchars($_POST['qty']);
+$nom  = htmlspecialchars($_POST['nom']);
+$qty  = htmlspecialchars($_POST['qty']);
 $prix = htmlspecialchars($_POST['prix']);
 $cout = htmlspecialchars($_POST['cout']);
+if (Empty($_POST['desc']))
+    $desc = "Aucune description de fournie";
+if (!Empty($_POST['desc']))
+    $desc = htmlspecialchars($_POST['desc']);
 
-if (Empty($_POST['desc'])){
-    $desc = htmlentities("Aucune description de fournie",ENT_QUOTES);
-}
-else{
-    $desc = htmlentities($_POST['desc'],ENT_QUOTES);
-}
+$msg = "<h3>L'article $nom a été ajouté.</h3>";
 
-$msg = "L'article $nom a été modifier.";
-
-//addAricleImage($_FILES['file'],$_POST['articleID']);
-
-updateArticle($nom, $prix, $cout, $desc, $qtyCour, $_POST['articleID']);
+//addAricleImage($_FILES['img'],$_POST['id']);
 
 
 
+
+
+
+
+insertArticle($nom, $qty, $prix, $cout, $desc);
+    
 include('../view/frmAddArticle.html');
 
 ?>

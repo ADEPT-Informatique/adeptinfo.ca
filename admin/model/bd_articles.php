@@ -2,11 +2,10 @@
 $path = $_SERVER['DOCUMENT_ROOT']."/admin";
 require_once($path.'/model/bd_connexion.php');
 
-function getAllArticles()
-{
+function getAllArticles(){
     $bdd = connect_DB();
     try {
-        $reponse = $bdd->query("SELECT nom, info, cout, articleID, qtyCourant FROM article");
+        $reponse = $bdd->query("SELECT * FROM article");
 
         if ($reponse)
         {
@@ -19,16 +18,15 @@ function getAllArticles()
     catch(Exception $e){die('Erreur : '.$e->getMessage());}
     $bdd->close();
 }
-function insertArticle($nom, $qty, $prix, $cout, $desc){
+function insertArticle($nom, $qty, $cout, $desc){
     $bdd = connect_DB();
     try {
 
-        $req = $bdd->prepare('INSERT INTO article (nom, qtyPaquet, prixPaquet, cout, info, qtyCourant) 
-                                    VALUES (:nom, :qty, :prix, :cout, :desc, :qty)');
+        $req = $bdd->prepare('INSERT INTO article (nom, cout, info, qty) 
+                                    VALUES (:nom, :cout, :desc, :qty)');
         $req->execute(array(
             'nom' => $nom,
             'qty' => $qty,
-            'prix' => $prix,
             'cout' => $cout,
             'desc' => $desc
 
@@ -40,7 +38,7 @@ function insertArticle($nom, $qty, $prix, $cout, $desc){
 function updateArticle($nom, $prix, $cout, $desc, $qtyCour, $articleID){
     $bdd = connect_DB();
     try {
-        $str = "UPDATE article SET nom = $nom, qtyCourant = $qtyCour, cout = $cout, info = '$desc' WHERE articleID = $articleID";
+        $str = "UPDATE article SET nom = '$nom', qtyCourant = '$qtyCour', cout = '$cout', info = '$desc' WHERE articleID = '$articleID'";
             $bdd->query($str);
          
         $msg =  "<h3>L\'article $nom a été modifie.</h3>";
@@ -67,7 +65,7 @@ function valeurProduits(){
     $bdd = connect_DB();
     try {
     
-        $reponse = $bdd->query("SELECT SUM(cout) * SUM(qtyCourant)  as 'total' FROM article");
+        $reponse = $bdd->query("SELECT SUM(cout) * SUM(qty)  as 'total' FROM article");
         if ($reponse)
         {
             $tabAllArticles = $reponse->fetchAll();
@@ -83,7 +81,7 @@ function qtyTotalProduits(){
     $bdd = connect_DB();
     try {
     
-        $reponse = $bdd->query("SELECT SUM(qtyCourant) as 'nbArticles' FROM article");
+        $reponse = $bdd->query("SELECT SUM(qty) as 'nbArticles' FROM article");
         if ($reponse)
         {
             $tabAllArticles = $reponse->fetchAll();
@@ -99,7 +97,7 @@ function articleEnManque(){
     $bdd = connect_DB();
     try {
     
-        $reponse = $bdd->query("SELECT nom , qtyCourant FROM article ORDER BY qtyCourant");
+        $reponse = $bdd->query("SELECT nom , qty FROM article ORDER BY qty");
         if ($reponse)
         {
             $tabAllArticles = $reponse->fetchAll();
@@ -126,6 +124,25 @@ function profitEstime(){
         $reponse->closeCursor();
     }
     catch(Exception $e){die('Erreur : '.$e->getMessage());}
+}
+
+function getLastArticle(){
+    $bdd = connect_DB();
+    try {
+        $reponse = $bdd->query("SELECT * FROM article ORDER BY articleID DESC LIMIT 1");
+
+        if ($reponse)
+        {
+            $tabAllArticles = $reponse->fetchAll();
+            foreach ($tabAllArticles as $article){
+                return $article;
+            }
+        }
+
+        $reponse->closeCursor();
+    }
+    catch(Exception $e){die('Erreur : '.$e->getMessage());}
+    $bdd->close();
 }
 
 ?>
