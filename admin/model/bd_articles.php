@@ -35,10 +35,10 @@ function insertArticle($nom, $qty, $cout, $desc){
     catch(Exception $e){die('Erreur : '.$e->getMessage());}
 
 }
-function updateArticle($nom, $prix, $cout, $desc, $qtyCour, $articleID){
+function updateArticle($nom, $prix, $cout, $desc, $qty, $articleID){
     $bdd = connect_DB();
     try {
-        $str = "UPDATE article SET nom = '$nom', qtyCourant = '$qtyCour', cout = '$cout', info = '$desc' WHERE articleID = '$articleID'";
+        $str = "UPDATE article SET nom = '$nom', qty = '$qty', cout = '$cout', info = '$desc' WHERE articleID = '$articleID'";
             $bdd->query($str);
          
         $msg =  "<h3>L\'article $nom a été modifie.</h3>";

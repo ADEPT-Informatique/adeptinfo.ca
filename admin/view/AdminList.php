@@ -3,19 +3,20 @@
 ob_start();
 session_start();
 require_once('../model/bd_utilisateur.php');
-$userID = 'visiteur';
+$userID = 'visiteur'; 
 $roleID = '8';
+
 if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
     $userID = $_SESSION['user'];
     $roleID = $_SESSION['roleID'];
     if (!hasDashPerms(getInfo($userID,'roleID'))){
-        header('Location: ../view/login.php?error=3');
+        header('Location: ../login.php?error=3');
     }
 }
 else{
     $_SESSION['user'] = 'visiteur'; 
     $_SESSION['roleID'] = '8';
-    header('Location: ../view/login.php?error=3');
+    header('Location: ../login.php?error=3');
 }
 
 
@@ -88,12 +89,16 @@ else{
                                         <?php echo $user['nom']; ?>
                                     </td> 
                                     <td >
-                                        <b>Options:</b> <br>
-                                        Changer Image<br>
-                                        Changer Email<br>
-                                        Reset mot de passe
+                                        Changer l'Image <br>
+                                        <form action="../controller/AdminEditIMG.php" method="POST" >
+                                            <input type="file" name="img" id=" name"/>
+                                            <input type="submit" value="Submit">
+                                        </form>
                                     </td> 
                                     <td >
+                                        <b>Options:</b> <br>
+                                        Changer Email<br>
+                                        Reset mot de passe
                                     </td> 
                                 </tr>
                         <?php } ?>

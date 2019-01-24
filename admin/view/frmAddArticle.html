@@ -68,24 +68,19 @@
                                     <form method="post" action="../controller/ArticleEdit.php">
                                         <td>
                                             <div class="custom-file">
-                                                <label class="custom-file-label" for="customFile">IMG</label>
-                                                <input type="file" class="custom-file-input" style="width:2rem;" id="file"
-                                                    name="file">
+                                                <input type="file" class="custom-file-input" style="width:2rem;" id="file" name="file">
                                             </div>
                                         </td>
                                         <td>
-                                            <input type="hidden" value="<?php echo $Article['articleID']?>" name="articleID"
-                                                class="form-control" id="articleID" />
-                                            <input type="text" value="<?php echo $Article['nom']?>" name="nom" class="form-control"
-                                                id="nom" />
+                                            <input type="hidden" value="<?php echo $Article['articleID']?>" name="articleID" class="form-control" id="articleID" />
+                                            <input type="text" value="<?php echo $Article['nom']?>" name="nom" class="form-control" id="nom" />
                                         </td>
                                         <td>
                                             <input type="number" value="<?php echo $Article['cout']?>" name="cout"
                                                 class="form-control" id="cout" step=".01" />
                                         </td>
                                         <td>
-                                            <input type="number" value="<?php echo $Article['qty']?>" name="qty"
-                                                class="form-control" id="qty" />
+                                            <input type="number" value="<?php echo $Article['qty']?>" name="qty" class="form-control" id="qty" />
                                         </td>
                                         <td>
                                             <input type="text" value="<?php echo $Article['info']?>" name="desc" class="form-control"

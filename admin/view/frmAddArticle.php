@@ -1,26 +1,26 @@
 <?php
-  ob_start();
-  session_start();
-  require_once('../model/bd_utilisateur.php');
-  require("../model/bd_articles.php");
+ob_start();
+session_start();
+require_once('../model/bd_utilisateur.php');
+require("../model/bd_articles.php");
 
-  $userID;
-  $roleID;
+$userID = 'visiteur'; 
+$roleID = '8';
 
-  if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
+if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
     $userID = $_SESSION['user'];
     $roleID = $_SESSION['roleID'];
     if (!hasDashPerms(getInfo($userID,'roleID'))){
-        header('Location: ../view/login.php?error=3');
+        header('Location: ../login.php?error=3');
     }
-  }
-  else{
+}
+else{
     $_SESSION['user'] = 'visiteur'; 
-    $_SESSION['roleID'] = '1';
-    header('Location: ../view/login.php?error=3');
-  }
+    $_SESSION['roleID'] = '8';
+    header('Location: ../login.php?error=3');
+}
 
-  $msg = "";
+$msg = "";
 
 include('frmAddArticle.html');
 

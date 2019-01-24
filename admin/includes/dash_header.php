@@ -152,7 +152,7 @@
                                             </div>
                                         </div>
                                         <div class="account-dropdown__footer">
-                                            <a href="../model/bd_auth.php?action=logoff">
+                                            <a href="../controller/logout.php?action=logoff">
                                                 <i class="zmdi zmdi-power"></i>Déconnexion</a>
                                         </div>
                                     </div>

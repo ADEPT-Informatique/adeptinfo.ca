@@ -4,19 +4,20 @@ session_start();
 
 require_once('../model/bd_utilisateur.php');
 require_once('../model/HoodieModuleFunctions.php');
-$userID = 'visiteur';
+$userID = 'visiteur'; 
 $roleID = '8';
+
 if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
     $userID = $_SESSION['user'];
     $roleID = $_SESSION['roleID'];
     if (!hasDashPerms(getInfo($userID,'roleID'))){
-        header('Location: ../index.php?error=3');
+        header('Location: ../login.php?error=3');
     }
 }
 else{
     $_SESSION['user'] = 'visiteur'; 
     $_SESSION['roleID'] = '8';
-    header('Location: ../index.php?error=3');
+    header('Location: ../login.php?error=3');
 }
 
 $Actions = GetHistory();

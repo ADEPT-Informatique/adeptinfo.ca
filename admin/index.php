@@ -4,6 +4,22 @@ session_start();
 $path = $_SERVER['DOCUMENT_ROOT'].'/admin';
 require_once($path.'/model/bd_utilisateur.php');
 
+if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
+    $userID = $_SESSION['user'];
+    $roleID = $_SESSION['roleID'];
+    if (hasDashPerms(getInfo($userID,'roleID'))){
+        header('Location: ../admin/view/dashboard.php');
+    }
+}
+else{
+    $_SESSION['user'] = 'visiteur'; 
+    $_SESSION['roleID'] = '8';
+    header('Location: ../admin/index.php?error=3');
+}
+
+
+
+
 ?>
 
 <!DOCTYPE html>

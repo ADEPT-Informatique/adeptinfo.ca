@@ -40,7 +40,27 @@ $msg = "L'article $nom a été modifier.";
 
 updateArticle($nom, $prix, $cout, $desc, $qtyCour, $_POST['articleID']);
 
+$fileName = $_POST['articleID'].".jpg";
+$name = $_SERVER['DOCUMENT_ROOT']."/img/epicerie/".$fileName;
 
+if(file_exists($name)){
+    unlink($name);
+}
+
+if (isset($_FILES['img']) AND $_FILES['img']['error'] == 0) //fichier ok
+{
+    if ($_FILES['img']['size'] <= 5000000) //5Mo max
+    {
+        $infosfichier = pathinfo($_FILES['img']['name']);
+        $extensionFichier = strtolower($infosfichier['extension']);
+        $extensions_valides = array('jpg', 'jpeg', 'png');
+        if (in_array($extensionFichier, $extensions_valides))
+        {
+            move_uploaded_file($_FILES['img']['tmp_name'],$name);
+            header('Location: ../view/frmAddArticle.php?code=Good');
+        }
+    }
+}
 
 include('../view/frmAddArticle.html');
 
