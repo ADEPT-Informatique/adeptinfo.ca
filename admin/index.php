@@ -11,14 +11,6 @@ if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
         header('Location: ../admin/view/dashboard.php');
     }
 }
-else{
-    $_SESSION['user'] = 'visiteur'; 
-    $_SESSION['roleID'] = '8';
-    header('Location: ../admin/index.php?error=3');
-}
-
-
-
 
 ?>
 
@@ -30,7 +22,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/HoodieStyle.css">
     <script>
         $(document).ready(function () {
             $('#username').focus();
@@ -39,37 +31,53 @@ else{
 </head>
 <body class="loginPage">
 
+    <?php
+    if(isset($_GET['error'])){ ?>
+
+        <script>
+            $(document).ready(function () {
+                $('#confirmation').fadeIn();
+            })
+        </script>
+
+    <?php } ?>
+
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="card login" style="width: 25rem;">
                     <div class="card-body text-center">
                         <img src="../img/badge.png" width="120">
-                        <h4 class="card-title text-center">Veuillez vous connecter</h4><br>
+                        <h4 class="card-title text-center">Veuillez vous connecter</h4>
                         <?php
                             if (isset($_GET['error'])){
                                 if ($_GET['error'] == 1){
-                                    echo '<h6 class="card-title text-center alert-danger">Utilisateur ou Mot de Passe invalide </h6>';
+                                    echo '<h6 class="card-title text-center alert-danger">Utilisateur ou mot de passe invalide.</h6>';
                                 }
                                 if ($_GET['error'] == 2){
-                                    echo '<h6 class="card-title text-center alert-danger">Utilisateur inexistant</h6>';
+                                    echo '<h6 class="card-title text-center alert-danger">Utilisateur inexistant.</h6>';
                                 }
                                 if ($_GET['error'] == 3){
-                                    echo '<h6 class="card-title text-center alert-danger">Vous n\'êtes  pas connectez.</h6>';
+                                    echo '<h6 class="card-title text-center alert-danger">Vous n\'êtes  pas connecté.</h6>';
                                 }
                             }
                         ?>
                         <br>
                         <form action="model/bd_auth.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Courriel">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Nom d'utilisateur">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                             </div>
                             <input type="submit" class="btn btn-primary btn-block" value="Se connecter">
                         </form>
-                        <a href="..">Retour a l'acceuil</a>
+
+                        <br>
+                        <div id="confirmation" class="alert alert-danger" role="alert" style="display: none">
+                            Le mot de passe est incorrect.
+                        </div>
+
                     </div>
                 </div>
             </div>

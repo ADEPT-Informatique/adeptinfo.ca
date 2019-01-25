@@ -7,7 +7,7 @@ require_once('../model/bd_articles.php');
 $userID = 'visiteur'; 
 $roleID = '8';
 
-if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
+if(isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
     $userID = $_SESSION['user'];
     $roleID = $_SESSION['roleID'];
     if (!hasDashPerms(getInfo($userID,'roleID'))){

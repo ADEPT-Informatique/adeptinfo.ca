@@ -71,7 +71,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo text-center">
-                <a href="../../index.php" class="text-center">
+                <a href="../../../index.php" class="text-center">
                     <img src="../img/badge.png" alt="ADEPT INFORMATIQUE" width="70"/>
                 </a>
             </div>

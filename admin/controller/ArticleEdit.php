@@ -3,7 +3,6 @@ ob_start();
 session_start();
 require_once('../model/bd_utilisateur.php');
 require_once("../model/bd_articles.php");
-require_once("ImgUpload.php");
 
 $userID;
 $roleID;
@@ -36,15 +35,14 @@ else{
 
 $msg = "L'article $nom a été modifier.";
 
-//addAricleImage($_FILES['file'],$_POST['articleID']);
 
 updateArticle($nom, $prix, $cout, $desc, $qtyCour, $_POST['articleID']);
 
 $fileName = $_POST['articleID'].".jpg";
 $name = $_SERVER['DOCUMENT_ROOT']."/img/epicerie/".$fileName;
-
+/*
 if(file_exists($name)){
-    unlink($name);
+    //unlink($name);
 }
 
 if (isset($_FILES['img']) AND $_FILES['img']['error'] == 0) //fichier ok
@@ -60,7 +58,7 @@ if (isset($_FILES['img']) AND $_FILES['img']['error'] == 0) //fichier ok
             header('Location: ../view/frmAddArticle.php?code=Good');
         }
     }
-}
+}*/
 
 include('../view/frmAddArticle.html');
 

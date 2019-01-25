@@ -19,16 +19,16 @@ if($email != null && !Empty($email) && isset($email)){
         header('Location: /admin/index.php?error=2');
     }
     foreach ($req as $row) {
-        $token = $row['password'];
+        $token = strtoupper($row['password']);
         $password = strtoupper(hash('sha256',$password));
         if($token == $password){
 
-            $_SESSION['role'] = $row['roleID'];
+            $_SESSION['roleID'] = $row['roleID'];
             $_SESSION['user'] = $row['userID'];
             header('Location: /admin/view/dashboard.php');
         }
         else{
-            header('Location: /admin/index.php?error=1('.$token.'+'.$password.')');       
+            header('Location: /admin/index.php?error=1');       
         }
     }
 }

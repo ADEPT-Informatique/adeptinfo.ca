@@ -4,6 +4,7 @@ session_start();
 
 require_once('../model/bd_utilisateur.php');
 require_once('../model/HoodieModuleFunctions.php');
+
 $userID = 'visiteur'; 
 $roleID = '8';
 
