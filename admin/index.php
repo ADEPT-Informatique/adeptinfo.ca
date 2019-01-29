@@ -74,10 +74,6 @@ if( isset($_SESSION['user']) && isset($_SESSION['roleID'])) {
                         </form>
 
                         <br>
-                        <div id="confirmation" class="alert alert-danger" role="alert" style="display: none">
-                            Le mot de passe est incorrect.
-                        </div>
-
                     </div>
                 </div>
             </div>
