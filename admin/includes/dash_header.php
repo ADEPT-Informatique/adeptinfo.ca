@@ -117,21 +117,24 @@
                             <a href="">
                                 <i class="fas fa-external-link-alt"></i>Gestion du LAN</a>
                         </li>
+                        <li>
+                            <a href="../controller/logout.php?action=logoff">
+                                <i class="zmdi zmdi-power"></i>Déconnexion</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </aside>
         <!-- END MENU SIDEBAR-->
-<div class="page-wrapper">
 
     <!-- PAGE CONTAINER-->
     <div class="page-container">
         <!-- HEADER DESKTOP-->
-        <header class="header-desktop">
+        <!-- <header class="header-desktop">
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="header-wrap">
-                        <div class="header-button">
+                    <div class="header-button">
                             <div class="account-wrap float-right">
                                 <div class="account-item clearfix js-item-menu">
                                     <div class="image">
@@ -162,5 +165,5 @@
                     </div>
                 </div>
             </div>
-        </header>
-        <!-- HEADER DESKTOP-->
+        </header> -->
+        <!-- HEADER DESKTOP -->
