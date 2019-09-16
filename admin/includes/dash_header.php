@@ -5,7 +5,6 @@
  */ -->
 
 
-
 <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
                 <div class="container-fluid">
@@ -13,9 +12,9 @@
                         <a class="logo" href="../index.php">
                             <img src="../img/badge.png" alt="ADEPT INFORMATIQUE" width="70"/>
                         </a>
-                        <button class="hamburger hamburger--slider" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
+                        <button class="hamburger hamburger--slider fas fa-bars" type="button">
+                            <span class="hamburger-box ">
+                                <span class="hamburger-inner">
                             </span>
                         </button>
                     </div>
@@ -119,7 +118,7 @@
                         </li>
                         <li>
                             <a href="../controller/logout.php?action=logoff">
-                                <i class="zmdi zmdi-power"></i>Déconnexion</a>
+                                <i class="fas fa-power-off"></i>Déconnexion</a>
                         </li>
                     </ul>
                 </nav>
