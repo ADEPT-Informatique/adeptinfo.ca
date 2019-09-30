@@ -35,6 +35,8 @@ node_modules
 
 model\bdconnect.php
 admin\model\bd_connexion.php
+model/bdconnect.php
+admin/model/bd_connexion.php
 
 
 .vscode/*
@@ -43,4 +45,3 @@ admin\model\bd_connexion.php
 !.vscode/launch.json
 !.vscode/extensions.json
 
-model/bdconnect.php
