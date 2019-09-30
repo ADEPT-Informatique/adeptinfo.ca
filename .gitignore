@@ -33,7 +33,9 @@ build/Release
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
 
-admin/model/bd_connexion.php
+model\bdconnect.php
+admin\model\bd_connexion.php
+
 
 .vscode/*
 !.vscode/settings.json
@@ -41,3 +43,4 @@ admin/model/bd_connexion.php
 !.vscode/launch.json
 !.vscode/extensions.json
 
+model/bdconnect.php
