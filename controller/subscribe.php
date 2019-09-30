@@ -14,7 +14,7 @@ if(!$email || !(preg_match('/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+/',$
     die();
 }
 
-$bdd = connect_BD();
+$bdd = connect_DB();
 
 try{
     $request = $bdd -> prepare("INSERT INTO InscriptionInfolettre(email) VALUES (:email)");

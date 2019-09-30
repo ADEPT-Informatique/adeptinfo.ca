@@ -7,10 +7,10 @@
 include_once __DIR__."/../controller/requestsHandlers.php";
 
 //Connexion à la BD
-function connect_BD(){
+function connect_DB(){
     try
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=adept;charset=utf8', 'adept_auth', 'usFaMVSgB5tmOSBk');
+        $bdd = new PDO('mysql:host=localhost;dbname=adept;charset=utf8', 'adept_auth', 'passw0rd');
         $bdd -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $bdd;
     }

@@ -7,7 +7,7 @@
 require_once "bdconnect.php";
 
 function usernameExist($username){
-    $bdd = connect_BD();
+    $bdd = connect_DB();
     try{
         $request = $bdd -> prepare("SELECT COUNT(email)'count' FROM Utilisateur WHERE email=:username");
         $request ->execute(array(
@@ -25,7 +25,7 @@ function usernameExist($username){
 
 
 function requestLogin($username, $token){
-    $bdd = connect_BD();
+    $bdd = connect_DB();
     if(!usernameExist($username)){
         return false;
     }

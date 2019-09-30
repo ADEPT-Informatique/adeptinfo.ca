@@ -1,5 +1,5 @@
 <?php
-require_once('bd_connexion.php');
+require_once('../../model/bdconnect.php');
 
 function getCandidaturesMDC(){
     $bdd = connect_DB();
