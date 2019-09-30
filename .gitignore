@@ -34,6 +34,7 @@ build/Release
 node_modules
 
 admin/model/bd_connexion.php
+model/bdconnect.php
 
 .vscode/*
 !.vscode/settings.json
