@@ -18,7 +18,7 @@ if (!$email){
     die();
 }
 
-$bdd = connect_BD();
+$bdd = connect_DB();
 
 try{
     $request = $bdd -> prepare("DELETE FROM InscriptionInfolettre WHERE email = :email");

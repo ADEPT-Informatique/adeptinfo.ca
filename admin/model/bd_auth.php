@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('bd_connexion.php');
+require_once('../../model/bdconnect.php');
 
 if (isset($_POST['email'])){
 
