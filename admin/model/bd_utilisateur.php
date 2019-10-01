@@ -1,5 +1,5 @@
 <?php
-require_once('../../model/bdconnect.php');
+require_once $_SERVER['DOCUMENT_ROOT'].'/model/bdconnect.php';
 
 function getAllUser(){
     $bdd = connect_DB();

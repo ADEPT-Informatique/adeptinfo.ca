@@ -5,7 +5,7 @@
  * Copyright © 2018 Olivier Brassard. All rights reserved.
  */
 
-require_once('../../model/bdconnect.php');
+require_once $_SERVER['DOCUMENT_ROOT'].'/model/bdconnect.php';
 
 
 function NewClient($nom, $prenom, $email,$studid){
