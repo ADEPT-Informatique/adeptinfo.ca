@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>LAN de l'ADEPT</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -19,36 +20,40 @@
     <!-- Main Stylesheet File -->
     <link href="../css/style.css" rel="stylesheet">
     <style>
-      h4,h3,h2,h5 {
-        color: white !important;
-      }
-      hr {
-        border-top: 1px solid rgba(255, 255, 255, 1);
-      }
-
-
-      h2{
-        font-size: 40px !important;
-      }
-
-      h5{
-        color: #199fff !important;
-        text-shadow: black 3px 3px 2px;
-      }
-
-      div.row{
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-      }
-
-      @media (max-width: 768px) {
-        hr {
-          border-top: 1px solid rgba(255, 255, 255, 0);
+        h4,
+        h3,
+        h2,
+        h5 {
+            color: white !important;
         }
-      }
+        
+        hr {
+            border-top: 1px solid rgba(255, 255, 255, 1);
+        }
+        
+        h2 {
+            font-size: 40px !important;
+        }
+        
+        h5 {
+            color: #199fff !important;
+            text-shadow: black 3px 3px 2px;
+        }
+        
+        div.row {
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+        
+        @media (max-width: 768px) {
+            hr {
+                border-top: 1px solid rgba(255, 255, 255, 0);
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <section id="intro">
         <div class="intro-container">
             <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
@@ -62,16 +67,12 @@
                                     <div class="text-center col-md-8">
                                         <img src="https://adeptinfo.ca/img/logo-lan.png" width="250" style="margin-bottom:20px">
                                         <img src="https://adeptinfo.ca/img/badge.png" width="250" style="margin-bottom:20px">
-
-                                        <h3>Nous sommes heureux de vous accueillir au LAN de l'ADEPT édition Hiver 2019!</h3>
-
-                                        <img width="400px" src="img/dreakhack.png">
-                                        
                                         <div class="progress">
                                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                         <br />
-                                        <h5>Veuillez patienter, vous accéderez au site dans quelques instants ...</h5>
+                                        <!-- <h5>Veuillez patienter, vous accéderez au site dans quelques instants ...</h5> -->
+                                        <h5>Le site web d'inscriptions sera prêt sous peu!</h5>
                                     </div>
                                 </div>
                             </div>
@@ -81,13 +82,17 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript">
-      var start = new Date().getTime();
-      for (var i = 0; i < 1e7; i++) {
-        if ((new Date().getTime() - start) > 1000){
-          break;
+    <!--<script type="text/javascript">
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > 1000) {
+                break;
+            }
         }
+        window.location.href = "https://lanadept.azurewebsites.net"
+
       }
-    </script>
+    </script>-->
 </body>
+
 </html>
