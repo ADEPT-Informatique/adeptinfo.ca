@@ -7,9 +7,9 @@
 require_once "bdconnect.php";
 
 function usernameExist($username){
-    $bdd = connect_BD();
+    $bdd = connect_DB();
     try{
-        $request = $bdd -> prepare("SELECT COUNT(Username)'count' FROM Administrateurs WHERE Username=:username");
+        $request = $bdd -> prepare("SELECT COUNT(email)'count' FROM Utilisateur WHERE email=:username");
         $request ->execute(array(
             "username"=>$username
         ));
@@ -25,13 +25,13 @@ function usernameExist($username){
 
 
 function requestLogin($username, $token){
-    $bdd = connect_BD();
+    $bdd = connect_DB();
     if(!usernameExist($username)){
         return false;
     }
 
     try{
-        $request = $bdd -> prepare("SELECT Token, AdminID FROM Administrateurs WHERE Username=:username");
+        $request = $bdd -> prepare("SELECT password, email FROM Utilisateur WHERE email=:username");
         $request ->execute(array(
             "username"=>$username
         ));
@@ -39,8 +39,8 @@ function requestLogin($username, $token){
 
         $request -> closeCursor();
 
-        if ($data["Token"] == $token){
-            $_SESSION["AdminID"] = $data["AdminID"];
+        if ($data["email"] == $token){
+            $_SESSION["AdminID"] = $data["roleID"];
 
             return true;
         } else {

@@ -31,7 +31,7 @@ if(!($nom && $email && $nbSessions && $motivations && $situation
     die();
 } else {
 
-    $bdd = connect_BD();
+    $bdd = connect_DB();
 
     try{
         $request = $bdd -> prepare("INSERT INTO `CandidatureMembreConfiance`

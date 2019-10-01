@@ -30,7 +30,7 @@ if(!($nom && $prenom && $email && $numetu && $motivations && $qualifiaction
         $choix2 = null;
     }
 
-    $bdd = connect_BD();
+    $bdd = connect_DB();
 
     try{
         $request = $bdd -> prepare("INSERT INTO `CandidaturesChefComiteLan`(`Nom`, `Prenom`, `NumEtudiant`, `Branche`, `Qualifications`, `ChoixPoste1`, `ChoixPoste2`, `Motivation`, `Participation`, `Email`)

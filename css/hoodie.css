@@ -1,0 +1,25 @@
+#module{
+    padding-top: 70px;
+}
+
+#header{
+    background: black;
+}
+body {
+    background: black;
+}
+
+img{
+    max-width: 100%
+}
+.theme-font{
+    font-family: Montserrat;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+h4, h5, h6{
+    color: black;
+}

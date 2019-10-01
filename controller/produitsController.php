@@ -2,7 +2,7 @@
 require_once __DIR__."/../model/bdconnect.php";
 
 function ObtenirCollationsDispo(){
-    $db = connect_BD();
+    $db = connect_DB();
     try{
         $request = $db -> query("SELECT NomProduit, Prix 
                                 FROM ProduitsAutoFinancement 
@@ -19,7 +19,7 @@ function ObtenirCollationsDispo(){
 }
 
 function ObtenirBrevagesDispo(){
-    $db = connect_BD();
+    $db = connect_DB();
     try{
         $request = $db -> query("SELECT NomProduit, Prix 
                                 FROM ProduitsAutoFinancement 
