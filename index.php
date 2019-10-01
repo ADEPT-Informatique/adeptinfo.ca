@@ -139,7 +139,7 @@ include("admin/model/bd_utilisateur.php");
                 </div>
                 <h2 class="title"><a href="#">Défendre vos droits</a></h2>
                 <p class="description">
-                  Nous représentons tous nos membres auprès de l'AGECEM et afin de défendre leurs droits aux points de vue physique, moral, social, intellectuel et pédagogique.
+                  Nous représentons tous nos membres auprès de l'AGECEM afin de défendre leurs droits aux points de vue physique, moral, social, intellectuel et pédagogique.
                 </p>
               </div>
             </div>
