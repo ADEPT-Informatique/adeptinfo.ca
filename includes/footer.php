@@ -67,7 +67,7 @@
     <script src="node_modules/superfish/dist/js/superfish.min.js"></script>
     <script src="node_modules/wow.js/dist/wow.min.js"></script>
     <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
-    <script src="node_modules/counterup/jquery.counterup.min.js"></script>
+    <script src="node_modules/counterup2/dist/index.js"></script>
     <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="node_modules/isotope-layout/dist/isotope.pkgd.min.js"></script>
     <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
