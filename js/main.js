@@ -131,11 +131,18 @@ jQuery(document).ready(function( $ ) {
     });
   }, { offset: '80%'} );
 
-  // jQuery counterUp (used in Facts section)
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
+// counterUp2 (used in Facts section)
+  $('#facts').waypoint(function() {
+    var counterUp = window.counterUp["default"];
+    var $counters = $('[data-toggle="counter-up"]');
+    
+    $counters.each(function (ignore, counter) {
+        counterUp(counter, {
+            duration: 1000,
+            delay: 10
+        });
+    });
+  }, { offset: '80%'} );
 
   // Porfolio isotope and filter
   var portfolioIsotope = $('.portfolio-container').isotope({
