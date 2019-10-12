@@ -41,7 +41,7 @@ Nous aimerions remercier tous les membres de l'ADEPT qui ont collaborés de prè
 - [Olivier Brassard](https://github.com/obrassard)
 - Philippe Bussière
 - [Michael Plourde](https://github.com/MichaelPlourde)
-- [Arianne Beaulac](https://github.com/aBeaulac)
+- [Aeden Beaulac](https://github.com/aBeaulac)
 - [Mathieu Massicotte](https://github.com/massicottem)
 - Nicolas U. Beaumier
 
