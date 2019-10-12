@@ -39,11 +39,12 @@ $t = getTranslations();
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active d-block d-sm-none"><a href="../index.php"><?php echo $t->home ?></a></li>
-                        <li><a href="./index.php#about"><?php echo $t->about ?></a></li>
-                        <li><a href="./index.php#services"><?php echo $t->services ?></a></li>
-                        <li><a href="./index.php#team"><?php echo $t->team ?></a></li>
-                        <li><a href="./index.php#contact"><?php echo $t->contact ?></a></li>
+                        <li><a href="./index.php?lang=<?php echo $t->lang ?>#about"><?php echo $t->about ?></a></li>
+                        <li><a href="./index.php?lang=<?php echo $t->lang ?>#services"><?php echo $t->services ?></a></li>
+                        <li><a href="./index.php?lang=<?php echo $t->lang ?>#team"><?php echo $t->team ?></a></li>
+                        <li><a href="./index.php?lang=<?php echo $t->lang ?>#contact"><?php echo $t->contact ?></a></li>
                         <li><a href="http://adeptinfo.ca/lan"><?php echo $t->lan_adept ?></a></li>
+                        <li><a href="?lang=<?php echo $t->switcher ?>"><?php echo $t->switcher ?></a></li>
                     </ul>
                 </nav>
             </div>
@@ -221,10 +222,10 @@ $t = getTranslations();
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4><?php echo $t->footer->useful_links ?></h4>
                             <ul>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php"><?php echo $t->footer->get_hoodie ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php?lang=<?php echo $t->lang ?>"><?php echo $t->footer->get_hoodie ?></a></li>
                                 <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan"><?php echo $t->footer->lan_adept ?></a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php#about" class="btn-get-started scrollto"><?php echo $t->footer->about ?></a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php#services" class="btn-get-started scrollto"><?php echo $t->footer->services ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php?lang=<?php echo $t->lang ?>#about" class="btn-get-started scrollto"><?php echo $t->footer->about ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php?lang=<?php echo $t->lang ?>#services" class="btn-get-started scrollto"><?php echo $t->footer->services ?></a></li>
                                 <li><i class="ion-ios-arrow-right"></i> <a href="https://github.com/ADEPT-Informatique/Charte/blob/master/README.md" class="btn-get-started scrollto"><?php echo $t->footer->charter ?></a></li>
                             </ul>
                         </div>

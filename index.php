@@ -44,6 +44,7 @@ $t = getTranslations();
             <li><a href="#team"><?php echo $t->team ?></a></li>
             <li><a href="#contact"><?php echo $t->contact ?></a></li>
             <li><a href="http://adeptinfo.ca/lan"><?php echo $t->lan_adept ?></a></li>
+            <li><a href="?lang=<?php echo $t->switcher ?>"><?php echo $t->switcher ?></a></li>
           </ul>
         </nav>
       </div>
@@ -392,7 +393,7 @@ $t = getTranslations();
                             <p>
                               <?php echo $t->mdc_desc ?>
                             </p>
-                            <a href="./membresconfiance.php" class="btn btn btn-light"><?php echo $t->mdc_cta ?></a>
+                            <a href="./membresconfiance.php?lang=<?php echo $t->lang ?>" class="btn btn btn-light"><?php echo $t->mdc_cta ?></a>
                         </div>
                         <div class="col-md-4">
                             <img src="img/membre-confiance.png">

@@ -11,7 +11,7 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4><?php echo $t->footer->useful_links ?></h4>
               <ul>
-                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php"><?php echo $t->footer->get_hoodie ?></a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php?lang=<?php echo $t->lang ?>"><?php echo $t->footer->get_hoodie ?></a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan"><?php echo $t->footer->lan_adept ?></a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="btn-get-started scrollto"><?php echo $t->footer->about ?></a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="btn-get-started scrollto"><?php echo $t->footer->services ?></a></li>
@@ -19,7 +19,7 @@
               </ul>
             </div>
             <div class="col-lg-3 col-md-6 footer-contact">
-              <h4><?php echo $t->footer->visit_us ?>s</h4>
+              <h4><?php echo $t->footer->visit_us ?></h4>
               <p>
                 <?php echo $t->footer->address ?>
                 <br>
