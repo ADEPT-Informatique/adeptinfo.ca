@@ -9,22 +9,21 @@
               <img src="img/badge.png" id="footer-logo">
             </div>
             <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Liens utiles</h4>
+              <h4><?php echo $t->footer->useful_links ?></h4>
               <ul>
-                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php">Réserver un hoodie</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan">Le LAN de l'ADEPT</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="btn-get-started scrollto">À propos</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="btn-get-started scrollto">Nos services</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="https://adept-informatique.github.io/Charte/" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php"><?php echo $t->footer->get_hoodie ?></a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan"><?php echo $t->footer->lan_adept ?></a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="#about" class="btn-get-started scrollto"><?php echo $t->footer->about ?></a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="#services" class="btn-get-started scrollto"><?php echo $t->footer->services ?></a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="https://adept-informatique.github.io/Charte/" class="btn-get-started scrollto"><?php echo $t->footer->charter ?></a></li>
               </ul>
             </div>
             <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Visitez-nous</h4>
+              <h4><?php echo $t->footer->visit_us ?>s</h4>
               <p>
-                945 chemin Chambly, Longueuil<br>
-                Local F-041, CEM,<br>
-                Québec, Canada <br>
-                <a href="mailto:adept.informatique.cem@gmail.com">Nous écrire par courriel...</a>
+                <?php echo $t->footer->address ?>
+                <br>
+                <a href="mailto:adept.informatique.cem@gmail.com"><?php echo $t->footer->email_us ?></a>
               </p>
               <div class="social-links">
                 <!--
@@ -37,10 +36,10 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 footer-newsletter">
-              <h4>Infolettre</h4>
-              <p>Inscrivez-vous afin de recevoir des nouvelles de nos événements et activités !</p>
+              <h4><?php echo $t->footer->newsletter ?></h4>
+              <p><?php echo $t->footer->newsletter_txt ?></p>
               <form action="controller/subscribe.php" method="post">
-                <input type="email" name="email" placeholder="Email" required><input type="submit"  value="S'abonner">
+                <input type="email" name="email" placeholder="Email" required><input type="submit"  value="<?php echo $t->footer->input_subscribe ?>">
               </form>
             </div>
           </div>
@@ -48,10 +47,10 @@
       </div>
       <div class="container">
         <div class="copyright">
-          &copy; Copyright 2018 <strong class="green">ADEPT Informatique</strong>. Tous droits réservés.
+        <?php echo $t->footer->copyright ?>
         </div>
         <div class="credits">
-            Ce site web est <a href="https://github.com/adept-informatique/adeptinfo.ca">open-source</a>. Merci à <a href="https://github.com/ADEPT-Informatique/adeptinfo.ca#remerciements">tous ceux qui y ont collaboré</a> !
+        <?php echo $t->footer->opensource ?>
 			<br><span class="black">Why do Java programmers wear glasses ? Because they can't C# ;)</span>
 		</div>
       </div>

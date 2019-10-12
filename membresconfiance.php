@@ -1,4 +1,8 @@
-<?php require_once "controller/requestsHandlers.php"; ?>
+<?php require_once "controller/requestsHandlers.php"; 
+require_once("i18n/translationService.php");
+
+$t = getTranslations();
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -34,12 +38,12 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active d-block d-sm-none"><a href="../index.php">Accueil</a></li>
-                        <li><a href="./index.php#about">Qui sommes nous</a></li>
-                        <li><a href="./index.php#services">Services</a></li>
-                        <li><a href="./index.php#team">Membres du conseil</a></li>
-                        <li><a href="./index.php#contact">Contact</a></li>
-                        <li><a href="http://adeptinfo.ca/lan">LAN de L'ADEPT</a></li>
+                        <li class="menu-active d-block d-sm-none"><a href="../index.php"><?php echo $t->home ?></a></li>
+                        <li><a href="./index.php#about"><?php echo $t->about ?></a></li>
+                        <li><a href="./index.php#services"><?php echo $t->services ?></a></li>
+                        <li><a href="./index.php#team"><?php echo $t->team ?></a></li>
+                        <li><a href="./index.php#contact"><?php echo $t->contact ?></a></li>
+                        <li><a href="http://adeptinfo.ca/lan"><?php echo $t->lan_adept ?></a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,16 +51,16 @@
 
         <div class="container content">
             <header class="section-header">
-                <h3>Devenir Membre de confiance</h3>
+                <h3><?php echo $t->mconfiances->become_mdc ?></h3>
             </header>
             <div class="row">
                 <?php if (isset($_GET['r']) && $_GET['r']=='success' ){ ?>
                     <div class="col-md-7">
-                        <div class="alert alert-primary">Votre candidature a été envoyée avec succès!</div>
+                        <div class="alert alert-primary"><?php echo $t->mconfiances->success ?></div>
                     </div>
                 <?php } else if ((isset($_GET['r']) && $_GET['r']=='error' )){ ?>
                     <div class="col-md-7">
-                        <div class="alert alert-danger">Une erreur est survenue! Veuillez réésayer.</div>
+                        <div class="alert alert-danger"><?php echo $t->mconfiances->error ?></div>
                     </div>
                 <?php }?>
 
@@ -65,33 +69,23 @@
             <div class="row">
                 <div class="col-md-8" id="1">
                     <p>
-                        Tu es un membre actif de l'ADEPT et tu veux t'impliquer dans l'association ?<br class="d-none d-lg-block">
-                        Tu pourrais devenir un <b>membre de confiance</b>.
+                        <?php echo $t->mconfiances->mdc_lead ?>
                     </p>
                     <p>
-                        Les membres de confiance ont un accès privilégié au local.
-                        Ils peuvent emprunter la clé flottante pour pouvoir y accéder n'importe quand.
-                        En revanche, les membres de confiance sont les <b>responsables du
-                        local</b> lorsqu'aucun membre du conseil d'administration n'est présent.
+                        <?php echo $t->mconfiances->mdc_desc ?>
                     </p>
-                    <button id="btn-1" class="btn btn-outline-light">Ça m'intéresse !</button>
+                    <button id="btn-1" class="btn btn-outline-light"><?php echo $t->mconfiances->mdc_cta ?></button>
                 </div>
                 <div class="col-md-8" style="display: none" id="2">
                     <p>
-                       <strong>Voici les principaux critères de sélection des membres de confiance :</strong>
+                       <strong><?php echo $t->mconfiances->mdc_criterias_title?></strong>
                     </p>
                     <ol>
-                        <li>Être membre de l'ADEPT depuis au moins une session</li>
-                        <li>Être un membre <i>actif</i> de l'ADEPT et fréquenter régulièrement le local</li>
-                        <li>Être motivé et vouloir s'impliquer auprès de l'asso</li>
-                        <li>Être gentil avec les administrateurs ;) </li>
-                        <li>Bien s'entendre avec tout le monde</li>
+                        <?php echo $t->mconfiances->mdc_criterias_list ?>
                     </ol>
-                    <p>Puisque nous ne pouvons nommer qu'un nombre limité de membres de confiance à chaque session,
-                    nous ferons une sélection parmi les candidatures reçues à partir de ces critères et des réponses
-                    au questionnaire d'inscription de la page suivante.</p>
+                    <p><?php echo $t->mconfiances->mdc_limited ?></p>
 
-                    <button id="btn-2" class="btn btn-outline-light">Continuer</button>
+                    <button id="btn-2" class="btn btn-outline-light"><?php echo $t->mconfiances->continue ?></button>
                 </div>
                 <div id="logo-mdc" class="col-md-4">
                     <img src="img/membre-confiance.png">
@@ -99,9 +93,10 @@
             </div>
             <div class="row text-center" style="display: none; padding-top: 0" id="contact">
                 <div class="col-md-12">
-                    <strong>Pour t'inscrire en tant que candidat, tu n'as qu'à répondre
-                            à ce questionnaire !</strong><br>
-                        (&nbsp;Répond de ton mieux à chacune des questions ! Si tu ne connais pas une des réponses, essaie quelque chose&nbsp;!&nbsp;)
+                    <strong><?php echo $t->mconfiances->mdc_form_lead ?></strong><br>
+                    (&nbsp;<?php echo $t->mconfiances->mdc_form_hint ?>&nbsp;!&nbsp;)
+                        
+                <?php if ($t->lang == 'en') { echo "<br>Please take note that this form is only available in french." ;} ?>
                 </div>
                 <div class="col-md-8 offset-md-2 form text-left">
                     <form action="controller/candidatureMdc.php" method="post" role="form" class="contactForm">
@@ -224,52 +219,52 @@
                             <img src="img/badge.png" id="footer-logo">
                         </div>
                         <div class="col-lg-3 col-md-6 footer-links">
-                            <h4>Liens utiles</h4>
+                            <h4><?php echo $t->footer->useful_links ?></h4>
                             <ul>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php">Réserver un hoodie</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan">Le LAN de l'ADEPT</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php#about" class="btn-get-started scrollto">À propos</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php#services" class="btn-get-started scrollto">Nos services</a></li>
-                                <li><i class="ion-ios-arrow-right"></i> <a href="https://github.com/ADEPT-Informatique/Charte/blob/master/README.md" class="btn-get-started scrollto">Charte de l'ADEPT</a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="./hoodies/index.php"><?php echo $t->footer->get_hoodie ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="http://adeptinfo.ca/lan"><?php echo $t->footer->lan_adept ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php#about" class="btn-get-started scrollto"><?php echo $t->footer->about ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="index.php#services" class="btn-get-started scrollto"><?php echo $t->footer->services ?></a></li>
+                                <li><i class="ion-ios-arrow-right"></i> <a href="https://github.com/ADEPT-Informatique/Charte/blob/master/README.md" class="btn-get-started scrollto"><?php echo $t->footer->charter ?></a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-6 footer-contact">
-                            <h4>Visitez-nous</h4>
-                            <p>
-                                945 chemin Chambly, Longueuil<br>
-                                Local F-041, CEM,<br>
-                                Québec, Canada <br>
-                                <a href="mailto:adept.informatique.cem@gmail.com">Nous écrire par courriel...</a>
-                            </p>
-                            <div class="social-links">
-                                <!--
-                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                                    -->
-                                <a href="https://www.facebook.com/ADEPTInformatique/" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="https://github.com/ADEPT-Informatique" class="git-hub"><i class="fa fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 footer-newsletter">
-                            <h4>Infolettre</h4>
-                            <p>Inscrivez-vous afin de recevoir des nouvelles de nos événements et activités !</p>
-                            <form action="controller/subscribe.php" method="post">
-                                <input type="email" name="email" placeholder="Email" required><input type="submit"  value="S'abonner">
-                            </form>
-                        </div>
-                    </div>
-                </div>
+              <h4><?php echo $t->footer->visit_us ?>s</h4>
+              <p>
+                <?php echo $t->footer->address ?>
+                <br>
+                <a href="mailto:adept.informatique.cem@gmail.com"><?php echo $t->footer->email_us ?></a>
+              </p>
+              <div class="social-links">
+                <!--
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                    -->
+                <a href="https://www.facebook.com/ADEPTInformatique/" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://github.com/ADEPT-Informatique" class="git-hub"><i class="fa fa-github"></i></a>
+              </div>
             </div>
-            <div class="container">
-                <div class="copyright">
-                    &copy; Copyright 2018 <strong class="green">ADEPT Informatique</strong>. Tous droits réservés.
-                </div>
-                <div class="credits">
-                    Ce site web est <a href="https://github.com/adept-informatique/adeptinfo.ca">open-source</a>. Merci à <a href="https://github.com/ADEPT-Informatique/adeptinfo.ca#remerciements">tous ceux qui y ont collaboré</a> !
-                </div>
+            <div class="col-lg-3 col-md-6 footer-newsletter">
+              <h4><?php echo $t->footer->newsletter ?></h4>
+              <p><?php echo $t->footer->newsletter_txt ?></p>
+              <form action="controller/subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Email" required><input type="submit"  value="<?php echo $t->footer->input_subscribe ?>">
+              </form>
             </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+        <?php echo $t->footer->copyright ?>
+        </div>
+        <div class="credits">
+        <?php echo $t->footer->opensource ?>
+			<br><span class="black">Why do Java programmers wear glasses ? Because they can't C# ;)</span>
+		</div>
+      </div>
+    </footer>
 
         <!-- JavaScript Libraries -->
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
