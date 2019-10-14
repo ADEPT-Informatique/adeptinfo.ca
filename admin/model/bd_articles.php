@@ -1,6 +1,6 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT']."/admin";
-require_once('../../model/bdconnect.php');
+$path = $_SERVER['DOCUMENT_ROOT'];
+require_once($path.'/model/bdconnect.php');
 
 function getAllArticles(){
     $bdd = connect_DB();
