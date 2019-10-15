@@ -8,8 +8,6 @@ Thumbs.db
 node_modules/
 .DS_Store
 
-package-lock\.json
-
 # Runtime data
 pids
 *.pid

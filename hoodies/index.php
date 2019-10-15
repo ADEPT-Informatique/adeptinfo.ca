@@ -1,5 +1,8 @@
 <?php 
 require_once  "../model/bdconnect.php";
+require_once("../i18n/translationService.php");
+$t = getTranslations();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,12 +46,14 @@ require_once  "../model/bdconnect.php";
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active d-block d-sm-none"><a href="../index.php">Accueil</a></li>
-                    <li><a href="../index.php#about">Qui sommes nous</a></li>
-                    <li><a href="../index.php#services">Services</a></li>
-                    <li><a href="../index.php#team">Membres du conseil</a></li>
-                    <li><a href="../index.php#contact">Contact</a></li>
-                    <li><a href="http://adeptinfo.ca/lan">LAN de L'ADEPT</a></li>
+                    <li class="menu-active d-block d-sm-none"><a href="../index.php"><?php echo $t->home ?></a></li>
+                    <li><a href="../index.php?lang=<?php echo $t->lang ?>#about"><?php echo $t->about ?></a></li>
+                    <li><a href="../index.php?lang=<?php echo $t->lang ?>#services"><?php echo $t->services ?></a></li>
+                    <li><a href="../index.php?lang=<?php echo $t->lang ?>#team"><?php echo $t->team ?></a></li>
+                    <li><a href="../index.php?lang=<?php echo $t->lang ?>#contact"><?php echo $t->contact ?></a></li>
+                    <li><a href="http://adeptinfo.ca/lan"><?php echo $t->lan_adept ?></a></li>
+                    <li><a href="?lang=<?php echo $t->switcher ?>"><?php echo $t->switcher ?></a></li>
+
                 </ul>
             </nav>
         </div>
@@ -71,18 +76,17 @@ require_once  "../model/bdconnect.php";
 			 $resvnum = validateGet("c");
        if ($result == "success") 
        { ?>
-				<div id="confirmation" class="alert alert-success">Votre réservation à été faite avec succès! Un courriel de confirmation vous a été envoyé. <br>Votre numéro de réservation est <strong><?php echo $resvnum ?></strong></div>
+				<div id="confirmation" class="alert alert-success"><?php echo $t->hoodies_mod->success ?><strong><?php echo $resvnum ?></strong></div>
 			<?php } else if ($result == "error") { ?>
-				<div id="infirmation" class="alert alert-danger">Oh non! Une erreur c'est produite <br>Veuillez réessayer</div>
+				<div id="infirmation" class="alert alert-danger"><?php echo $t->hoodies_mod->error ?></div>
 			<?php } ?>
 
-		  <h3>Les Hoodies de l'ADEPT sont arrivés!</h3>
-		  <p>Intéréssé par un hoodie de la technique !? C'est le moment d'effectuer votre commande pour la session A18!<br>
-              <br>Les hoodie coûtent 40$ (taxes incluses) et un supplément est applicable pour les tailles plus grandes que XL.<br><strong>Veuillez noter qu'un dépôt d'au moins 20$ sera nécessaire avant l'envoi de votre commande à notre fournisseur..</strong><br>
-          </p>
-            <a class="btn btn-lg btn-outline-primary theme-font" href="#resvform">RÉSERVER MAINTENANT</a><br><br>
+		  <h3><?php echo $t->hoodies_mod->title ?></h3>
+      <?php echo $t->hoodies_mod->desc ?>
+      <br>
+      <a class="btn btn-lg btn-outline-primary theme-font" href="#resvform"><?php echo $t->hoodies_mod->cta ?></a><br><br>
 
-            <h4>Cette année, le hoodie de l'ADEPT est disponible en 3 couleurs !</h4>
+      <h4><?php echo $t->hoodies_mod->subtitle ?></h4>
 
 		</div>
 		<div class="row">
@@ -90,7 +94,7 @@ require_once  "../model/bdconnect.php";
                 <div class="card">
                     <img class="card-img-top" src="../img/hoodies/hoodie_navy.jpg" >
                     <div class="card-body">
-                        <h6 class="card-text">Navy</h6>
+                        <h6 class="card-text"><?php echo $t->hoodies_mod->navy ?></h6>
                     </div>
                 </div>
             </div>
@@ -98,7 +102,7 @@ require_once  "../model/bdconnect.php";
                 <div class="card">
                     <img class="card-img-top" src="../img/hoodies/hoodie_noir.jpg" >
                     <div class="card-body">
-                        <h6 class="card-text">Noir</h6>
+                        <h6 class="card-text"><?php echo $t->hoodies_mod->black ?></h6>
                     </div>
                 </div>
             </div>
@@ -106,7 +110,7 @@ require_once  "../model/bdconnect.php";
                 <div class="card">
                     <img class="card-img-top" src="../img/hoodies/hoodie_royal.jpg" >
                     <div class="card-body">
-                        <h6 class="card-text">Bleu royal</h6>
+                        <h6 class="card-text"><?php echo $t->hoodies_mod->blue ?></h6>
                     </div>
                 </div>
             </div>
@@ -115,77 +119,76 @@ require_once  "../model/bdconnect.php";
 		<hr >
 		<section>
             <br>
-		<h3>Réservation</h3>
+		<h3><?php echo $t->hoodies_mod->reservation ?></h3>
 		<div class="form">
 		    <!-- <div class="alert alert-info">
-		        <strong>La période de réservation des hoodies est maintenant terminée.</strong><br>
-		        Pour plus d'informations, adressez-vous à un membre du CA de l'ADEPT.
+		        <strong><?php echo $t->hoodies_mod->rsv_ended ?>.
 		    </div> -->
 		  <form action="../admin/controller/HoodieCreateReservation.php" method="post" role="form" class="contactForm">
 			<div class="form-row">
 			  <div class="form-group col-md-6">
-				<input type="text" name="prenom" class="form-control" id="firstname" placeholder="Prénom" required />
+				<input type="text" name="prenom" class="form-control" id="firstname" placeholder="<?php echo $t->hoodies_mod->firstname ?>" required />
 			  </div>
 			  <div class="form-group col-md-6">
-				<input type="text" name="nom" class="form-control" id="lastname" placeholder="Nom" required/>
+				<input type="text" name="nom" class="form-control" id="lastname" placeholder="<?php echo $t->hoodies_mod->lastname ?>" required/>
 			  </div>
 			</div>
 			  <div class="form-row">
 				<div class="form-group col-md-6">
-				  <input type="email" class="form-control" name="email" id="email" placeholder="Votre adresse courriel" data-rule="email" data-msg="Veuillez nous fournir une adresse courriel valide.<br>Cette information est nécéssaire pour vous contacter lorsque votre commande sera prête à être récupérée" required/>
+				  <input type="email" class="form-control" name="email" id="email" placeholder="<?php echo $t->hoodies_mod->email ?>" data-rule="email" data-msg="<?php echo $t->hoodies_mod->email_dsc ?>" required/>
 				  <div class="validation"></div>
 				</div>
 				  <div class="form-group col-md-6">
-					  <input type="text" name="studentid" class="form-control" id="studentid" placeholder="Numéro d'étudiant" pattern="^[1][0-9]{6}$" title="Ce numéro d'étudiant est invalide" required />
+					  <input type="text" name="studentid" class="form-control" id="studentid" placeholder="<?php echo $t->hoodies_mod->studentid ?>" pattern="^[1][0-9]{6}$" title="<?php echo $t->hoodies_mod->sid_invalid ?>" required />
 				  </div>
 			  </div>
 			<div class="form-group card">
 			  <div class="card-body">
-				<p class="underlined">Grandeur</p>
+				<p class="underlined"><?php echo $t->hoodies_mod->size ?></p>
                   <div class="radio">
                     <label>
                       <input type="radio" name="size" id="size1" value="S" required>&nbsp;
-                      Petit
+                      <?php echo $t->hoodies_mod->small ?>
                     </label>
                   </div>
                   <div class="radio">
                     <label>
                       <input type="radio" name="size" id="size2" value="M">&nbsp;
-                      Moyen
+                      <?php echo $t->hoodies_mod->medium ?>
                     </label>
                   </div>
                   <div class="radio">
                     <label>
                       <input type="radio" name="size" id="size3" value="L">&nbsp;
-                      Grand
+                      <?php echo $t->hoodies_mod->large ?>
                     </label>
                   </div>
                   <div class="radio">
                     <label>
                         <input type="radio" name="size" id="size3" value="XL">&nbsp;
-                        Très Grand
+                        <?php echo $t->hoodies_mod->xlarge ?>
                     </label>
                   </div>
 <!--                  <div class="radio">-->
 <!--                    <label>-->
 <!--                      <input type="radio" name="size" id="sizeundefined" value="N" checked>&nbsp;-->
-<!--                      J'irai essayer les grandeurs à l'ADEPT-->
+<!--                      <?php echo $t->hoodies_mod->try ?>-->
 <!--                    </label>-->
 <!--                  </div>-->
                 </div>
 			  </div>
               <div class="form-group card">
                   <div class="card-body">
-                      <label for="selectCouleur" class="underlined">Couleur</label>
+                      <label for="selectCouleur" class="underlined"><?php echo $t->hoodies_mod->colors ?></label>
                       <select class="form-control" name="color" id="selectCouleur" required>
-                          <option value="">Veuillez choisir la couleur</option>
-                          <option value="Navy">Navy</option>
-                          <option value="Black">Noir</option>
-                          <option value="Royal">Bleu</option>
+                          <option value=""><?php echo $t->hoodies_mod->colors_sub ?></option>
+                          <option value="Navy"><?php echo $t->hoodies_mod->navy ?></option>
+                          <option value="Black"><?php echo $t->hoodies_mod->black ?></option>
+                          <option value="Royal"><?php echo $t->hoodies_mod->blue ?></option>
                       </select>
                   </div>
               </div>
-			<div class="text-center"><button type="submit">Confirmer</button></div>
+			<div class="text-center"><button type="submit"><?php echo $t->hoodies_mod->confirm ?></button></div>
 		  </form>
 		</div>
     <br>
@@ -202,11 +205,11 @@ require_once  "../model/bdconnect.php";
   <footer id="footer">
       <div class="container">
           <div class="copyright">
-              &copy; Copyright 2018 <strong class="green">ADEPT Informatique</strong>. Tous droits réservés
+          <?php echo $t->footer->copyright ?>
           </div>
       </div>
       <div class="text-center">
-          <a href="../admin/" class="text-dark">Gérer les réservations</a>
+          <a href="../admin/" class="text-dark"><?php echo $t->hoodies_mod->manage ?></a>
       </div>
 
 
