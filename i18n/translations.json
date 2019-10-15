@@ -133,6 +133,16 @@
             "colors": "Couleur",
             "colors_sub": "Veuillez choisir la couleur",
             "manage": "Gérer les réservations."
+        },
+        "shop_mod": {
+            "title": "Autofinancement",
+            "image": "Image",
+            "article": "Article",
+            "price": "Prix",
+            "inventory": "Inventaire",
+            "description": "Description",
+            "list_intro": "Voici la liste des produits disponible à notre local (F-041)!",
+            "shop_info": "Afin d'organiser des évennements comme le LAN et d'améliorer l'aménagement de notre local, l'ADEPT offre à ses membres (et à tous les visiteurs) un programme d'autofinancement. Nous vous offrons ainsi une vaste séléction de collations et de repas hautement gatronomiques à faible coût qui respectent bien entendu les recommendations du guide alimentaire canadien! Ce qui est avantageux pour vous, en tant que membre, c'est que tous les profits retournent directement à l'association et donc en quelques sortes à vous même ! "
         }
     },
     "en": {
@@ -214,12 +224,12 @@
         "footer": {
             "useful_links": "Useful links",
             "get_hoodie": "Get a hoodie",
-            "lan_adept": "Le LAN de L'ADEPT",
+            "lan_adept": "The LAN",
             "about": "About us",
             "services": "Our services",
             "charter": "ADEPT charter",
             "visit_us": "Visit us",
-            "address": "945 Chambly road, Longueuil<br>room F-041, CEM,<br>Québec, Canada",
+            "address": "945 Chambly Road, Longueuil<br>room F-041, CEM,<br>Québec, Canada",
             "email_us": "Write us by email...",
             "newsletter": "Newsletter",
             "input_subscribe": "Subscribe",
@@ -269,6 +279,17 @@
             "colors": "Colour",
             "colors_sub": "Please choose a color",
             "manage": "Manage reservations."
+        },
+        "shop_mod": {
+            "title": "Self-Financing",
+            "image": "Image",
+            "article": "Article",
+            "price": "Price",
+            "inventory": "Invetory",
+            "description": "Description",
+            "list_intro": "Here is a list of products available at our local(F-041)!",
+            "shop_info": "In order to organize events such as the LAN and to improve the layout of our local, the ADEPT offers its members (and all visitors) a self-financing program. We offer you a wide selection of low-cost gourmet snacks and meals that, of course, follow the recommendations of Canada's Food Guide! What's good for you, as a member, is that all the profits go directly back to the association and so in some ways to yourself!"
+
         }
     }
 }
