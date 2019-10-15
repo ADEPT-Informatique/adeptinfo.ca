@@ -4,14 +4,20 @@
 
 Votre contribution est la bienvenue! Si vous avez des idées d'éléments à ajouter au site web, nous vous encourageons à créer un [nouvel issue](https://github.com/ADEPT-Informatique/adeptinfo.ca/issues/new) avec le tag **enhancement**.
 
-**Pour développer en local**
+### Développement local
 
 Prérequis : [Node.js](https://nodejs.org/en/) et un serveur php/mysql local
 1. `git clone https://github.com/ADEPT-Informatique/adeptinfo.ca.git`
 2. `cd adeptinfo.ca`
 3. `npm install`
 
-Le script de cération de la base de donnée du site est disponible dans `model/adeptbd.sql`
+#### Base de donnée
+Certaines fonctionnalités du site nécéssitent l'accès à la base de donnée `adept`. 
+Le script de création de la base de donnée du site est disponible dans **`model/adeptbd.sql`**
+
+Le fichier de connexion aà la BD est `model/bdconnect.php`
+
+Avec cette BD il est possible de se connecter à la section admin avec l'utilisateur `admin@adeptinfo.ca` et le mot de passe `Passw0rd`
 
 ## Vue d'ensemble
 
