@@ -32,9 +32,7 @@ $t = getTranslations();
         Entête
         ============================-->
     <header id="header">
-      <div class="container-fluid">
         <?php include("includes/nav.php")?>
-      </div>
     </header>
     <!-- #header -->
     <!--==========================
