@@ -102,6 +102,24 @@ function GetCountReservationBySize($taille){
     $db = null;
 }
 
+function GetCountReservationBySizeAndColor($taille, $color){
+    $db = connect_DB();
+    try {
+        $request = $db->prepare("SELECT COUNT(ReservationID) 'count' FROM HoodieReservation WHERE Taille = :Taille AND Color = :Color");
+        $request->execute(array(
+          'Taille' => $taille,
+          'Color' => $color
+        ));
+        return $request->fetch()['count'];
+        
+    }
+    catch(Exception $e)
+    {
+        die('Erreur : '.$e->getMessage());
+    }
+    $db = null;
+}
+
 
 function GetTotalCountReservation(){
     $db = connect_DB();

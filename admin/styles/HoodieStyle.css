@@ -49,6 +49,21 @@ td, th{
     background-color : gold;
 }
 
+.black{
+    color:white;
+    background-color: black;
+}
+
+.navy{
+    color:white;
+    background-color: navy;
+}
+
+.royal{
+    color:white;
+    background-color: royalblue;
+}
+
 /*=========== Page de login ==============================*/
 
 .login{
