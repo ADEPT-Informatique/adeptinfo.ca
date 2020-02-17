@@ -243,19 +243,19 @@ $t = getTranslations();
           </header>
           <div class="row counters">
             <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">256</span>
+              <span data-toggle="counter-up">316</span>
               <p><?php echo $t->members ?></p>
             </div>
             <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">31</span>
+              <span data-toggle="counter-up">32</span>
               <p><?php echo $t->years ?></p>
             </div>
             <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">9</span>
+              <span data-toggle="counter-up">12</span>
               <p><?php echo $t->lans_org ?></p>
             </div>
             <div class="col-lg-3 col-6 text-center">
-              <span data-toggle="counter-up">752</span>
+              <span data-toggle="counter-up">1252</span>
               <p><?php echo $t->pogos_sold ?></p>
             </div>
           </div>

@@ -10,7 +10,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/controller/requestsHandlers.php";
 function connect_DB(){
     try
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=adept;charset=utf8', 'user', 'Passw0rd');
+        $bdd = new PDO('mysql:host=localhost;dbname=adept;charset=utf8', 'user', 'password');
         $bdd -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $bdd;
     }
