@@ -63,7 +63,7 @@ $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Return-Path: noreply@adeptinfo.ca\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 // send email
-mail('brassard.oli@gmail.com',"ADEPT Nouvelle réservation",$msgStatus,$headers);
+mail('adept.informatique.cem@gmail.com',"ADEPT Nouvelle réservation",$msgStatus,$headers);
 
 
 header('Location: ../../hoodies/index.php?r=success&c='.$cfnumber);
