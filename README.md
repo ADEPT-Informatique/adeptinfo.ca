@@ -51,6 +51,14 @@ Nous aimerions remercier tous les membres de l'ADEPT qui ont collaborés de prè
 - [Mathieu Massicotte](https://github.com/massicottem)
 - Nicolas U. Beaumier
 
+De plus, quelques généreux donateurs auront permis au site de rester en ligne, en des temps de sécheresse fiduciaire des fonds alloués à l'associatoin. Les voici :
+
+- [Laurent Bouchard, 10$](https://github.com/LaurentBouchard)
+- [Olivier Brassard, 10$](https://github.com/OBrassard)
+- [Ricky Chittaphone, 15$]() 
+- [William Richer, 20$]()
+- [Matthew Duteau, 10$]()
+- [Pierre-Olivier Brillant, 5$](https://github.com/PierreOlivierBrillant)
 
 ## Screenshots
 ![Page d'accueil](./screenshots/homepage.png)
