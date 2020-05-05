@@ -55,7 +55,7 @@ De plus, quelques généreux donateurs auront permis au site de rester en ligne,
 
 - [Laurent Bouchard, 10$](https://github.com/LaurentBouchard)
 - [Olivier Brassard, 10$](https://github.com/OBrassard)
-- [Ricky Chittaphone, 15$]() 
+- [Ricky Chittaphone, 15$](https://github.com/RickyChittaphone) 
 - [William Richer, 20$]()
 - [Matthew Duteau, 10$]()
 - [Pierre-Olivier Brillant, 5$](https://github.com/PierreOlivierBrillant)
