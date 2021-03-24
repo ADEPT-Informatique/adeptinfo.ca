@@ -22,7 +22,6 @@ import { SharedModule } from '../shared/shared.module';
     FooterComponent],
   imports: [
     CommonModule,
-    BrowserModule,
     HomeRoutingModule,
     SharedModule
   ]

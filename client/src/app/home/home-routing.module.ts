@@ -7,7 +7,7 @@ import { Page404homeComponent } from './page404home/page404home.component';
 
 const routes: Routes = [
   {
-    path: 'home', component: MainComponent, children: [
+    path: '', component: MainComponent, children: [
       { path: '', component: HomeComponent },
       { path: 'mdc', component: MdcComponent },
       { path: 'membredeconfiance', component: MdcComponent },
@@ -15,7 +15,7 @@ const routes: Routes = [
       { path: '**', component: Page404homeComponent }
     ]
   },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

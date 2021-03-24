@@ -3,15 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home/',
+    path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'admin/',
+    path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
-    path: 'lan/',
+    path: 'lan',
     loadChildren: () => import('./lan/lan.module').then(m => m.LanModule)
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' }

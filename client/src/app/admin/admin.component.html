@@ -1,1 +1,14 @@
-<p>admin works!</p>
+<div class="admin-shell">
+    <div class="sidebar" [class.sidebar_open]="navbarHover" (mouseenter)="navbarHover = true"
+        (mouseleave)="navbarHover = false">
+        <div class="sidebar_logo">
+            <img [class.sidebar_logo_big]="navbarHover" src="/assets/img/badge.png">
+        </div>
+        <div *ngFor="let page of pages" class="sidebar_bubble" [class.sidebar_bubble_selected]="page.path == getPath()"
+            [routerLink]="page.path">
+            <fa-icon class="icon" [icon]="page.icon"></fa-icon>
+            <p *ngIf="navbarHover" class="sidebar_page_name">{{page.name}}</p>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
