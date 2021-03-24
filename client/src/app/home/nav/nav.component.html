@@ -1,17 +1,18 @@
 <header id="header">
-    <div class="container-fluid">
-      <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">ADEPT</a></h1>
-      </div>
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active d-block d-sm-none"><a href="#intro">Accueil</a></li>
-          <li><a href="#about">Qui sommes nous</a></li>
-          <li><a href="#services">Nos services</a></li>
-          <li><a href="#team">Membres du conseil</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="http://adeptinfo.ca/lan">LAN de L'ADEPT</a></li>
-        </ul>
-      </nav>
+  <div class="container-fluid">
+    <div id="logo" class="pull-left">
+      <h1><a href="#intro" class="scrollto">ADEPT</a></h1>
     </div>
-  </header>
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+        <li class="menu-active d-block d-sm-none"><a href="#intro">{{"home" |translate}}</a></li>
+        <li><a href="#about">{{"about" |translate}}</a></li>
+        <li><a href="#services">{{ "services" |translate}}</a></li>
+        <li><a href="#team">{{"team" |translate}}</a></li>
+        <li><a href="#contact">{{"contact" |translate}}</a></li>
+        <li><a href="http://adeptinfo.ca/lan">{{"lan_adept" |translate}}</a></li>
+        <li (click)="toggleLanguage()">{{"lang" |translate}}</li>
+      </ul>
+    </nav>
+  </div>
+</header>

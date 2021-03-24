@@ -1,17 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { stdout } from 'process';
-import { TranslationService } from 'src/app/services/translation.service';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'home-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
 
-  constructor(public translate: TranslationService) { }
+  constructor(
+    public translationService: TranslateService
+  ) { }
 
-  ngOnInit(): void {
+  toggleLanguage() {
+    this.translationService.get("toggle").toPromise().then(
+      value => {
+        this.translationService.use(value);
+      }
+    )
   }
 
 }

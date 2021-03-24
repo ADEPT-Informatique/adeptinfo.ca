@@ -8,12 +8,10 @@ import { Page404homeComponent } from './page404home/page404home.component';
 const routes: Routes = [
   {
     path: 'home', component: MainComponent, children: [
-      { path: 'home', component: HomeComponent },
-      { path: 'mdc', component: MdcComponent }, 
-      { path: 'membredeconfiance', component: MdcComponent }, 
-      {
-        path: '', redirectTo: 'home', pathMatch: 'full'
-      },
+      { path: '', component: HomeComponent },
+      { path: 'mdc', component: MdcComponent },
+      { path: 'membredeconfiance', component: MdcComponent },
+      { path: 'home', redirectTo: '', pathMatch: 'full' },
       { path: '**', component: Page404homeComponent }
     ]
   },

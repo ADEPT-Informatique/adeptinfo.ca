@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslationService } from './services/translation.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,16 @@ import { TranslationService } from './services/translation.service';
 export class AppComponent {
   title = 'client';
 
-  
-  constructor(public translate: TranslationService) { }
+
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang('en');
+
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  }
 
   ngOnInit(): void {
-    
-    if(!this.translate.get('lang'))
-    {
-      this.translate.setLanguage('fr');
-    }
+
   }
 }
