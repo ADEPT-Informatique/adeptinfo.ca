@@ -1,4 +1,5 @@
-import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +10,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavComponent {
 
   constructor(
-    public translationService: TranslateService
+    public translationService: TranslateService,
+    public router: Router
   ) { }
 
   toggleLanguage() {
@@ -18,6 +20,11 @@ export class NavComponent {
         this.translationService.use(value);
       }
     )
+  }
+
+  getCurrentPage() {
+    let url = this.router.url
+    return url.includes("#") ? url : url + "#"
   }
 
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCertificate, faCoffee, faCogs, faExternalLinkAlt, faGamepad, faIdBadge, faShoppingBasket, faTachometerAlt, faTshirt, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faCertificate, faCogs, faExternalLinkAlt, faGamepad, faIdBadge, faShoppingBasket, faTachometerAlt, faTshirt, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Page } from '../shared/models'
 @Component({
   selector: 'app-admin',
@@ -7,9 +7,6 @@ import { Page } from '../shared/models'
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-
-
-
   navbarHover = false;
   pages: Page[] = [
     {
@@ -59,8 +56,7 @@ export class AdminComponent implements OnInit {
     },
   ]
   constructor() {
-    console.log(this.path);
-
+    console.log(this.getPath());
   }
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@
         <li><a href="#team">{{"team" |translate}}</a></li>
         <li><a href="#contact">{{"contact" |translate}}</a></li>
         <li><a href="/lan">{{"lan_adept" |translate}}</a></li>
-        <li (click)="toggleLanguage()">{{"lang" |translate}}</li>
+        <li><a [href]="getCurrentPage()" (click)="toggleLanguage()">{{"lang" |translate}}</a></li>
       </ul>
     </nav>
   </div>
