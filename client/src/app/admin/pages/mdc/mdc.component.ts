@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-mdc',
   templateUrl: './mdc.component.html',
-  styleUrls: ['./mdc.component.scss']
+  styleUrls: ['./mdc.component.scss'],
 })
 export class MdcComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

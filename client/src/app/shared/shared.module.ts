@@ -4,21 +4,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AdeptService } from './services/adept.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
-
 @NgModule({
-  declarations: [
-
-  ],
-  imports: [
-    CommonModule,
-    TranslateModule,
-    FontAwesomeModule
-  ],
-  exports: [
-    TranslateModule,
-    FontAwesomeModule
-  ],
-  providers: [AdeptService]
+  declarations: [],
+  imports: [CommonModule, TranslateModule, FontAwesomeModule],
+  exports: [TranslateModule, FontAwesomeModule],
+  providers: [AdeptService],
 })
-export class SharedModule { }
+export class SharedModule {}

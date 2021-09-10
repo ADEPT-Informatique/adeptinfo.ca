@@ -10,39 +10,40 @@ import { MdcComponent } from './pages/mdc/mdc.component';
 
 const routes: Routes = [
   {
-    path: '', component: AdminComponent,
+    path: '',
+    component: AdminComponent,
     children: [
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
       },
       {
         path: 'fridge',
-        component: ShoppingComponent
+        component: ShoppingComponent,
       },
       {
         path: 'users',
-        component: UsersComponent
+        component: UsersComponent,
       },
       {
         path: 'hoodies',
-        component: HoodiesComponent
+        component: HoodiesComponent,
       },
       {
         path: 'mdc',
-        component: MdcComponent
+        component: MdcComponent,
       },
       {
         path: '**',
-        component: AdminNotFoundComponent
+        component: AdminNotFoundComponent,
       },
-    ]
+    ],
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}

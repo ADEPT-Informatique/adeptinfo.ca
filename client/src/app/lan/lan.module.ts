@@ -3,13 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LanComponent } from './lan.component';
 import { LanRoutingModule } from './lan-routing.module';
 
-
-
 @NgModule({
   declarations: [LanComponent],
-  imports: [
-    CommonModule,
-    LanRoutingModule
-  ]
+  imports: [CommonModule, LanRoutingModule],
 })
-export class LanModule { }
+export class LanModule {}

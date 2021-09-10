@@ -10,14 +10,16 @@ import { UsersComponent } from './pages/users/users.component';
 import { HoodiesComponent } from './pages/hoodies/hoodies.component';
 import { MdcComponent } from './pages/mdc/mdc.component';
 
-
-
 @NgModule({
-  declarations: [AdminComponent, AdminNotFoundComponent, HomeComponent, ShoppingComponent, UsersComponent, HoodiesComponent, MdcComponent],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    SharedModule
-  ]
+  declarations: [
+    AdminComponent,
+    AdminNotFoundComponent,
+    HomeComponent,
+    ShoppingComponent,
+    UsersComponent,
+    HoodiesComponent,
+    MdcComponent,
+  ],
+  imports: [CommonModule, AdminRoutingModule, SharedModule],
 })
-export class AdminModule { }
+export class AdminModule {}

@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-mdc',
   templateUrl: './mdc.component.html',
-  styleUrls: ['./mdc.component.scss']
+  styleUrls: ['./mdc.component.scss'],
 })
 export class MdcComponent implements OnInit {
+  error = '';
 
-  error = "";
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

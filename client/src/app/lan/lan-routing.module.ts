@@ -5,13 +5,13 @@ import { LanComponent } from './lan.component';
 const routes: Routes = [
   {
     path: '',
-    component: LanComponent
+    component: LanComponent,
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class LanRoutingModule { }
+export class LanRoutingModule {}

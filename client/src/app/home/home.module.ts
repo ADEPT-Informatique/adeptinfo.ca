@@ -10,8 +10,6 @@ import { Page404homeComponent } from './page404home/page404home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
 
-
-
 @NgModule({
   declarations: [
     MainComponent,
@@ -19,11 +17,8 @@ import { SharedModule } from '../shared/shared.module';
     MdcComponent,
     HomeComponent,
     Page404homeComponent,
-    FooterComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    SharedModule
-  ]
+    FooterComponent,
+  ],
+  imports: [CommonModule, HomeRoutingModule, SharedModule],
 })
-export class HomeModule { }
+export class HomeModule {}
