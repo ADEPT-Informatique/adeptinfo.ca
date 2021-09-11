@@ -1,141 +1,15 @@
-
-/*--------------------------------------
-# Colors
----------------------------------------*/
-
-
-.discord-color{
-    color: #7289DA;
-  }
-  
-  .messenger-color{
-    color: #0084ff;
-  }
-  
-  .discord {
-    background: #7289DA;
-    border-color: #6077da;
-  }
-  
-  .discord:hover{
-    background: #6077da;
-  }
-  
-  .green{
-    color:#10d22d;
-  }
-  
-  
-  .black{
-    color: black;
-  }
-  
-  .blue{
-    color: blue;
-  }
-  
-  .turquoise {
-    color: #17b4b0;
-  }
-  
-  
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500');
+* {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500");
 @font-face {
-  font-family: 'Imagine';
-  src: url('/assets/font/imagine-font.woff2') format('woff2'),
-  url('/assets/font/imagine-font.woff') format('woff'),
-  url('/assets/font/imagine-font.ttf') format('truetype');
+  font-family: "Imagine";
+  src: url("/assets/font/imagine-font.woff2") format("woff2"),
+    url("/assets/font/imagine-font.woff") format("woff"),
+    url("/assets/font/imagine-font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-body {
-  background: #fff;
-  color: #666666;
-  font-family: "Open Sans", sans-serif;
-}
-
-a {
-  color: #10d213;
-  transition: 0.5s;
-}
-
-a:hover, a:active, a:focus {
-  color: #10d213;
-  outline: none;
-  text-decoration: none;
-}
-
-p {
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-  padding: 0;
-}
-
-/* Back to top button */
-.back-to-top {
-  position: fixed;
-  display: none;
-  background: #10d213;
-  color: #fff;
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  text-align: center;
-  line-height: 1;
-  font-size: 16px;
-  border-radius: 50%;
-  right: 15px;
-  bottom: 15px;
-  transition: background 0.5s;
-  z-index: 11;
-}
-
-.back-to-top i {
-  padding-top: 12px;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 15px;
-  }
-}
-
-@media (max-width: 350px) {
-  .section-header h3 {
-    font-size: 26px !important;
-  }
-}
-
-.x-small{
-  font-size: 9px;
-}
-
-.code{
-  font-family: consolas, Inconsolata, monospace;
-  background: white;
-  padding: 6px;
-  border-radius: 5px;
-}
-
-.compact {
-  padding-bottom: 0 !important;
-}
-
-.large-icon{
-  height: auto !important;
-  font-size: 45px;
-  margin-bottom: 20px;
-}
-
-
+$primary-color: #10d213;

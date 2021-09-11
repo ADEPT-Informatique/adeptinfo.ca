@@ -5,13 +5,29 @@
     </div>
     <nav id="nav-menu-container">
       <ul class="nav-menu">
-        <li class="menu-active d-block d-sm-none"><a href="#intro">{{"home" |translate}}</a></li>
-        <li><a href="#about">{{"about" |translate}}</a></li>
-        <li><a href="#services">{{ "services" |translate}}</a></li>
-        <li><a href="#team">{{"team" |translate}}</a></li>
-        <li><a href="#contact">{{"contact" |translate}}</a></li>
-        <li><a href="/lan">{{"lan_adept" |translate}}</a></li>
-        <li><a [href]="getCurrentPage()" (click)="toggleLanguage()">{{"lang" |translate}}</a></li>
+        <li class="menu-active d-block d-sm-none">
+          <a href="#intro">{{ "home" | translate }}</a>
+        </li>
+        <li>
+          <a href="#about">{{ "about" | translate }}</a>
+        </li>
+        <li>
+          <a href="#services">{{ "services" | translate }}</a>
+        </li>
+        <li>
+          <a href="#team">{{ "team" | translate }}</a>
+        </li>
+        <li>
+          <a href="#contact">{{ "contact" | translate }}</a>
+        </li>
+        <li>
+          <a href="/lan">{{ "lan_adept" | translate }}</a>
+        </li>
+        <li>
+          <a [href]="getCurrentPage()" (click)="toggleLanguage()">{{
+            "lang" | translate
+          }}</a>
+        </li>
       </ul>
     </nav>
   </div>

@@ -26,13 +26,11 @@
     </div>
     <div class="col-md-8" style="display: none" id="2">
       <p>
-        <strong>{{
-          "mconfiances.mdc_criterias_title" | translate
-          }}</strong>
+        <strong>{{ "mconfiances.mdc_criterias_title" | translate }}</strong>
       </p>
       <ol>
         {{
-        "mconfiances.mdc_criterias_list" | translate
+          "mconfiances.mdc_criterias_list" | translate
         }}
       </ol>
       <p>{{ "mconfiances.mdc_limited" | translate }}</p>
@@ -45,87 +43,169 @@
       <img src="/assets/img/membre-confiance.png" />
     </div>
   </div>
-  <div class="row text-center" style="display: none; padding-top: 0" id="contact">
+  <div
+    class="row text-center"
+    style="display: none; padding-top: 0"
+    id="contact"
+  >
     <div class="col-md-12">
-      <strong>{{ "mconfiances.mdc_form_lead" | translate }}</strong><br />
+      <strong>{{ "mconfiances.mdc_form_lead" | translate }}</strong
+      ><br />
       (&nbsp; {{ "mconfiances.mdc_form_hint" | translate }}nbsp;!&nbsp;)
 
       <div>
         <br />Please take note that this form is only available in french."
       </div>
-
     </div>
     <div class="col-md-8 offset-md-2 form text-left">
-      <form action="controller/candidatureMdc.php" method="post" role="form" class="contactForm">
+      <form
+        action="controller/candidatureMdc.php"
+        method="post"
+        role="form"
+        class="contactForm"
+      >
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="nom">Quel est ton nom ?</label>
-            <input type="text" name="nom" class="form-control" id="nom" placeholder="Prénom Nom" required />
+            <input
+              type="text"
+              name="nom"
+              class="form-control"
+              id="nom"
+              placeholder="Prénom Nom"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="email">Quel est ton adresse email ?</label>
-            <input type="email" name="email" class="form-control" id="email" required />
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="email"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="nbsession">Combien de sessions en informatique as-tu complétées jusqu'à date
-              ?</label>
-            <input type="number" name="nbsession" class="form-control" id="nbsession" required />
+            <label for="nbsession"
+              >Combien de sessions en informatique as-tu complétées jusqu'à date
+              ?</label
+            >
+            <input
+              type="number"
+              name="nbsession"
+              class="form-control"
+              id="nbsession"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="raison">Pour quelle(s) raison(s) veux-tu devenir membre de confiance
-              ?</label>
-            <textarea id="raison" class="form-control" name="raison" required></textarea>
+            <label for="raison"
+              >Pour quelle(s) raison(s) veux-tu devenir membre de confiance
+              ?</label
+            >
+            <textarea
+              id="raison"
+              class="form-control"
+              name="raison"
+              required
+            ></textarea>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="reaction">Un étudiant utilise la télévision comme escabot pour grimper sur
+            <label for="reaction"
+              >Un étudiant utilise la télévision comme escabot pour grimper sur
               le réfrigérateur. En lui demandant ce qu'il fait, il vous répond
               qu'il achète un thé glacé à l'ATIM par le plafond. Que faites-vous
-              ?</label>
-            <textarea id="reaction" class="form-control" name="reaction" required></textarea>
+              ?</label
+            >
+            <textarea
+              id="reaction"
+              class="form-control"
+              name="reaction"
+              required
+            ></textarea>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="bin">01010001 01110101 01100101 01101100 01101100 01100101 00100000
+            <label for="bin"
+              >01010001 01110101 01100101 01101100 01101100 01100101 00100000
               01100101 01110011 01110100 00100000 01110100 01100001 00100000
               01110011 01101111 01110010 01110100 01100101 00100000 01100100
               01100101 00100000 01110000 01101001 01111010 01111010 01100001
               00100000 01110000 01110010 11000011 10101001 01100110 11000011
-              10101001 01110010 11000011 10101001 01100101 ?</label>
-            <input type="text" name="bin" class="form-control" id="bin" required />
+              10101001 01110010 11000011 10101001 01100101 ?</label
+            >
+            <input
+              type="text"
+              name="bin"
+              class="form-control"
+              id="bin"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="facto">Factorise l'expression suivante :
-              <i>x<sup>2</sup>&nbsp;+&nbsp;3x&nbsp;-&nbsp;xy&nbsp;-&nbsp;3y</i></label>
-            <input type="text" name="facto" class="form-control" id="facto" required />
+            <label for="facto"
+              >Factorise l'expression suivante :
+              <i
+                >x<sup>2</sup>&nbsp;+&nbsp;3x&nbsp;-&nbsp;xy&nbsp;-&nbsp;3y</i
+              ></label
+            >
+            <input
+              type="text"
+              name="facto"
+              class="form-control"
+              id="facto"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="java">Java ou Javascript ?</label>
-            <input type="text" name="java" class="form-control" id="java" required />
+            <input
+              type="text"
+              name="java"
+              class="form-control"
+              id="java"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="gif">Comment prononce-t-on gif ?</label>
-            <input type="text" name="gif" class="form-control" id="gif" required />
+            <input
+              type="text"
+              name="gif"
+              class="form-control"
+              id="gif"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="meme">Quel meme te représente le mieux ? (Copie-colle un lien)</label>
-            <input type="text" name="meme" class="form-control" id="meme" required />
+            <label for="meme"
+              >Quel meme te représente le mieux ? (Copie-colle un lien)</label
+            >
+            <input
+              type="text"
+              name="meme"
+              class="form-control"
+              id="meme"
+              required
+            />
           </div>
         </div>
         <br />
@@ -134,35 +214,72 @@
         <br />
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="ban">Quels sont le ou les sujet(s) bannis de l’ADEPT ?</label>
-            <input type="text" name="ban" class="form-control" id="ban" required />
+            <label for="ban"
+              >Quels sont le ou les sujet(s) bannis de l’ADEPT ?</label
+            >
+            <input
+              type="text"
+              name="ban"
+              class="form-control"
+              id="ban"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="brev">Quel est LE breuvage officiel de l’ADEPT ?</label>
-            <input type="text" name="brev" class="form-control" id="brev" required />
+            <input
+              type="text"
+              name="brev"
+              class="form-control"
+              id="brev"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="alim">Quel est l’aliment le plus vendu dans l'histoire de l'asso
-              ?</label>
-            <input type="text" name="alim" class="form-control" id="alim" required />
+            <label for="alim"
+              >Quel est l’aliment le plus vendu dans l'histoire de l'asso
+              ?</label
+            >
+            <input
+              type="text"
+              name="alim"
+              class="form-control"
+              id="alim"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="local">Sans tricher, quel est le numéro de local de l’ADEPT ?</label>
-            <input type="text" name="local" class="form-control" id="local" required />
+            <label for="local"
+              >Sans tricher, quel est le numéro de local de l’ADEPT ?</label
+            >
+            <input
+              type="text"
+              name="local"
+              class="form-control"
+              id="local"
+              required
+            />
           </div>
         </div>
         <div class="form-row">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="check" required />
-            <label class="form-check-label" for="check">Je comprend qu'il ne peut y avoir qu'un nombre limité de membres
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="check"
+              required
+            />
+            <label class="form-check-label" for="check"
+              >Je comprend qu'il ne peut y avoir qu'un nombre limité de membres
               de confiance par session et que ma participation ne garantit pas
-              ma sélection.</label>
+              ma sélection.</label
+            >
           </div>
         </div>
         <br />
