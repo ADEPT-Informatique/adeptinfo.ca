@@ -1,7 +1,11 @@
 * {
   margin: 0px;
   font-family: "Open Sans", sans-serif;
+  $primary-color: #10d213;
+  $messenger-color: #0084ff;
+  $discord-color: #7289da;
 }
+
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500");
 @font-face {
   font-family: "Imagine";
@@ -12,4 +16,5 @@
   font-style: normal;
 }
 
-$primary-color: #10d213;
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

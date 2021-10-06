@@ -4,26 +4,26 @@
       <h1><a href="#intro" class="scrollto">ADEPT</a></h1>
     </div>
     <nav id="nav-menu-container">
-      <ul class="nav-menu">
+      <ul class="nav justify-content-end">
         <li class="menu-active d-block d-sm-none">
           <a href="#intro">{{ "home" | translate }}</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#about">{{ "about" | translate }}</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#services">{{ "services" | translate }}</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#team">{{ "team" | translate }}</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#contact">{{ "contact" | translate }}</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="/lan">{{ "lan_adept" | translate }}</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a [href]="getCurrentPage()" (click)="toggleLanguage()">{{
             "lang" | translate
           }}</a>
