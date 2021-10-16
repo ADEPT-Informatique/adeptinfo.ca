@@ -248,7 +248,6 @@
 }
 
 #intro .btn-get-started {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -484,12 +483,10 @@
 
 #call-to-action p {
   color: #fff;
-  font-family: "Ubuntu", "Open Sans", sans-serif;
   font-weight: 500;
 }
 
 #call-to-action .cta-btn {
-  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -537,7 +534,6 @@
 }
 
 #facts .counters span {
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 48px;
   display: block;
@@ -547,7 +543,6 @@
 #facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #111;
 }
@@ -751,67 +746,6 @@
   margin-right: 22%;
 }
 
-#header {
-  padding: 30px 0;
-  height: 92px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  transition: all 0.5s;
-  z-index: 997;
-}
-
-#header.header-scrolled {
-  background: rgba(0, 0, 0, 0.9);
-  padding: 20px 0;
-  height: 72px;
-  transition: all 0.5s;
-}
-
-#header #logo {
-  float: left;
-}
-
-@media (min-width: 1024px) {
-  #header #logo {
-    padding-left: 60px;
-  }
-}
-
-#header #logo h1 {
-  font-size: 34px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-#header #logo h1 a,
-#header #logo h1 a:hover {
-  color: #fff;
-  padding-left: 10px;
-  padding-top: 5px;
-  border-left: 4px solid $primary-color;
-  font-family: Imagine;
-}
-
-#header #logo img {
-  padding: 0;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  #header #logo h1 {
-    font-size: 28px;
-  }
-  #header #logo img {
-    max-height: 40px;
-  }
-}
-
 #team {
   background: #fff;
   padding: 60px 0;
@@ -929,5 +863,16 @@
 
   #membres-confiance .section-header p {
     text-align: center;
+  }
+}
+
+@media (max-width: 790px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  #call-to-action {
+    background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
+      url("/assets/img/bg-lan.jpg") center center;
   }
 }

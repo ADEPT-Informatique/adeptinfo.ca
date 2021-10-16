@@ -1,18 +1,7 @@
-* {
-  margin: 0px;
-  font-family: "Open Sans", sans-serif;
-}
-
+@import '~styles/imports.scss';
 @import "~styles/colors.scss";
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500");
-@font-face {
-  font-family: "Imagine";
-  src: url("/assets/font/imagine-font.woff2") format("woff2"),
-    url("/assets/font/imagine-font.woff") format("woff"),
-    url("/assets/font/imagine-font.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import '~styles/fonts.scss';
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap.scss';
+body {
+    font-family: 'Montserrat';
+}

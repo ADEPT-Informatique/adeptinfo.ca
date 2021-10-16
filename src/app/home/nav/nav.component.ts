@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -8,6 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
+  scrolled: boolean = false;
+
   constructor(
     public translationService: TranslateService,
     public router: Router
@@ -25,5 +27,10 @@ export class NavComponent {
   getCurrentPage() {
     let url = this.router.url;
     return url.includes('#') ? url : url + '#';
+  }
+
+  @HostListener("window:scroll", [])
+  onScroll() {
+    this.scrolled = window.scrollY > 20;
   }
 }

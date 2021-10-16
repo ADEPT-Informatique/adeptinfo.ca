@@ -1,10 +1,15 @@
-<header id="header">
+<button type="button" id="mobile-nav-toggle">
+  <i class="fa fa-bars"></i>
+</button>
+<header id="header" [ngClass]="{'header-scrolled': this.scrolled}">
   <div class="container-fluid">
     <div id="logo" class="pull-left">
-      <h1><a href="#intro" class="scrollto">ADEPT</a></h1>
+      <h1>
+        <a href="#intro" class="scrollto">ADEPT</a>
+      </h1>
     </div>
     <nav id="nav-menu-container">
-      <ul class="nav justify-content-end">
+      <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
         <li class="menu-active d-block d-sm-none">
           <a href="#intro">{{ "home" | translate }}</a>
         </li>
