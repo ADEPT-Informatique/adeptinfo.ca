@@ -9,6 +9,7 @@ import { ShoppingComponent } from './pages/shopping/shopping.component';
 import { UsersComponent } from './pages/users/users.component';
 import { HoodiesComponent } from './pages/hoodies/hoodies.component';
 import { MdcComponent } from './pages/mdc/mdc.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MdcComponent } from './pages/mdc/mdc.component';
     UsersComponent,
     HoodiesComponent,
     MdcComponent,
+    SidebarComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, SharedModule],
 })

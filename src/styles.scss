@@ -1,7 +1,11 @@
-@import '~styles/imports.scss';
-@import "~styles/colors.scss";
-@import '~styles/fonts.scss';
+// @import "~styles/colors.scss";
+@import "~styles/fonts.scss";
+@import "~styles/theme.scss";
 
 body {
-    font-family: 'Montserrat';
+  font-family: "Montserrat";
+}
+
+* {
+  margin: 0px;
 }

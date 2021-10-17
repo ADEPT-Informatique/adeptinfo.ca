@@ -1,15 +1,2 @@
-<div class="sidebar">
-  <div class="sidebar_logo">
-    <img src="/assets/img/badge.png" />
-  </div>
-  <div
-    *ngFor="let page of pages"
-    class="sidebar_bubble"
-    [class.sidebar_bubble_selected]="page.path == getPath()"
-    [routerLink]="page.path"
-  >
-    <fa-icon class="icon" [icon]="page.icon"></fa-icon>
-    <p class="sidebar_page_name">{{ page.name }}</p>
-  </div>
-</div>
+<admin-sidebar></admin-sidebar>
 <router-outlet></router-outlet>
