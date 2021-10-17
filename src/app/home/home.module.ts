@@ -11,14 +11,14 @@ import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    MainComponent,
-    NavComponent,
-    MdcComponent,
-    HomeComponent,
-    Page404homeComponent,
-    FooterComponent,
-  ],
-  imports: [CommonModule, HomeRoutingModule, SharedModule],
+	declarations: [
+		MainComponent,
+		NavComponent,
+		MdcComponent,
+		HomeComponent,
+		Page404homeComponent,
+		FooterComponent,
+	],
+	imports: [CommonModule, HomeRoutingModule, SharedModule],
 })
 export class HomeModule {}

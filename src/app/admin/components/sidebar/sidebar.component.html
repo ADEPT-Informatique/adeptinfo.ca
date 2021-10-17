@@ -1,14 +1,14 @@
 <div class="sidebar">
-  <div class="sidebar_logo">
-    <img clas="badge" src="/assets/img/badge.png" />
-  </div>
-  <div
-    *ngFor="let page of pages"
-    class="sidebar_bubble"
-    [class.sidebar_bubble_selected]="page.path == getPath()"
-    [routerLink]="page.path"
-  >
-    <fa-icon class="icon" [icon]="page.icon"></fa-icon>
-    <p class="sidebar_bubble_page-name">{{ page.name }}</p>
-  </div>
+	<div class="sidebar_logo">
+		<img clas="badge" src="/assets/img/badge.png" />
+	</div>
+	<div
+		*ngFor="let page of pages"
+		class="sidebar_bubble"
+		[class.sidebar_bubble_selected]="page.path == getPath()"
+		[routerLink]="page.path"
+	>
+		<fa-icon class="icon" [icon]="page.icon"></fa-icon>
+		<p class="sidebar_bubble_page-name">{{ page.name }}</p>
+	</div>
 </div>

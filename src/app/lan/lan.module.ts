@@ -4,7 +4,7 @@ import { LanComponent } from './lan.component';
 import { LanRoutingModule } from './lan-routing.module';
 
 @NgModule({
-  declarations: [LanComponent],
-  imports: [CommonModule, LanRoutingModule],
+	declarations: [LanComponent],
+	imports: [CommonModule, LanRoutingModule],
 })
 export class LanModule {}

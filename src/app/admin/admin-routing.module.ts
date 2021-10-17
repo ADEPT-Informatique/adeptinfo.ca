@@ -9,41 +9,41 @@ import { HoodiesComponent } from './pages/hoodies/hoodies.component';
 import { MdcComponent } from './pages/mdc/mdc.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AdminComponent,
-    children: [
-      {
-        path: '',
-        component: HomeComponent,
-      },
-      {
-        path: 'fridge',
-        component: ShoppingComponent,
-      },
-      {
-        path: 'users',
-        component: UsersComponent,
-      },
-      {
-        path: 'hoodies',
-        component: HoodiesComponent,
-      },
-      {
-        path: 'mdc',
-        component: MdcComponent,
-      },
-      {
-        path: '**',
-        component: AdminNotFoundComponent,
-      },
-    ],
-  },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+	{
+		path: '',
+		component: AdminComponent,
+		children: [
+			{
+				path: '',
+				component: HomeComponent,
+			},
+			{
+				path: 'fridge',
+				component: ShoppingComponent,
+			},
+			{
+				path: 'users',
+				component: UsersComponent,
+			},
+			{
+				path: 'hoodies',
+				component: HoodiesComponent,
+			},
+			{
+				path: 'mdc',
+				component: MdcComponent,
+			},
+			{
+				path: '**',
+				component: AdminNotFoundComponent,
+			},
+		],
+	},
+	{ path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+	imports: [RouterModule.forChild(routes)],
+	exports: [RouterModule],
 })
 export class AdminRoutingModule {}

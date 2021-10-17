@@ -16,35 +16,35 @@ import { environment } from '../environments/environment';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient);
+	return new TranslateHttpLoader(httpClient);
 }
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    CoreModule,
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    LanModule,
-    HomeModule,
-    AdminModule,
-    NgbPaginationModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
-    }),
-    FontAwesomeModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-    NgbModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent],
+	imports: [
+		CoreModule,
+		BrowserModule,
+		HttpClientModule,
+		AppRoutingModule,
+		LanModule,
+		HomeModule,
+		AdminModule,
+		NgbPaginationModule,
+		TranslateModule.forRoot({
+			loader: {
+				provide: TranslateLoader,
+				useFactory: HttpLoaderFactory,
+				deps: [HttpClient],
+			},
+		}),
+		FontAwesomeModule,
+		ServiceWorkerModule.register('ngsw-worker.js', {
+			enabled: environment.production,
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+		NgbModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

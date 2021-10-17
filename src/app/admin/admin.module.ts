@@ -12,16 +12,16 @@ import { MdcComponent } from './pages/mdc/mdc.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [
-    AdminComponent,
-    AdminNotFoundComponent,
-    HomeComponent,
-    ShoppingComponent,
-    UsersComponent,
-    HoodiesComponent,
-    MdcComponent,
-    SidebarComponent,
-  ],
-  imports: [CommonModule, AdminRoutingModule, SharedModule],
+	declarations: [
+		AdminComponent,
+		AdminNotFoundComponent,
+		HomeComponent,
+		ShoppingComponent,
+		UsersComponent,
+		HoodiesComponent,
+		MdcComponent,
+		SidebarComponent,
+	],
+	imports: [CommonModule, AdminRoutingModule, SharedModule],
 })
 export class AdminModule {}

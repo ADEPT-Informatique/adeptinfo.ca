@@ -1,13 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
-  selector: 'app-mdc',
-  templateUrl: './mdc.component.html',
-  styleUrls: ['./mdc.component.scss'],
+	selector: 'app-mdc',
+	templateUrl: './mdc.component.html',
+	styleUrls: ['./mdc.component.scss'],
 })
-export class MdcComponent implements OnInit {
-  error = '';
-
-  constructor() {}
-
-  ngOnInit(): void {}
+export class MdcComponent {
+	error = '';
 }

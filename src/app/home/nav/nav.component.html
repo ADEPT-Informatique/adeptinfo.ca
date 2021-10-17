@@ -1,39 +1,42 @@
 <button type="button" id="mobile-nav-toggle">
-  <i class="fa fa-bars"></i>
+	<i class="fa fa-bars"></i>
 </button>
-<header id="header" [ngClass]="{'header-scrolled': this.scrolled}">
-  <div class="container-fluid">
-    <div id="logo" class="pull-left">
-      <h1>
-        <a href="#intro" class="scrollto">ADEPT</a>
-      </h1>
-    </div>
-    <nav id="nav-menu-container">
-      <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-        <li class="menu-active d-block d-sm-none">
-          <a href="#intro">{{ "home" | translate }}</a>
-        </li>
-        <li class="nav-item">
-          <a href="#about">{{ "about" | translate }}</a>
-        </li>
-        <li class="nav-item">
-          <a href="#services">{{ "services" | translate }}</a>
-        </li>
-        <li class="nav-item">
-          <a href="#team">{{ "team" | translate }}</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact">{{ "contact" | translate }}</a>
-        </li>
-        <li class="nav-item">
-          <a href="/lan">{{ "lan_adept" | translate }}</a>
-        </li>
-        <li class="nav-item">
-          <a [href]="getCurrentPage()" (click)="toggleLanguage()">{{
-            "lang" | translate
-          }}</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+<header id="header" [ngClass]="{ 'header-scrolled': this.scrolled }">
+	<div class="container-fluid">
+		<div id="logo" class="pull-left">
+			<h1>
+				<a href="#intro" class="scrollto">ADEPT</a>
+			</h1>
+		</div>
+		<nav id="nav-menu-container">
+			<ul
+				class="nav-menu sf-js-enabled sf-arrows"
+				style="touch-action: pan-y"
+			>
+				<li class="menu-active d-block d-sm-none">
+					<a href="#intro">{{ "home" | translate }}</a>
+				</li>
+				<li class="nav-item">
+					<a href="#about">{{ "about" | translate }}</a>
+				</li>
+				<li class="nav-item">
+					<a href="#services">{{ "services" | translate }}</a>
+				</li>
+				<li class="nav-item">
+					<a href="#team">{{ "team" | translate }}</a>
+				</li>
+				<li class="nav-item">
+					<a href="#contact">{{ "contact" | translate }}</a>
+				</li>
+				<li class="nav-item">
+					<a href="/lan">{{ "lan_adept" | translate }}</a>
+				</li>
+				<li class="nav-item">
+					<a [href]="getCurrentPage()" (click)="toggleLanguage()">{{
+						"lang" | translate
+					}}</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </header>

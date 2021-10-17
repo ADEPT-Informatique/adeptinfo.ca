@@ -1,17 +1,17 @@
 import { Role } from './role';
 
 export interface User {
-  id: number;
-  email: string;
-  password: string;
+	id: number;
+	email: string;
+	password: string;
 
-  role: Role[];
+	role: Role[];
 
-  nickname: string;
-  firstName: string;
-  middleName: string;
-  lastName: string;
+	nickname: string;
+	firstName: string;
+	middleName: string;
+	lastName: string;
 
-  studentNumber: string;
-  discordUsername: string;
+	studentNumber: string;
+	discordUsername: string;
 }

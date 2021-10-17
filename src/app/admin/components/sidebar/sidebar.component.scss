@@ -1,59 +1,59 @@
 :host {
-  display: flex;
+	display: flex;
 }
 
 .sidebar {
-  display: flex;
-  transition: all 1ms;
-  flex-direction: column;
-  background-color: var(--background-layer-two);
+	display: flex;
+	transition: all 1ms;
+	flex-direction: column;
+	background-color: var(--background-layer-two);
 
-  gap: 16px;
-  &_logo {
-    display: flex;
-    max-width: 100%;
-    height: 120px;
-    justify-content: center;
-    padding: 0px 4px;
-    img {
-      width: 32px;
-      height: 32px;
-    }
-  }
-  &_bubble {
-    display: flex;
-    gap: 8px;
-    padding: 0px 8px;
+	gap: 16px;
+	&_logo {
+		display: flex;
+		max-width: 100%;
+		height: 120px;
+		justify-content: center;
+		padding: 0px 4px;
+		img {
+			width: 32px;
+			height: 32px;
+		}
+	}
+	&_bubble {
+		display: flex;
+		gap: 8px;
+		padding: 0px 8px;
 
-    cursor: pointer;
-    user-select: none;
+		cursor: pointer;
+		user-select: none;
 
-    &_selected {
-      background-color: var(--primary-color);
-    }
-    &_page-name {
-      display: none;
-    }
-    fa-icon {
-      align-self: center;
-    }
-  }
+		&_selected {
+			background-color: var(--primary-color);
+		}
+		&_page-name {
+			display: none;
+		}
+		fa-icon {
+			align-self: center;
+		}
+	}
 }
 
 .sidebar:hover {
-  .sidebar_logo {
-    img {
-      width: 120px;
-      height: 110px;
-    }
-  }
-  .sidebar_bubble_page-name {
-    display: block !important;
-  }
+	.sidebar_logo {
+		img {
+			width: 120px;
+			height: 110px;
+		}
+	}
+	.sidebar_bubble_page-name {
+		display: block !important;
+	}
 }
 
 .sidebar_bubble:hover {
-  .sidebar_bubble_page-name {
-    display: block !important;
-  }
+	.sidebar_bubble_page-name {
+		display: block !important;
+	}
 }
