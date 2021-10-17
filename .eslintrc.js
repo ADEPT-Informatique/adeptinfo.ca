@@ -7,11 +7,12 @@ module.exports = {
 	},
 	rules: {
 		semi: 2,
+		"unused-imports/no-unused-imports": "error",
 		"require-jsdoc": 0,
 		"valid-jsdoc": 0,
 		"new-cap": 0,
 	},
-	plugins: ["@typescript-eslint", "html"],
+	plugins: ["@typescript-eslint", "html", "unused-imports"],
 	extends: [
 		"google",
 		"eslint:recommended",
