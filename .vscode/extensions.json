@@ -1,0 +1,21 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"angular.ng-template",
+		"coenraads.bracket-pair-colorizer",
+		"dbaeumer.vscode-eslint",
+		"eamodio.gitlens",
+		"angular.ng-template",
+		"caomeinaixi.ts-mock",
+		"johnpapa.angular2",
+		"mikael.angular-beastcode",
+		"editorconfig.editorconfig",
+		"sonarsource.sonarlint-vscode",
+		"johnpapa.angular-essentials",
+		"abusaidm.html-snippets",
+		"xabikos.javascriptsnippets",
+		"ms-vsliveshare.vsliveshare",
+		"christian-kohler.path-intellisense",
+		"rvest.vs-code-prettier-eslint"
+	]
+}

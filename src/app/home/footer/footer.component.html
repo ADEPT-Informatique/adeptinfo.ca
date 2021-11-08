@@ -3,25 +3,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6 footer-info">
-					<img src="/assets/img/badge.png" id="footer-logo" />
+					<img src="/assets/img/badge.png" id="footer-logo" alt="ad"/>
 				</div>
 				<div class="col-lg-3 col-md-6 footer-links">
 					<h4>{{ "footer.useful_links" | translate }}</h4>
 					<ul>
 						<li>
-							<i class="ion-ios-arrow-right"></i>
+							<em class="fas fa-chevron-right"></em>
 							<a href="http://adeptinfo.ca/lan">{{
 								"footer.lan_adept" | translate
 							}}</a>
 						</li>
 						<li>
-							<i class="ion-ios-arrow-right"></i>
+							<em class="fas fa-chevron-right"></em>
 							<a href="#about" class="btn-get-started scrollto">{{
 								"footer.about" | translate
 							}}</a>
 						</li>
 						<li>
-							<i class="ion-ios-arrow-right"></i>
+							<em class="fas fa-chevron-right"></em>
 							<a
 								href="#services"
 								class="btn-get-started scrollto"
@@ -29,7 +29,7 @@
 							>
 						</li>
 						<li>
-							<i class="ion-ios-arrow-right"></i>
+							<em class="fas fa-chevron-right"></em>
 							<a
 								href="https://adept-informatique.github.io/Charte/"
 								class="btn-get-started scrollto"
@@ -44,33 +44,37 @@
 						945 chemin Chambly, Longueuil<br />Local F-045, CEM,<br />Québec,
 						Canada
 						<br />
-						<a href="mailto:adept.informatique.cem@gmail.com">{{
-							"footer.email_us" | translate
-						}}</a>
 					</p>
+					<a href="mailto:adept.informatique.cem@gmail.com">
+						{{"footer.email_us" | translate}}
+					</a>
 					<div class="social-links">
 						<a
 							href="https://www.facebook.com/ADEPTInformatique/"
 							class="facebook"
-							><i class="fa fa-facebook"></i
+							><em class="fab fa-facebook"></em
 						></a>
 						<a
 							href="https://github.com/ADEPT-Informatique"
 							class="git-hub"
-							><i class="fa fa-github"></i
-						></a>
+							><em class="fab fa-github"></em></a>
+						<a
+							href="https://discord.com/invite/KYZ5JQB"
+							class="discord">
+							<em class="fab fa-discord"></em>
+						</a>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 footer-newsletter">
 					<h4>{{ "footer.input_subscribe" | translate }}</h4>
 					<p>{{ "footer.newsletter_txt" | translate }}</p>
-					<form action="controller/subscribe.php" method="post">
+					<form action="" method="post">
 						<input
 							type="email"
 							name="email"
 							placeholder="Email"
 							required
-						/><input type="submit" value="S'abonner" />
+						/><button>{{ "footer.input_subscribe" | translate}}</button>
 					</form>
 				</div>
 			</div>
@@ -93,8 +97,7 @@
 			>
 			! <br /><span class="black"
 				>Why do Java programmers wear glasses ? Because they can't C#
-				;)</span
-			>
+				;)</span>
 		</div>
 	</div>
 </footer>

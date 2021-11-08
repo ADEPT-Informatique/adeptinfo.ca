@@ -2,10 +2,12 @@
 @import "~styles/fonts.scss";
 @import "~styles/theme.scss";
 
-body {
-  font-family: "Montserrat";
+*{
+	margin: 0px;
+	font-family: "Montserrat";
 }
 
-* {
-  margin: 0px;
+a:hover {
+	text-decoration: none;
 }
+

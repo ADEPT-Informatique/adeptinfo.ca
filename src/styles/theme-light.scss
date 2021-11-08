@@ -1,5 +1,6 @@
 :root {
   --primary-color: #10d213;
+  --white:#fff;
   --accent-color: #123;
 
   --background-layer-one: #ececec;
@@ -13,4 +14,14 @@
   --blue-color: #3a68b8;
   --messenger-blue-color: #0084ff;
   --blurple-color: #5865f2;
+}
+
+button{
+	background: var(--primary-color);
+	color: var(--white);
+	border-radius: 16px;
+	&:hover{
+		background: var(--black-color);
+		color: var(--primary-color)
+	}
 }

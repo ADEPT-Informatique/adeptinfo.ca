@@ -14,3 +14,13 @@
   --messenger-blue-color: #0084ff;
   --blurple-color: #5865f2;
 }
+
+button{
+	background: var(--primary-color);
+	color: var(--white);
+	border-radius: 16px;
+	&:hover{
+		background: var(--black-color);
+		color: var(--primary-color)
+	}
+}
