@@ -1179,6 +1179,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     filter: grayscale(100%) contrast(120%);
 
 }
+
+.imgMembreCA{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
 /* Section membres-confiances
 --------------------------------*/
 
