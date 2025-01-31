@@ -1,15 +1,21 @@
-jQuery(document).ready(function( $ ) {
+jQuery(document).ready(function ($) {
+  //Obtiens l'année courante pour le copyright
+  function getCurrentCopyrightYear() {
+    var currentYear = new Date().getFullYear();
+    return currentYear.toString();
+  };
+  document.getElementById("copyrightYear").innerHTML = getCurrentCopyrightYear();
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
     }
   });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+  $('.back-to-top').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
     return false;
   });
 
@@ -38,19 +44,19 @@ jQuery(document).ready(function( $ ) {
     $('body').append('<div id="mobile-body-overly"></div>');
     $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
 
-    $(document).on('click', '.menu-has-children i', function(e) {
+    $(document).on('click', '.menu-has-children i', function (e) {
       $(this).next().toggleClass('menu-item-active');
       $(this).nextAll('ul').eq(0).slideToggle();
       $(this).toggleClass("fa-chevron-up fa-chevron-down");
     });
 
-    $(document).on('click', '#mobile-nav-toggle', function(e) {
+    $(document).on('click', '#mobile-nav-toggle', function (e) {
       $('body').toggleClass('mobile-nav-active');
       $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
       $('#mobile-body-overly').toggle();
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       var container = $("#mobile-nav, #mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
@@ -65,7 +71,7 @@ jQuery(document).ready(function( $ ) {
   }
 
   // Smooth scroll for the menu and links with .scrollto classes
-  $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function() {
+  $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       if (target.length) {
@@ -74,7 +80,7 @@ jQuery(document).ready(function( $ ) {
         if ($('#header').length) {
           top_space = $('#header').outerHeight();
 
-          if( ! $('#header').hasClass('header-fixed') ) {
+          if (!$('#header').hasClass('header-fixed')) {
             top_space = top_space - 20;
           }
         }
@@ -99,7 +105,7 @@ jQuery(document).ready(function( $ ) {
   });
 
   // Header scroll class
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
     } else {
@@ -110,39 +116,39 @@ jQuery(document).ready(function( $ ) {
   // Intro carousel
   var introCarousel = $(".carousel");
   var introCarouselIndicators = $(".carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".carousel-item").each(function(index) {
+  introCarousel.find(".carousel-inner").children(".carousel-item").each(function (index) {
     (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
   });
 
   $(".carousel").swipe({
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
       if (direction == 'left') $(this).carousel('next');
       if (direction == 'right') $(this).carousel('prev');
     },
-    allowPageScroll:"vertical"
+    allowPageScroll: "vertical"
   });
 
   // Skills section
-  $('#skills').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
+  $('#skills').waypoint(function () {
+    $('.progress .progress-bar').each(function () {
       $(this).css("width", $(this).attr("aria-valuenow") + '%');
     });
-  }, { offset: '80%'} );
+  }, { offset: '80%' });
 
-// counterUp2 (used in Facts section)
-  $('#facts').waypoint(function() {
+  // counterUp2 (used in Facts section)
+  $('#facts').waypoint(function () {
     var counterUp = window.counterUp["default"];
     var $counters = $('[data-toggle="counter-up"]');
-    
+
     $counters.each(function (ignore, counter) {
-        counterUp(counter, {
-            duration: 1000,
-            delay: 10
-        });
+      counterUp(counter, {
+        duration: 1000,
+        delay: 10
+      });
     });
-  }, { offset: '80%'} );
+  }, { offset: '80%' });
 
   // Porfolio isotope and filter
   var portfolioIsotope = $('.portfolio-container').isotope({
@@ -150,7 +156,7 @@ jQuery(document).ready(function( $ ) {
     layoutMode: 'fitRows'
   });
 
-  $('#portfolio-flters li').on( 'click', function() {
+  $('#portfolio-flters li').on('click', function () {
     $("#portfolio-flters li").removeClass('filter-active');
     $(this).addClass('filter-active');
 
@@ -162,7 +168,8 @@ jQuery(document).ready(function( $ ) {
     autoplay: true,
     dots: true,
     loop: true,
-    responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+    responsive: {
+      0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
     }
   });
 
